@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Modular Projects - React</title>
+    <title>Modular Projects</title>
 
     <!-- ====== CSS PLUGINS ====== -->
     <link rel="stylesheet" href="/assets/plugins/bootstrap-4.5.0/css/bootstrap.min.css" />
@@ -24,7 +24,7 @@
   <body>
     <div id="root"></div>
 
-    <!-- ====== PLUGINS JS (carga jQuery y dependencias primero) ====== -->
+    <!-- ====== PLUGINS JS ====== -->
     <script src="/assets/plugins/jquery/jquery.min-3.4.0.js"></script>
     <script src="/assets/plugins/popper/popper.min.js"></script>
     <script src="/assets/plugins/bootstrap-4.5.0/js/bootstrap.min.js"></script>
@@ -36,7 +36,6 @@
     <script src="/assets/lcms/js/registro.js"></script>
     <script src="/assets/lcms/js/lcmspaginator.js"></script>
     <script src="/assets/lcms/js/lcms.js"></script>
-
     <script src="/assets/lcms/js/ellipsis_min.js"></script>
     <script src="/assets/lcms/js/jquery.sticky.js"></script>
 
@@ -44,7 +43,12 @@
     <script src="/assets/custom/js/custom.js"></script>
     <script src="/assets/custom/js/custom_map.js"></script>
 
-    <!-- Vite script -->
+    <!-- ====== VITE ENTRYPOINT (dev mode) ====== -->
+    <!-- 
+      Vite usará este script SOLO en desarrollo.
+      En producción, Vite lo reemplazará automáticamente por:
+      <script type="module" src="/assets/main-XXXXX.js"></script>
+    -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
