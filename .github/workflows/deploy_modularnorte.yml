@@ -1,24 +1,17 @@
-name: 🌍 Deploy Modularnorte Frontend
+name: 🚀 Deploy modularnorte.com (static site)
 
 on:
   push:
     branches:
       - main
 
-
 jobs:
-  deploy-frontend:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: 🧩 Checkout code
         uses: actions/checkout@v3
-
-      - name: 🏗️ Build Frontend
-        run: |
-          npm install --legacy-peer-deps
-          npm run build
-          ls -l dist
 
       - name: 🧹 Clean remote directory
         uses: appleboy/ssh-action@master
@@ -27,21 +20,19 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            echo "Cleaning /var/www/vhosts/modularnorte.com/httpdocs/"
             rm -rf /var/www/vhosts/modularnorte.com/httpdocs/*
 
-      - name: 📤 Upload Build to Server
+      - name: 📤 Upload ALL files to server
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "frontend/dist/**"
+          source: "./**"
           target: "/var/www/vhosts/modularnorte.com/httpdocs"
           overwrite: true
-          strip_components: 2
 
-      - name: 🔧 Fix Permissions
+      - name: 🔧 Fix permissions
         uses: appleboy/ssh-action@v0.1.8
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -51,5 +42,5 @@ jobs:
             chown -R www-data:www-data /var/www/vhosts/modularnorte.com/httpdocs
             chmod -R 755 /var/www/vhosts/modularnorte.com/httpdocs
 
-      - name: ✅ Deployment Completed
-        run: echo "🚀 modularnorte.com deployed successfully!"
+      - name: ✅ Done
+        run: echo "Deployment completed successfully 🎉"
