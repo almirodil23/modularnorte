@@ -16,7 +16,6 @@ jobs:
 
       - name: 🏗️ Build Frontend
         run: |
-          cd frontend
           npm install --legacy-peer-deps
           npm run build
           ls -l dist
