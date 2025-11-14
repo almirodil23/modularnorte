@@ -1,0 +1,71 @@
+export default function Intro() {
+  return (
+    <div className="container-fluid">
+      <div className="row">
+        
+        {/* COLUMNA IZQUIERDA */}
+        <div className="col-lg-6 info_home">
+
+          <li className="redes_intro">
+            <a href="https://www.facebook.com/Modular-Projects-145924372121713" target="_blank"><i className="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/modularprojects?lang=es" target="_blank"><i className="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/explore/tags/modularprojects/" target="_blank"><i className="fa fa-instagram"></i></a>
+          </li>
+
+          <div className="fragmento_sup">
+            <div className="texto_vertical"><span>Modular Projects</span></div>
+
+            <div className="textos_intro">
+              <h2 className="titulo">Viviendas Modulares de diseño</h2>
+
+              <p>En <strong>Modular Projects</strong> diseñamos a medida...</p>
+              <p>Además, nuestro departamento de decoración...</p>
+              <p>Nuestro equipo formado por arquitectos...</p>
+              <p>Modular Projects da forma a tus ideas...</p>
+
+              <a href="/web/131" className="boton_adicional">Conócenos</a>
+            </div>
+          </div>
+
+          <div className="video">
+            <video
+              src="/assets/custom/video/modular_projects_red.mp4"
+              controls
+              poster="/assets/custom/img/miniatura_video.jpg"
+            ></video>
+          </div>
+        </div>
+
+        {/* COLUMNA DERECHA */}
+        <div className="col-lg-6 info_home caracteristicas_home">
+
+          <div className="fotos">
+            <img src="/recurso/pagina/borrar1.jpg" alt="Modular Projects" />
+            <img src="/recurso/pagina/borrar2.jpg" alt="Modular Projects" />
+          </div>
+
+          <div className="textos_intro centrar_al_medio">
+            <div className="texto_vertical"><span>SOMOS DIFERENTES</span></div>
+
+            <div>
+              <h2 className="titulo">Lo que nos<br />hace diferentes</h2>
+              
+              <h4>REDUCCIÓN</h4>
+              <p>Nuestro sistema constructivo modular...</p>
+
+              <h4>EFICIENCIA</h4>
+              <p>Todas nuestras viviendas tienen...</p>
+
+              <h4>COMPROMISO</h4>
+              <p>Más de 300 viviendas llave en mano...</p>
+
+              <h4>PROCESOS</h4>
+              <p>En Modular Projects nos ocupamos...</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}
