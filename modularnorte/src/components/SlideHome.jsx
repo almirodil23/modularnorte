@@ -7,7 +7,7 @@ return (
 <div className="row">
 <div className="col-12 textos">
 <div className="contenido">
-<h1 className="titulo">MODULAR PROJECTS</h1>
+<h1 className="titulo">MODULAR NORTE</h1>
 <h3 className="subtitulo">Arquitectura modular de diseño vanguardista</h3>
 </div>
 </div>

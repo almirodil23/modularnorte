@@ -10,7 +10,7 @@ font-family: 'Mulish', sans-serif;
 */
 
 body{
-background-color: #1c1c1c;
+background-color: white;
 }
 
 .color_resultado_busqueda{
@@ -23,7 +23,7 @@ color: #9f988e;
 }
 
 a:hover,a:focus{
-color: white;
+color: black;
 }
 
 a,li,p,h1,h2,h3,h4,h5,h6,button,input{
@@ -32,8 +32,8 @@ max-width: 100%;
 }
 
 ::selection {
-background: #9d968c;
-color: white;
+background: #fff;
+color: black;
 text-shadow: none;
 }
 
@@ -42,7 +42,7 @@ border-color: #404040;
 }
 
 .preloader {
-background-color: black;
+background-color: white;
 }
 
 .preloader >div img{
@@ -76,7 +76,7 @@ background-color: #1c1c1c;
 #_lcms_banerCookies p{
 font-family: 'Open Sans', sans-serif;
 font-size: 0.85rem;
-color: whitesmoke;
+color: blacksmoke;
 letter-spacing: 0.5px;
 max-width: 900px;
 }
@@ -122,7 +122,7 @@ background-image: url("/assets/custom/img/icono_menu.png");
 
 .boton_standard{
 background-color: #1c1c1c;
-color: white;
+color: black;
 letter-spacing: 4px;
 text-transform: uppercase;
 font-weight: bold;
@@ -168,7 +168,7 @@ font-weight: 900;
 }
 
 .parallax a.boton_standard{
-color: #9e978d;
+color: white;
 width: fit-content;
 display: block;
 margin: 0 auto;
@@ -191,7 +191,7 @@ width: 100%;
 }
 
 .boton_linea_blanco{
-color: white;
+color: black;
 letter-spacing: 4px;
 text-transform: uppercase;
 font-weight: bold;
@@ -221,7 +221,7 @@ opacity: 1;
 }
 
 .boton_flotante a{
-background-color: #9d968c;
+background-color: #fff;
 color: black;
 padding: 17px 20px;
 letter-spacing: 2px;
@@ -241,7 +241,7 @@ background-color:#7c7771;
 }
 
 .boton_adicional{
-color: white;
+color: black;
 padding: 0px 7px;
 border-bottom: solid 1px white;
 text-transform: uppercase;
@@ -507,7 +507,7 @@ z-index: 10;
 }
 
 .boton_menu a{
-color: white;
+color: black;
 letter-spacing: 3px;
 text-transform: uppercase;
 font-size: 12px;
@@ -518,7 +518,7 @@ cursor: pointer;
 }
     
 .boton_menu a:hover{
-color: white;
+color: black;
 padding: 9px 35px 5px 25px;
 }
 
@@ -528,7 +528,7 @@ content: "Menú";
 }
 
 .boton_menu.entra a{
-background-color: #0000007a;
+
 border-bottom: solid 1px #0000001c;
 }
 
@@ -536,7 +536,8 @@ border-bottom: solid 1px #0000001c;
 position: fixed;
 right: -350px;
 height: 100%;
-background-color: black;
+background-color: white;
+color:black;
 z-index: 9;
 width: 350px;
 webkit-transition: all .3s ease-in-out;
@@ -562,13 +563,13 @@ margin-top: 0px;
 }
 
 #menu_lateral .nav-link {
-color: white;
+color: black;
 font-size: 12px;
 letter-spacing: 3px;
 text-align: right;
 text-transform: uppercase;
-border-bottom: solid 1px #ffffff1a;
-color:#ffffffdb;    
+border-bottom: solid 1px #fff;
+color:black;    
 padding: 0px;
 padding-top: 10px;
 padding-bottom: 10px;
@@ -577,7 +578,7 @@ white-space: nowrap;
 
 #menu_lateral .nav-link:hover{
 padding-right: 5px;
-color: white;    
+color: black;    
 margin-left: -5px;    
 }
 
@@ -587,8 +588,8 @@ margin-top: 35px;
 }
 
 #menu_lateral .redes a{
-color: white;
-border: solid 1px #ffffff1f;
+color: black;
+border: solid 1px #fff;
 width: 31px;
 height: 31px;
 display: inline-block;
@@ -646,7 +647,7 @@ transition: all 0.0s ease-in-out;
     }
     
     .navbar-nav .dropdown-menu .segundo_select .submenu .dropdown-item {
-    color: white;
+    color: black;
     }
     
     .logo_head img{
@@ -861,7 +862,7 @@ CESTA MENU
 ======================================================*/
 
 #top-cart > a{
-color: white;  
+color: black;  
 }
 
 #top-cart > a:hover i{
@@ -890,7 +891,7 @@ background-color: #26394e;
 }
 
 #top-cart .top-cart-content .top-cart-title h4{
-color: white;
+color: black;
 }
 
 #top-cart.top-cart-open .top-cart-content .top-cart-title h4 span{
@@ -913,11 +914,11 @@ font-weight: bold;
 
 #top-cart .top-cart-item-desc .contenido a:hover{
 text-decoration: none !important;
-color: white;
+color: black;
 }
 
 #top-cart .top-cart-item-desc .contenido .precio{
-color: white;
+color: black;
 font-weight: bold;
 }
 
@@ -983,9 +984,19 @@ background-size: cover;
 background-attachment: fixed;
 }
 
+#slide_home {
+  background-image: url("/assets/img/home.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 #slide_home .contenido{
 text-align: center;
-color: white;  
+color: black;  
 margin-bottom: -7rem;
 }
 
@@ -996,10 +1007,12 @@ opacity: 1;
 }
 
 #slide_home .titulo{
-font-size: 2.2rem;
+font-size: 3.7rem;
 letter-spacing: 1rem;
-color: #ffffff;
+color: black;
 font-weight: 400;
+position:relative;
+top:-205px;
 }
 
 #slide_home .titulo span{
@@ -1008,14 +1021,16 @@ font-weight: 300;
 
 #slide_home .subtitulo{
 font-weight: 300;
-font-size: 1.15rem;
+font-size: 2.15rem;
 letter-spacing: 0.3rem;
-color: #ffffffd4;
+color: black;
 border-top: solid 1px #ffffff40;
 width: max-content;
 margin: 0 auto;
 padding: 11px 66px;
 margin-top: 20px;
+position:relative;
+top:-205px;
 }
 
 #slide_home >div, #slide_home >div>.row {
@@ -1057,7 +1072,7 @@ display: inline-block;
 @media (max-width: 1200px){ 
     
     /*#slide_home >.container-fluid{
-    background-color: #00000096;
+    background-color: #fff96;
     }*/
     
 }
@@ -1220,7 +1235,7 @@ border-color: #9f988e;
 
 .owl-carousel .owl-nav button .icon:before{
 font-family: "FontAwesome";
-color: white;    
+color: black;    
 }
 
 .owl-carousel .owl-nav .owl-prev .icon:before{
@@ -1357,7 +1372,7 @@ letter-spacing: 0.05rem;
 }
 
 #newsletter_home .formulario_newsletter input.boton:hover{
-color: white;    
+color: black;    
 }
 
 #newsletter_home .titulo_seccion{
@@ -1496,7 +1511,7 @@ width: 100%;
 }
 
 .info_home{
-background-color: #1c1c1c;
+background-color: white;
 padding: 0px;    
 }
 
@@ -1510,7 +1525,7 @@ padding-bottom: 300px;
 }
 
 .info_home .textos_intro .titulo{
-color: white;
+color: black;
 font-weight: 900;
 text-transform: uppercase;
 letter-spacing: 8px;
@@ -1529,7 +1544,7 @@ margin-bottom: 0px;
 }
 
 .info_home .video{
-background-color: black;
+background-color: white;
 }
     
 .info_home .video video{
@@ -1570,7 +1585,7 @@ top: 18px;
 }
 
 .redes_intro a{
-color: white;
+color: black;
 border: solid 1px #ffffff1f;
 width: 31px;
 height: 31px;
@@ -1602,7 +1617,7 @@ flex-wrap: wrap;
 }
 
 .caracteristicas_home{
-background-color: #9d968c;   
+background-color: #fff;   
 display: grid;
 }
 
@@ -1611,8 +1626,7 @@ padding: 0px;
 padding-top: 100px;
 padding-bottom: 100px;
 height: 100%;
-border-left: solid 1px #1c1c1c1a;
-border-right: solid 1px #1c1c1c1a;
+
 }
 
 .caracteristicas_home .textos_intro .intro{
@@ -1735,7 +1749,7 @@ padding: 3rem 2rem;
 }
 
 .mapa_contacto .ficha_contacto .contenido h4{
-color: white;
+color: black;
 line-height: 2rem;
 margin-bottom: 1rem;
 letter-spacing: 0.1rem;
@@ -1757,7 +1771,7 @@ margin-bottom: 0px;
 }
 
 .mapa_contacto .ficha_contacto .contenido h4 a{
-color: white;    
+color: black;    
 }
 
 .mapa_contacto .ficha_contacto .contenido h4 a:hover{
@@ -1769,7 +1783,7 @@ color: #9f988e;
 }
 
 .mapa_contacto .ficha_contacto .contenido h4 a:hover i{
-color: white;  
+color: black;  
 }
 
 .mapa_contacto .ficha_contacto {
@@ -1777,14 +1791,14 @@ width: 100%;
 }
 
 .titulo_negro{
-background-color: #1c1c1c;
+background-color: white;
 text-align: center;
 padding: 60px 30px;
-color: white;  
+color: black;  
 }
 
 .titulo_negro h2{
-color: #efefef;
+color: black;
 text-transform: uppercase;
 font-size: 19px;
 letter-spacing: 9px;
@@ -1800,7 +1814,7 @@ height: 760px;
 }
 
 .miniatura_proyecto a{
-background-color: #0000002e;
+background-color: #fff;
 height: 100%;
 padding: 50px 35px;    
 display: flex;
@@ -1810,7 +1824,7 @@ position: relative;
 }
 
 .miniatura_proyecto h4{
-color: white;
+color: black;
 font-weight: 900;
 text-transform: uppercase;
 letter-spacing: 4px;
@@ -1826,7 +1840,7 @@ letter-spacing: 4px;
 }
 
 .miniatura_proyecto a:hover{
-background-color: #000000cf;  
+background-color: #fff;  
 }
 
 .opinion_clientes .info_home .textos_intro .titulo {
@@ -2141,7 +2155,7 @@ margin-left: 4%;
 
 
 .pagina_con_fragmento_fijo .fragmento_fijo .contenido .titulo{
-color: white;
+color: black;
 font-weight: 900;
 text-transform: uppercase;
 letter-spacing: 8px;
@@ -2150,7 +2164,7 @@ font-size: 2rem;
 }
 
 .pagina_con_fragmento_fijo .fragmento_fijo .contenido .volver{
-color: #ffffff82;
+color: black;
 font-size: 11px;
 text-transform: uppercase;
 letter-spacing: 3px;
@@ -2166,7 +2180,7 @@ text-decoration: underline !important;
 }
 
 .pagina_con_fragmento_fijo .fragmento_fijo .contenido  p{
-color: #BABABA;
+color: black    ;
 text-align: justify;
 line-height: 24px;
 font-size: 15px;
@@ -2174,7 +2188,7 @@ margin-bottom: 13px;
 }
 
 .pagina_con_fragmento_fijo .fragmento_fijo .contenido  p a{
-color: white;
+color: black;
 text-decoration: underline !important;
 }
 
@@ -2295,7 +2309,7 @@ padding: 0;
 
 .div_articulo .titulo{
 text-align: center;
-color: #ffffff;
+color: black;
 font-weight: 700;
 font-size: 15px;
 margin-bottom: 0.2rem;
@@ -2310,7 +2324,6 @@ width: 100%;
 text-transform: uppercase;
 letter-spacing: 2px;
 margin-top: -10px;
-text-shadow: 2px 1px 0px #00000091;
 padding-left: 32px;
 padding-right: 32px;
 line-height: 24px;
@@ -2476,8 +2489,8 @@ FOOTER
 
 footer{
 padding: 35px 50px;
-background-color: #1c1c1c;
-color: white;
+background-color: white;
+color: black;
 border-top: solid 1px #ffffff0f;
 display: flex;
 justify-content: space-between;
@@ -2530,7 +2543,7 @@ text-transform: none;
 letter-spacing: 0.1rem;
 }
 footer .items .redes a:hover{
-color: white;    
+color: black;    
 }
 
 footer .subfooter{
@@ -2560,7 +2573,7 @@ color: #ffffff24;
     
 footer a,
 footer a:not([href]){
-color: white;
+color: black;
 font-size: 13px;
 letter-spacing: 2px;
 padding: 0px 9px;  
@@ -2568,7 +2581,7 @@ padding: 0px 9px;
 
 footer a:hover,
 footer a:hover:not([href]){
-color: white;
+color: black;
 text-decoration: underline !important;
 }
 
@@ -2577,7 +2590,7 @@ margin-left: 6px;
 }
 
 footer li.redes a{
-color: white;
+color: black;
 border: solid 1px #ffffff1f;
 width: 31px;
 height: 31px;
@@ -2757,7 +2770,7 @@ letter-spacing: 0.5px;
 }
 
 .pagina_standard p a,.pagina_standard li a{
-color: white;
+color: black;
 text-decoration: underline !important;
 text-decoration-color: #575757 !important;
 }
@@ -2784,7 +2797,7 @@ margin-top: 4px;
 .pagina_standard h6{
 font-weight: 700;
 margin-bottom: 20px;
-color: white;  
+color: black;  
 letter-spacing: 1px;    
 }
 
@@ -3149,11 +3162,11 @@ color: #15362d;
 }
 
 #sync1  .owl-nav button .icon:before{
-color: white;    
+color: black;    
 }
 
 #sync1 .owl-nav button:hover .icon:before{
-color: white;   
+color: black;   
 }
 
 #sync1 .owl-nav .owl-next .icon{
@@ -3193,7 +3206,7 @@ color: #9f988e;
 
 #sync2  .owl-nav button.owl-next:hover,
 #sync2  .owl-prev button.owl-next:hover{
-color: whitesmoke;    
+color: blacksmoke;    
 }
 
 .ficha_articulo .descripcion_articulo{
@@ -3255,7 +3268,7 @@ text-align: center;
 }
 
 .contacto_articulo h3{
-color: white;
+color: black;
 margin-bottom: 68px;
 text-transform: uppercase;
 font-size: 18px;
@@ -3270,7 +3283,7 @@ color: #1c1c1c;
 
 .contacto_articulo .boton_linea_blanco:hover{
 background-color: #1c1c1c;
-color: white;    
+color: black;    
 }
 
 @media (max-width: 1500px){ 
@@ -3367,7 +3380,7 @@ background-color: transparent;
 color: #1c1c1c;
 padding: 4px 13px;
 margin-right: 4px;
-color: white;    
+color: black;    
 }
 
 #searchform input::placeholder{
@@ -3385,7 +3398,7 @@ border-color: #9f988e;
 }
 
 #searchform .botonlcms:hover{
-color: white;    
+color: black;    
 }
 
 /*======================================================
@@ -3397,7 +3410,7 @@ background-color: #1c1c1c;
 }
 
 #novedades_home .titulo_seccion {
-color: whitesmoke;
+color: blacksmoke;
 margin-bottom: 4rem;
 text-transform: uppercase;
 }
@@ -3543,7 +3556,7 @@ margin-bottom: 79px;
 }
 
 .formulario_contacto .enviar:hover{
-color: white;
+color: black;
 background-color: transparent;
 border: solid 1px white;
 }
@@ -3574,7 +3587,7 @@ color: #9f988e;
 background-color: #1c1c1c;
 border: solid 1px #ffffff29;
 border-radius: 0px;
-color: white;
+color: black;
 font-weight: bold;
 margin-bottom: 18px;
 /*text-align: center;*/
@@ -3592,7 +3605,7 @@ font-style: italic;
 
 .formulario_contacto .form-control:focus{
 border: solid 1px white;
-color: white    
+color: black    
 }
 
 .formulario_contacto .form-group {
@@ -3863,7 +3876,7 @@ font-weight: 400;
 }
 
 .ficha_blog.ficha_proceso .titulo span{
-color: white;
+color: black;
 /*font-weight: bold;*/
 }
 
@@ -4128,7 +4141,7 @@ color: #dddddd;
 }
 
 .preguntas_frecuentes .card .btn-link{
-color: white;    
+color: black;    
 /*text-decoration: none;    */
 }
 
@@ -4284,7 +4297,7 @@ left: -59px;
 }
  .animated-arrow {
 display: inline-block;
-color: white;
+color: black;
 font-size: 14px;
 position: relative;
 transition: all 0.2s;
@@ -4391,7 +4404,7 @@ padding-bottom: 0px;
 }
 
 .ficha_equipo h6{
-color: white;
+color: black;
 text-transform: uppercase;
 margin-top: 16px;
 font-size: 14px;

@@ -1,11 +1,21 @@
+
 export default function HomeHero() {
   return (
-    <section id="slide_home">
-      <div className="container-fluid">
+    <section
+      id="slide_home"
+      style={{
+        backgroundImage: 'url("/assets/custom/img/home.JPG")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "100vh",
+      }}
+    >
+        <div className="container-fluid">
         <div className="row">
           <div className="col-12 textos">
             <div className="contenido">
-              <h1 className="titulo">MODULAR PROJECTS</h1>
+              <h1 className="titulo">MODULAR NORTE</h1>
               <h3 className="subtitulo">Arquitectura modular de diseño vanguardista</h3>
             </div>
           </div>

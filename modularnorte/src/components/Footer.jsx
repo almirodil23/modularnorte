@@ -20,7 +20,7 @@ export default function Footer() {
           <ul>
             <li><a href="tel:657156065">657 15 60 65</a></li>
             <li className="separador">|</li>
-            <li><a href="mailto:clientes@modularprojects.es">clientes@modularprojects.es</a></li>
+            <li><a href="mailto:clientes@modularnorte.es">clientes@modularnorte.es</a></li>
             <li className="separador">|</li>
             <li><a>ALICANTE – SPAIN</a></li>
 

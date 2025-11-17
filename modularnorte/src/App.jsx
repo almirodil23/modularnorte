@@ -13,6 +13,7 @@ import Blog from './pages/Blog'
 import ProcesoConstructivo from './pages/ProcesoConstructivo'
 import TourVirtual from './pages/TourVirtual/TourVirtual'
 import Preguntas from './pages/Preguntas/Preguntas'
+import ProjectDetail from './pages/Projects/ProjectDetail'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/tour-virtual" element={<TourVirtual />} />
         <Route path="/preguntas-frecuentes" element={<Preguntas />} />
+        <Route path="/producto/:id/:slug" element={<ProjectDetail />} />
         <Route path="/proceso-constructivo" element={<ProcesoConstructivo />} />
       </Routes>
 

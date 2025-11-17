@@ -11,7 +11,7 @@ export default function ParallaxBlock() {
               <div className="contenido">
                 <p><strong>¿Tienes un terreno? ¿Una vivienda antigua? ¿Un local? ¿O una idea?</strong></p>
                 <p>
-                  En Modular Projects construimos y damos forma a todo lo que pase<br />
+                  En Modular Norte construimos y damos forma a todo lo que pase<br />
                   por tu mente.
                 </p>
 

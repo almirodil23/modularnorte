@@ -1,7 +1,7 @@
 const faqs = [
   {
     id: 1,
-    question: "¿Cómo son las casas que construye Modular Projects?",
+    question: "¿Cómo son las casas que construye Modular Norte?",
     answer: `
       Los casas modulares que construimos tienen consideración de bien inmueble, siempre y cuando se construyan en un solar urbano o rústico, se realicen los proyectos básicos y de ejecución visados por el Colegio de Arquitectos pertinente y se conceda la pertinente licencia de obras municipal.
       <br/><br/>
@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     id: 2,
-    question: "¿Son más baratas las construcciones de Modular Projects?",
+    question: "¿Son más baratas las construcciones de Modular Norte?",
     answer: `
       A igualdad de calidad nuestras viviendas son más baratas.
       <br/><br/>
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     id: 3,
-    question: "¿Cuáles son las formas de pago de Modular Projects?",
+    question: "¿Cuáles son las formas de pago de Modular Norte?",
     answer: `
       Las formas de pago son flexibles, mediante certificaciones de obra.
       <br/><br/>
@@ -34,7 +34,7 @@ const faqs = [
     id: 4,
     question: "¿Las viviendas con estructura de madera son sólidas?",
     answer: `
-      MODULAR PROJECTS apuesta por estructuras de madera como en numerosos países europeos.
+      MODULAR Norte apuesta por estructuras de madera como en numerosos países europeos.
       <br/><br/>
       Existen construcciones de madera con siglos de antigüedad. Hoy, gracias a tratamientos modernos, este tipo de estructura garantiza gran durabilidad.
       <br/><br/>
@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     id: 5,
-    question: "¿Las viviendas de Modular Projects son hipotecables?",
+    question: "¿Las viviendas de Modular Norte son hipotecables?",
     answer: `
       Sí. Son bienes inmuebles con proyecto visado, licencia de obra y cédula de habitabilidad.
       <br/><br/>
@@ -97,7 +97,7 @@ const faqs = [
   },
   {
     id: 11,
-    question: "¿Qué garantías da Modular Projects?",
+    question: "¿Qué garantías da Modular Norte?",
     answer: `
       Garantía legal de 10 años para cualquier estructura.
       <br/><br/>

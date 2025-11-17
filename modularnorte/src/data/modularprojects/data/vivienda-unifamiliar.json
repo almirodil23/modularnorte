@@ -1,0 +1,13 @@
+{
+  "slug": "vivienda-unifamiliar",
+  "title": "Vivienda unifamiliar",
+  "location": "Puzol, Valencia.",
+  "description": "Puzol, Valencia.",
+  "cover": "/projects/vivienda-unifamiliar/cover.jpg",
+  "gallery": [
+    "/projects/vivienda-unifamiliar/img_1.jpg",
+    "/projects/vivienda-unifamiliar/img_2.jpg",
+    "/projects/vivienda-unifamiliar/img_3.jpg",
+    "/projects/vivienda-unifamiliar/img_4.jpg"
+  ]
+}

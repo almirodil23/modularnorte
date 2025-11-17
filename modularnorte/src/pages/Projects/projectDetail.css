@@ -1,0 +1,70 @@
+
+.fragmento_fijo {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.fragmento_scroll {
+  padding: 0;
+}
+
+.volver {
+  color: #000;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.volver i {
+  margin-right: 6px;
+}
+
+.titulo {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.titulo p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.project-main-img {
+  width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.ordenar_galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.div_articulo img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.contacto_articulo {
+  margin-top: 40px;
+  background: #000;
+  padding: 40px;
+  color: #fff;
+  text-align: center;
+}
+
+.boton_linea_blanco {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 15px;
+}

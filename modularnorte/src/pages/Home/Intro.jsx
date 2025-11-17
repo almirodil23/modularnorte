@@ -13,12 +13,12 @@ export default function Intro() {
           </li>
 
           <div className="fragmento_sup">
-            <div className="texto_vertical"><span>Modular Projects</span></div>
+            <div className="texto_vertical"><span>Modular Norte</span></div>
 
             <div className="textos_intro">
               <h2 className="titulo">Viviendas Modulares de diseño</h2>
 
-              <p>En <strong>Modular Projects</strong> diseñamos a medida...</p>
+              <p>En <strong>Modular Norte</strong> diseñamos a medida...</p>
               <p>Además, nuestro departamento de decoración...</p>
               <p>Nuestro equipo formado por arquitectos...</p>
               <p>Modular Projects da forma a tus ideas...</p>
@@ -28,11 +28,10 @@ export default function Intro() {
           </div>
 
           <div className="video">
-            <video
-              src="/assets/custom/video/modular_projects_red.mp4"
-              controls
-              poster="/assets/custom/img/miniatura_video.jpg"
-            ></video>
+            <img
+              src="/assets/custom/img/fotoxvideo.jpg"
+              alt="Modular Projects"
+            />
           </div>
         </div>
 
@@ -60,7 +59,7 @@ export default function Intro() {
               <p>Más de 300 viviendas llave en mano...</p>
 
               <h4>PROCESOS</h4>
-              <p>En Modular Projects nos ocupamos...</p>
+              <p>En Modular Norte nos ocupamos...</p>
             </div>
           </div>
         </div>

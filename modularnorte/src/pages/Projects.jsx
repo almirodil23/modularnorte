@@ -1,6 +1,9 @@
-import projects from "../data/projects";
+import projects from "../data/modularprojects";
+import "./projects.css";
+
 
 export default function Projects() {
+
   return (
     <div className="pagina_con_fragmento_fijo container-fluid projects-page">
 
@@ -9,7 +12,7 @@ export default function Projects() {
 
         <div className="col-xl-4 col-lg-5 centrar_al_medio fragmento_fijo">
           <div className="contenido">
-            <h1 className="titulo">Modular Projects</h1>
+            <h1 className="titulo">Modular Norte</h1>
             <p>
               Llevamos diseñando y construyendo llave en mano viviendas modulares
               basadas en la construcción industrializada modular con estructura de
@@ -36,7 +39,7 @@ export default function Projects() {
             {projects.map((p) => (
               <div className="div_articulo" key={p.id}>
                 <a href={`/producto/${p.id}/${p.slug}`} className="centrar_al_medio">
-                  <img src={p.img} loading="lazy" alt={p.title} />
+                  <img src={p.img} alt={p.title} loading="lazy" />
                   <h4 className="titulo">
                     {p.title}
                     <br />
@@ -53,3 +56,4 @@ export default function Projects() {
     </div>
   );
 }
+

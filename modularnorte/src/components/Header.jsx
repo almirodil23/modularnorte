@@ -3,7 +3,7 @@ export default function Header() {
     <header id="header">
       <div className="logo_head">
         <a href="/">
-          <img src="/assets/custom/img/logo_menu.png" alt="Logo Modular Projects" />
+          <img src="/assets/custom/img/logo_menu.png" alt="Logo Modular Projects" style={{position:"fixed"}}/>
         </a>
       </div>
 

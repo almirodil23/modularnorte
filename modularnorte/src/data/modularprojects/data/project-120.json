@@ -1,0 +1,12 @@
+{
+  "slug": "project-120",
+  "title": "Project 120",
+  "location": "Algeciras, Cádiz",
+  "description": "Algeciras, Cádiz",
+  "cover": "/projects/project-120/cover.jpg",
+  "gallery": [
+    "/projects/project-120/img_1.jpg",
+    "/projects/project-120/img_2.jpg",
+    "/projects/project-120/img_3.jpg"
+  ]
+}

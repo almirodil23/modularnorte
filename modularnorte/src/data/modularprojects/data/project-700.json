@@ -1,0 +1,12 @@
+{
+  "slug": "project-700",
+  "title": "Project 700",
+  "location": "Las Rozas, Madrid.",
+  "description": "Las Rozas, Madrid.",
+  "cover": "/projects/project-700/cover.jpg",
+  "gallery": [
+    "/projects/project-700/img_1.jpg",
+    "/projects/project-700/img_2.jpg",
+    "/projects/project-700/img_3.jpg"
+  ]
+}

@@ -35,7 +35,7 @@ export default function Testimonials() {
               <div className="owl-carousel carrusel_opiniones owl-theme">
 
                 <div className="item">
-                  <p>“Modular Projects realizó la reforma...”</p>
+                  <p>“Modular Norte realizó la reforma...”</p>
                   <h6>B&S</h6>
                 </div>
 
