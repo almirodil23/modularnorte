@@ -29,7 +29,7 @@ jobs:
           script: |
             rm -rf /var/www/vhosts/modularnorte.com/httpdocs/*
 
-      - name: 📤 Upload dist/ to server
+      - name: 📤 Upload dist/ + public/
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -41,6 +41,7 @@ jobs:
           target: "/var/www/vhosts/modularnorte.com/httpdocs"
           overwrite: true
           strip_components: 1
+
 
       - name: 🔧 Fix permissions
         uses: appleboy/ssh-action@v0.1.8
