@@ -2808,6 +2808,18 @@ letter-spacing: 1px;
 .pagina_standard h2,
 .pagina_standard h3{
 
+    color: #ffffff;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.7rem;
+    letter-spacing: 7px;
+    margin-bottom: 0px;
+    border-bottom: solid 1px #434343;
+    width: max-content;
+    margin: 0 auto;
+    padding: 7px 49px;
+
 }
 
 .titulo_pagina_standard{
@@ -2815,7 +2827,7 @@ letter-spacing: 1px;
 }
 
 .titulo_pagina_standard{
-background-image: url(/assets/custom/img/cabecera.jpg);
+background-image: url(/assets/custom/img/home.JPG);
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
@@ -3835,6 +3847,7 @@ font-size: 12px;
 .ficha_blog.ficha_proceso{
 /*border: solid 1px white;*/
 border-style: dashed;
+border: 1px solid black;
 }
 
 .ficha_blog.ficha_proceso a img {
