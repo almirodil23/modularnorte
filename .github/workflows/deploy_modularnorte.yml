@@ -15,7 +15,7 @@ jobs:
 
       - name: 🏗️ Build project with Vite
         run: |
-          cd modularnorte/modularnorte
+          cd modularnorte
           npm install --legacy-peer-deps
           npm run build
           ls -R .
@@ -36,11 +36,11 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: |
-            modularnorte/modularnorte/dist/**
-            modularnorte/modularnorte/public/**
+            modularnorte/dist/**
+            modularnorte/public/**
           target: "/var/www/vhosts/modularnorte.com/httpdocs"
           overwrite: true
-          strip_components: 2   # ahora sí es correcto
+          strip_components: 1
 
       - name: 🔧 Fix permissions
         uses: appleboy/ssh-action@v0.1.8
