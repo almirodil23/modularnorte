@@ -3,12 +3,12 @@
   "title": "Concesionario Massini Cars",
   "location": "Elche. Alicante",
   "description": "Elche. Alicante",
-  "cover": "/projects/concesionario-massini-cars/cover.jpeg",
+  "cover": "cover.jpeg",
   "gallery": [
-    "/projects/concesionario-massini-cars/img_1.jpeg",
-    "/projects/concesionario-massini-cars/img_2.jpeg",
-    "/projects/concesionario-massini-cars/img_3.jpeg",
-    "/projects/concesionario-massini-cars/img_4.jpeg",
-    "/projects/concesionario-massini-cars/img_5.jpeg"
+    "img_1.jpeg",
+    "img_2.jpeg",
+    "img_3.jpeg",
+    "img_4.jpeg",
+    "img_5.jpeg"
   ]
 }

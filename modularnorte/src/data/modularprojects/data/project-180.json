@@ -3,15 +3,15 @@
   "title": "Project 180",
   "location": "Adeje. Tenerife",
   "description": "Adeje. Tenerife",
-  "cover": "/projects/project-180/cover.jpeg",
+  "cover": "cover.jpeg",
   "gallery": [
-    "/projects/project-180/img_1.jpeg",
-    "/projects/project-180/img_2.jpg",
-    "/projects/project-180/img_3.jpg",
-    "/projects/project-180/img_4.jpg",
-    "/projects/project-180/img_5.jpg",
-    "/projects/project-180/img_6.jpeg",
-    "/projects/project-180/img_7.jpeg",
-    "/projects/project-180/img_8.jpeg"
+    "img_1.jpeg",
+    "img_2.jpg",
+    "img_3.jpg",
+    "img_4.jpg",
+    "img_5.jpg",
+    "img_6.jpeg",
+    "img_7.jpeg",
+    "img_8.jpeg"
   ]
 }

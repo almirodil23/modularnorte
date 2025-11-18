@@ -3,10 +3,10 @@
   "title": "Project 170",
   "location": "Busot. Alicante",
   "description": "Busot. Alicante",
-  "cover": "/projects/project-170/cover.jpeg",
+  "cover": "cover.jpeg",
   "gallery": [
-    "/projects/project-170/img_1.jpeg",
-    "/projects/project-170/img_2.jpeg",
-    "/projects/project-170/img_3.jpeg"
+    "img_1.jpeg",
+    "img_2.jpeg",
+    "img_3.jpeg"
   ]
 }

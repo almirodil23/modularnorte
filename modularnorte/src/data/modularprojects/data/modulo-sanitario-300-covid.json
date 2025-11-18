@@ -3,17 +3,17 @@
   "title": "Modulo Sanitario 300 Covid",
   "location": "Carchalejo, Jaén",
   "description": "Carchalejo, Jaén",
-  "cover": "/projects/modulo-sanitario-300-covid/cover.jpg",
+  "cover": "cover.jpg",
   "gallery": [
-    "/projects/modulo-sanitario-300-covid/img_1.jpg",
-    "/projects/modulo-sanitario-300-covid/img_2.jpg",
-    "/projects/modulo-sanitario-300-covid/img_3.jpg",
-    "/projects/modulo-sanitario-300-covid/img_4.jpg",
-    "/projects/modulo-sanitario-300-covid/img_5.jpg",
-    "/projects/modulo-sanitario-300-covid/img_6.jpg",
-    "/projects/modulo-sanitario-300-covid/img_7.jpg",
-    "/projects/modulo-sanitario-300-covid/img_8.jpg",
-    "/projects/modulo-sanitario-300-covid/img_9.jpg",
-    "/projects/modulo-sanitario-300-covid/img_10.jpg"
+    "img_1.jpg",
+    "img_2.jpg",
+    "img_3.jpg",
+    "img_4.jpg",
+    "img_5.jpg",
+    "img_6.jpg",
+    "img_7.jpg",
+    "img_8.jpg",
+    "img_9.jpg",
+    "img_10.jpg"
   ]
 }

@@ -3,18 +3,18 @@
   "title": "Project 300",
   "location": "Burdeos, Francia.",
   "description": "Burdeos, Francia.",
-  "cover": "/projects/project-300/cover.jpg",
+  "cover": "cover.jpg",
   "gallery": [
-    "/projects/project-300/img_1.jpg",
-    "/projects/project-300/img_2.jpg",
-    "/projects/project-300/img_3.jpg",
-    "/projects/project-300/img_4.jpg",
-    "/projects/project-300/img_5.jpg",
-    "/projects/project-300/img_6.jpg",
-    "/projects/project-300/img_7.jpg",
-    "/projects/project-300/img_8.jpg",
-    "/projects/project-300/img_9.jpg",
-    "/projects/project-300/img_10.jpg",
-    "/projects/project-300/img_11.jpg"
+    "img_1.jpg",
+    "img_2.jpg",
+    "img_3.jpg",
+    "img_4.jpg",
+    "img_5.jpg",
+    "img_6.jpg",
+    "img_7.jpg",
+    "img_8.jpg",
+    "img_9.jpg",
+    "img_10.jpg",
+    "img_11.jpg"
   ]
 }

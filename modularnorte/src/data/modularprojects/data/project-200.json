@@ -3,15 +3,15 @@
   "title": "Project 200",
   "location": "Finestrat, Alicante.",
   "description": "Finestrat, Alicante.",
-  "cover": "/projects/project-200/cover.jpg",
+  "cover": "cover.jpg",
   "gallery": [
-    "/projects/project-200/img_1.jpg",
-    "/projects/project-200/img_2.jpg",
-    "/projects/project-200/img_3.jpg",
-    "/projects/project-200/img_4.jpg",
-    "/projects/project-200/img_5.jpg",
-    "/projects/project-200/img_6.jpg",
-    "/projects/project-200/img_7.jpg",
-    "/projects/project-200/img_8.jpg"
+    "img_1.jpg",
+    "img_2.jpg",
+    "img_3.jpg",
+    "img_4.jpg",
+    "img_5.jpg",
+    "img_6.jpg",
+    "img_7.jpg",
+    "img_8.jpg"
   ]
 }

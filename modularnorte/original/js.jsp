@@ -1,1 +1,0 @@
-var LCMS_CONTEXT_PATH = '';var LCMS_USA_STOCK = false;var LCMS_LANG = 'es';

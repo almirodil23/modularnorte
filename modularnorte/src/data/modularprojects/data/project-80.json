@@ -3,11 +3,11 @@
   "title": "Project 80",
   "location": "",
   "description": "Vivienda modular de 80m2 en una sola planta, de dos dormitorios dobles y dos baños aprovechando al maximo los espacios.  La Luz solar era clave en este proyecto de arquitectura donde también se garantizó el máximo aislamiento. Desde 104.000€ mas IVA llave en mano, incluida cimentación, honorarios tecnicos , trasporte y montaje.",
-  "cover": "/projects/project-80/cover.jpeg",
+  "cover": "cover.jpeg",
   "gallery": [
-    "/projects/project-80/img_1.jpeg",
-    "/projects/project-80/img_2.jpeg",
-    "/projects/project-80/img_3.jpeg",
-    "/projects/project-80/img_4.jpeg"
+    "img_1.jpeg",
+    "img_2.jpeg",
+    "img_3.jpeg",
+    "img_4.jpeg"
   ]
 }

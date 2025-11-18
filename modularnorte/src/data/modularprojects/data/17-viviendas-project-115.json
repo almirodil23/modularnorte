@@ -3,14 +3,14 @@
   "title": "17 Viviendas Project 115",
   "location": "Corvera, Murcia",
   "description": "Corvera, Murcia",
-  "cover": "/projects/17-viviendas-project-115/cover.jpg",
+  "cover": "cover.jpg",
   "gallery": [
-    "/projects/17-viviendas-project-115/img_1.jpg",
-    "/projects/17-viviendas-project-115/img_2.jpg",
-    "/projects/17-viviendas-project-115/img_3.jpg",
-    "/projects/17-viviendas-project-115/img_4.jpg",
-    "/projects/17-viviendas-project-115/img_5.jpg",
-    "/projects/17-viviendas-project-115/img_6.jpg",
-    "/projects/17-viviendas-project-115/img_7.jpg"
+    "img_1.jpg",
+    "img_2.jpg",
+    "img_3.jpg",
+    "img_4.jpg",
+    "img_5.jpg",
+    "img_6.jpg",
+    "img_7.jpg"
   ]
 }

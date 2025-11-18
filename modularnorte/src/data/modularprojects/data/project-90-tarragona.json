@@ -3,10 +3,10 @@
   "title": "Project 90 Tarragona",
   "location": "Tarragona",
   "description": "Tarragona",
-  "cover": "/projects/project-90-tarragona/cover.jpg",
+  "cover": "cover.jpg",
   "gallery": [
-    "/projects/project-90-tarragona/img_1.jpg",
-    "/projects/project-90-tarragona/img_2.jpg",
-    "/projects/project-90-tarragona/img_3.jpg"
+    "img_1.jpg",
+    "img_2.jpg",
+    "img_3.jpg"
   ]
 }

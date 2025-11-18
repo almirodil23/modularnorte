@@ -3,12 +3,12 @@
   "title": "Centro Multiusos",
   "location": "Linares, Jaén",
   "description": "Linares, Jaén",
-  "cover": "/projects/centro-multiusos/cover.jpg",
+  "cover": "cover.jpg",
   "gallery": [
-    "/projects/centro-multiusos/img_1.jpg",
-    "/projects/centro-multiusos/img_2.jpg",
-    "/projects/centro-multiusos/img_3.jpg",
-    "/projects/centro-multiusos/img_4.jpg",
-    "/projects/centro-multiusos/img_5.jpg"
+    "img_1.jpg",
+    "img_2.jpg",
+    "img_3.jpg",
+    "img_4.jpg",
+    "img_5.jpg"
   ]
 }

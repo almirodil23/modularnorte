@@ -3,14 +3,14 @@
   "title": "Restaurante Ca Joan",
   "location": "Altea, Alicante",
   "description": "Altea, Alicante",
-  "cover": "/projects/restaurante-ca-joan/cover.jpg",
+  "cover": "cover.jpg",
   "gallery": [
-    "/projects/restaurante-ca-joan/img_1.jpg",
-    "/projects/restaurante-ca-joan/img_2.jpg",
-    "/projects/restaurante-ca-joan/img_3.jpg",
-    "/projects/restaurante-ca-joan/img_4.jpg",
-    "/projects/restaurante-ca-joan/img_5.jpg",
-    "/projects/restaurante-ca-joan/img_6.jpg",
-    "/projects/restaurante-ca-joan/img_7.jpg"
+    "img_1.jpg",
+    "img_2.jpg",
+    "img_3.jpg",
+    "img_4.jpg",
+    "img_5.jpg",
+    "img_6.jpg",
+    "img_7.jpg"
   ]
 }

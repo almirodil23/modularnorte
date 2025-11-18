@@ -3,10 +3,10 @@
   "title": "Project 160",
   "location": "Muchamiel, Alicante",
   "description": "Muchamiel, Alicante",
-  "cover": "/projects/project-160/cover.jpg",
+  "cover": "cover.jpg",
   "gallery": [
-    "/projects/project-160/img_1.jpg",
-    "/projects/project-160/img_2.jpg",
-    "/projects/project-160/img_3.jpg"
+    "img_1.jpg",
+    "img_2.jpg",
+    "img_3.jpg"
   ]
 }
