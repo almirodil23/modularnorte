@@ -1534,9 +1534,12 @@ font-size: 2.2rem;
 }
 
 .info_home .textos_intro p{
-color: #BABABA;
+color: #0000006e;
 text-align: justify;
+font-weight: 500;
 line-height: 26px; 
+letter-spacing: 1px;
+
 }
 
 .info_home .textos_intro p:last-child{
@@ -1814,7 +1817,7 @@ height: 760px;
 }
 
 .miniatura_proyecto a{
-background-color: #fff;
+background-color: transparent;
 height: 100%;
 padding: 50px 35px;    
 display: flex;
@@ -1824,7 +1827,7 @@ position: relative;
 }
 
 .miniatura_proyecto h4{
-color: black;
+color: white;
 font-weight: 900;
 text-transform: uppercase;
 letter-spacing: 4px;
@@ -1840,7 +1843,7 @@ letter-spacing: 4px;
 }
 
 .miniatura_proyecto a:hover{
-background-color: #fff;  
+background-color: transparent;  
 }
 
 .opinion_clientes .info_home .textos_intro .titulo {
@@ -3582,26 +3585,6 @@ text-decoration-color: #ffffff2b !important;
 color: #9f988e;
 }
 
-.formulario_contacto .form-control,
-.formulario_contacto .form-control select{
-background-color: #1c1c1c;
-border: solid 1px #ffffff29;
-border-radius: 0px;
-color: black;
-font-weight: bold;
-margin-bottom: 18px;
-/*text-align: center;*/
-}
-
-.formulario_contacto .form-control::placeholder{
-color: #949494;
-/*text-align: center;*/
-margin-bottom: 9px;
-font-size: 14px;
-letter-spacing: 0.5px;
-font-weight: bold;    
-font-style: italic;    
-}
 
 .formulario_contacto .form-control:focus{
 border: solid 1px white;
@@ -4297,7 +4280,7 @@ left: -59px;
 }
  .animated-arrow {
 display: inline-block;
-color: black;
+color: white;
 font-size: 14px;
 position: relative;
 transition: all 0.2s;

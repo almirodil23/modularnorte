@@ -192,7 +192,7 @@ jQuery(document).ready(function($) {
 				  icon: "/assets/custom/img/mark-google.png"
 			  })
 			  .infowindow({
-				  content: "<h4 style='color:margin-bottom: 5px;font-weight:bold;'class='markgoogle'>Modular Projects</h4><p>Calle Segura, 6<br> 03004 Alicante<br>Telf:  +34 865 68 38 86<br>clientes@modularprojects.es</p>"
+				  content: "<h4 style='color:margin-bottom: 5px;font-weight:bold;'class='markgoogle'>Modular Norte</h4><p>Calle Segura, 6<br> 03004 Alicante<br>Telf:  +34 865 68 38 86<br>clientes@modularprojects.es</p>"
 			  })
 			  .then(function (infowindow) {
 				var map = this.get(0);

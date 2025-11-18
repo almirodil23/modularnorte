@@ -1,4 +1,10 @@
+import projects from "../../data/modularprojects";
+import "./projectspreview.css";
+
 export default function ProjectsPreview() {
+  // Tomamos los 4 primeros proyectos (o los que quieras)
+  const preview = projects.slice(0, 4);
+
   return (
     <>
       {/* Título negro */}
@@ -10,106 +16,43 @@ export default function ProjectsPreview() {
         </div>
       </div>
 
-      {/* Cuadrícula de proyectos */}
+      {/* Cuadrícula */}
       <div className="container-fluid listado_proyectos">
         <div className="row">
-
-          {/* 1 */}
-          <div
-            className="col-lg-3 col-md-6 miniatura_proyecto"
-            style={{ backgroundImage: 'url(/recurso/articulo/portada_project_180_aspe.jpg)' }}
-          >
-            <a href="/producto/117/project-180">
-              <div className="texto">
-                <h4>Project 180</h4>
-                <h5>Aspe, Alicante</h5>
-              </div>
-
-              <div className="flecha_especial">
-                <div className="animated-arrow">
-                  <span className="the-arrow -left"><span className="shaft"></span></span>
-                  <span className="main">
-                    <span className="text">VER MÁS</span>
-                    <span className="the-arrow -right"><span className="shaft"></span></span>
-                  </span>
+          {preview.map((p) => (
+            <div
+              key={p.id}
+              className="col-lg-3 col-md-6 miniatura_proyecto"
+              style={{
+                backgroundImage: `url(${p.img})`,
+              }}
+            >
+              <a href={`/producto/${p.id}/${p.slug}`}>
+                <div className="texto">
+                  <h4>{p.title}</h4>
+                  <h5>{p.location}</h5>
                 </div>
-              </div>
-            </a>
-          </div>
 
-          {/* 2 */}
-          <div
-            className="col-lg-3 col-md-6 miniatura_proyecto"
-            style={{ backgroundImage: 'url(/recurso/articulo/1_3.jpg)' }}
-          >
-            <a href="/producto/57/project-140">
-              <div className="texto">
-                <h4>Project 140</h4>
-                <h5>Adeje, Tenerife</h5>
-              </div>
-
-              <div className="flecha_especial">
-                <div className="animated-arrow">
-                  <span className="the-arrow -left"><span className="shaft"></span></span>
-                  <span className="main">
-                    <span className="text">VER MÁS</span>
-                    <span className="the-arrow -right"><span className="shaft"></span></span>
-                  </span>
+                <div className="flecha_especial">
+                  <div className="animated-arrow">
+                    <span className="the-arrow -left">
+                      <span className="shaft"></span>
+                    </span>
+                    <span className="main">
+                      <span className="text">VER MÁS</span>
+                      <span className="the-arrow -right">
+                        <span className="shaft"></span>
+                      </span>
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-
-          {/* 3 */}
-          <div
-            className="col-lg-3 col-md-6 miniatura_proyecto"
-            style={{ backgroundImage: 'url(/recurso/articulo/image0_mdp.jpeg)' }}
-          >
-            <a href="/producto/116/project-170">
-              <div className="texto">
-                <h4>Project 170</h4>
-                <h5>Guadalajara</h5>
-              </div>
-
-              <div className="flecha_especial">
-                <div className="animated-arrow">
-                  <span className="the-arrow -left"><span className="shaft"></span></span>
-                  <span className="main">
-                    <span className="text">VER MÁS</span>
-                    <span className="the-arrow -right"><span className="shaft"></span></span>
-                  </span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          {/* 4 */}
-          <div
-            className="col-lg-3 col-md-6 miniatura_proyecto"
-            style={{ backgroundImage: 'url(/recurso/articulo/56a257a1_5e51_4fd6_a468_af2b54d3b0a6.jpg)' }}
-          >
-            <a href="/producto/115/project-120">
-              <div className="texto">
-                <h4>Project 120</h4>
-                <h5>Muchamiel, Alicante</h5>
-              </div>
-
-              <div className="flecha_especial">
-                <div className="animated-arrow">
-                  <span className="the-arrow -left"><span className="shaft"></span></span>
-                  <span className="main">
-                    <span className="text">VER MÁS</span>
-                    <span className="the-arrow -right"><span className="shaft"></span></span>
-                  </span>
-                </div>
-              </div>
-            </a>
-          </div>
-
+              </a>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Botón debajo */}
+      {/* Botón */}
       <div className="container-fluid titulo_negro">
         <div className="row">
           <div className="col-12">

@@ -16,7 +16,7 @@ export default function Projects() {
             <p>
               Llevamos diseñando y construyendo llave en mano viviendas modulares
               basadas en la construcción industrializada modular con estructura de
-              madera más de 12 años. Con más de 300 viviendas realizadas por toda España,
+              madera más de 15 años. Con más de 400 viviendas realizadas por toda España,
               incluyendo Baleares y Canarias.
               <br /><br />
               Una construcción ecológica, segura y rápida. Todos nuestros proyectos se

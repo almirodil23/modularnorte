@@ -18,11 +18,11 @@ export default function Footer() {
 
         <div className="enlaces_contacto">
           <ul>
-            <li><a href="tel:657156065">657 15 60 65</a></li>
+            <li><a href="tel:657156065">695 884 896</a></li>
             <li className="separador">|</li>
-            <li><a href="mailto:clientes@modularprojects.es">clientes@modularprojects.es</a></li>
+            <li><a href="mailto:clientes@modularnorte.com">clientes@modularnorte.com</a></li>
             <li className="separador">|</li>
-            <li><a>ALICANTE – SPAIN</a></li>
+            <li><a>A CORUÑA – SPAIN</a></li>
 
             <li className="redes">
               <a href="https://facebook.com" target="_blank"><i className="fa fa-facebook"></i></a>

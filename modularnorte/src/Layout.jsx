@@ -55,11 +55,11 @@ return (
 
 <div className="enlaces_contacto">
 <ul>
-<li><a href="tel:657156065">657 15 60 65</a></li>
+<li><a href="tel:657156065">695 88 48 96</a></li>
 <li className="separador">|</li>
-<li><a href="mailto:clientes@modularnorte.es">clientes@modularnorte.es</a></li>
+<li><a href="mailto:clientes@modularnorte.com">clientes@modularnorte.com</a></li>
 <li className="separador">|</li>
-<li><a>ALICANTE – SPAIN</a></li>
+<li><a>A CORUÑA – SPAIN</a></li>
 </ul>
 </div>
 </footer>
