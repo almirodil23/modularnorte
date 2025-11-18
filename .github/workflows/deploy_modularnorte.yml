@@ -13,17 +13,13 @@ jobs:
       - name: 🧩 Checkout
         uses: actions/checkout@v3
 
-      - name: 🗂️ Debug initial structure
-        run: ls -R .
-
       - name: 🏗️ Build project with Vite
         run: |
           cd modularnorte
           npm install --legacy-peer-deps
           npm run build
           echo "--- FINAL STRUCTURE ---"
-          cd ..
-          ls -R modularnorte
+          ls -R dist
 
       - name: 🧹 Clean remote directory
         uses: appleboy/ssh-action@master
@@ -40,11 +36,10 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "./dist/**"
+          source: "modularnorte/dist/**"
           target: "/var/www/vhosts/modularnorte.com/httpdocs"
           overwrite: true
-          strip_components: 1
-
+          strip_components: 2
 
       - name: 🔧 Fix permissions
         uses: appleboy/ssh-action@v0.1.8
@@ -53,8 +48,5 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            chown -R www-data:www-data /var/www/vhosts/modularnorte.com/httpdocs
+            chown -R modularnorte.com_8zmjuls33v8:psacln /var/www/vhosts/modularnorte.com/httpdocs
             chmod -R 755 /var/www/vhosts/modularnorte.com/httpdocs
-
-      - name: 🎉 Done
-        run: echo "Deployment completed successfully!"
