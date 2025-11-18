@@ -2,7 +2,7 @@ export default function ParallaxBlock() {
   return (
     <div
       className="container-fluid parallax"
-      style={{ backgroundImage: 'url(/recurso/pagina/parallax_home.jpg)' }}
+      style={{ backgroundColor: "transparent" }}
     >
       <div className="padding_seccion">
         <div className="container">

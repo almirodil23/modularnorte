@@ -26,14 +26,13 @@ export default function Contact() {
   }, []);
 
   return (
-    <div className="pagina_con_fragmento_fijo container-fluid contact-page">
+    <div className="pagina_con_fragmento_fijo container-fluid contact-page" style={{ backgroundColor: "white" }}>
       <div className="row justify-content-between">
 
         {/* COLUMNA IZQUIERDA */}
         <div className="col-xl-4 col-lg-5 centrar_al_medio fragmento_fijo">
           <div className="contenido">
             <h1 className="titulo">Cuéntanos tu proyecto</h1>
-aa
             <p>
               Estaremos encantados de atenderte, que nos cuentes tu proyecto y resolver todas tus dudas online o en nuestra oficina de A CORUÑA.<br /><br />
               Déjanos tus datos y el motivo de la consulta y nos pondremos en contacto contigo lo antes posible.
