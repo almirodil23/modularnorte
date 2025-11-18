@@ -1,0 +1,14 @@
+.contenido_texto {
+  padding: 40px 60px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.contenido_texto p {
+  margin-bottom: 25px;
+}
+
+.pagina_con_fragmento_fijo {
+  background-color: #000; /* como en Modular Projects */
+}

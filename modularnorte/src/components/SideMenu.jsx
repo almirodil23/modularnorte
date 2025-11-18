@@ -37,10 +37,7 @@ export default function SideMenu() {
             <Link to="/projects" className="nav-link">Proyectos</Link>
           </li>
 
-          <li className="nav-item">
-            <Link to="/tour-virtual" className="nav-link">Tours Virtuales</Link>
-          </li>
-
+  
           <li className="nav-item">
             <Link to="/proceso-constructivo" className="nav-link">Proceso Constructivo</Link>
           </li>
@@ -53,9 +50,7 @@ export default function SideMenu() {
             <Link to="/nosotros" className="nav-link">Nosotros</Link>
           </li>
 
-          <li className="nav-item">
-            <Link to="/blog" className="nav-link">Blog</Link>
-          </li>
+
 
           <li className="nav-item">
             <Link to="/contactar" className="nav-link">Contacto</Link>

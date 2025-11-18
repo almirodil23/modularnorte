@@ -1,17 +1,17 @@
-const modules = import.meta.glob('./data/*.json', { eager: true });
+const modules = import.meta.glob('./json/*.json', { eager: true });
 
-let projects = Object.values(modules).map((mod) => {
-  const p = mod.default;
+let projects = Object.values(modules).map((m) => {
+  const p = m.default;
 
-  const folder = `/src/data/modularprojects/images/${p.slug}`;
-
-  // Limpia ruta → solo el nombre del archivo
-  const cleanName = (path) => path.split('/').pop();
+  // Carpeta pública donde estarán las imágenes
+  const folder = `/projects/${p.slug}`;
 
   return {
     ...p,
-    img: p.cover ? `${folder}/${cleanName(p.cover)}` : null,
-    gallery: p.gallery ? p.gallery.map(g => `${folder}/${cleanName(g)}`) : []
+    img: `${folder}/${p.cover.replace("/projects/" + p.slug + "/", "")}`,
+    gallery: p.gallery.map((g) =>
+      `${folder}/${g.replace("/projects/" + p.slug + "/", "")}`
+    ),
   };
 });
 
