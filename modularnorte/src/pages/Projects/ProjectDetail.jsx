@@ -1,20 +1,18 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./projectDetail.css"; // Estilos clonados
+import "./projectDetail.css";
 import projects from "../../data/modularprojects";
+import Lightbox from "./Lightbox"; // si existe
 
 export default function ProjectDetail() {
   const { slug } = useParams();
   const [project, setProject] = useState(null);
   const [activeImg, setActiveImg] = useState(null);
 
-
-
-useEffect(() => {
-  const p = projects.find((x) => x.slug === slug);
-  setProject(p);
-}, [slug]);
-
+  useEffect(() => {
+    const p = projects.find((x) => x.slug === slug);
+    setProject(p);
+  }, [slug]);
 
   if (!project) return <p>Cargando...</p>;
 
@@ -39,7 +37,7 @@ useEffect(() => {
           </div>
         </div>
 
-        {/* COLUMNA DERECHA (GALERÍA) */}
+        {/* GALERÍA */}
         <div className="col-xl-8 col-lg-7 fragmento_scroll">
 
           {/* Imagen principal */}
@@ -50,8 +48,7 @@ useEffect(() => {
             alt={project.title}
           />
 
-
-          {/* Galería */}
+          {/* Miniaturas */}
           <div id="_lcms_divLoad" className="ordenar_galeria ordenar_articulos">
             {project.gallery?.map((img, i) => (
               <div className="div_articulo" key={i}>
@@ -80,7 +77,6 @@ useEffect(() => {
       {activeImg && (
         <Lightbox image={activeImg} onClose={() => setActiveImg(null)} />
       )}
-
     </div>
   );
 }

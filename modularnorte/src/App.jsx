@@ -31,7 +31,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/tour-virtual" element={<TourVirtual />} />
         <Route path="/preguntas-frecuentes" element={<Preguntas />} />
-        <Route path="/producto/:id/:slug" element={<ProjectDetail />} />
+        <Route path="/producto/:slug" element={<ProjectDetail />} />
         <Route path="/proceso-constructivo" element={<ProcesoConstructivo />} />
       </Routes>
 

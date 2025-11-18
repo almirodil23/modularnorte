@@ -1,12 +1,17 @@
 {
   "slug": "project-160",
   "title": "Project 160",
-  "location": "Muchamiel, Alicante",
-  "description": "Muchamiel, Alicante",
+  "location": "Denia, Alicante",
+  "description": "Denia, Alicante",
   "cover": "cover.jpg",
   "gallery": [
-    "img_1.jpg",
     "img_2.jpg",
-    "img_3.jpg"
+    "img_3.jpg",
+    "img_4.jpg",
+    "img_5.jpg",
+    "img_6.jpg",
+    "img_7.jpg",
+    "img_8.jpg"
+    
   ]
 }

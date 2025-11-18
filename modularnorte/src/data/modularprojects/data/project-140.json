@@ -5,13 +5,15 @@
   "description": "Viladecavalls. Barcelona",
   "cover": "cover.jpeg",
   "gallery": [
-    "img_1.jpg",
     "img_2.jpg",
     "img_3.jpg",
     "img_4.jpg",
     "img_5.jpeg",
     "img_6.jpeg",
     "img_7.jpeg",
-    "img_8.jpeg"
+    "img_8.jpeg",
+    "img_9.jpeg"
+
+
   ]
 }

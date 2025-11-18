@@ -3,7 +3,10 @@ import "./projectspreview.css";
 
 export default function ProjectsPreview() {
   // Tomamos los 4 primeros proyectos (o los que quieras)
-  const preview = projects.slice(0, 4);
+  const slugs = ["project-120", "project-140", "project-160", "project-220"];
+
+  const preview = projects.filter(p => slugs.includes(p.slug));
+
 
   return (
     <>

@@ -221,8 +221,8 @@ opacity: 1;
 }
 
 .boton_flotante a{
-background-color: #fff;
-color: black;
+background-color: black;
+color: white;
 padding: 17px 20px;
 letter-spacing: 2px;
 text-transform: uppercase;
@@ -237,7 +237,8 @@ bottom: 25px;
 }
 
 .boton_flotante a:hover{
-background-color:#7c7771;
+background-color:white;
+color:black;     
 }
 
 .boton_adicional{
@@ -3850,7 +3851,7 @@ border-style: dashed;
 border: 1px dashed black;
 }
 .projects-grid .div_articulo h4 {
-  text-shadow: none;
+  text-shadow: none !important;
 }
 
 .ficha_blog.ficha_proceso a img {

@@ -13,7 +13,7 @@ export function ProyectosGrid() {
             className="col-lg-3 col-md-6 miniatura_proyecto"
             style={{ backgroundImage: `url(${p.img})` }}
           >
-            <a href={`/producto/${p.id}/${p.slug}`}>
+            <a href={`/producto/${p.slug}`}>
               <div className="texto">
                 <h4>{p.title}</h4>
                 <h5>{p.location}</h5>
