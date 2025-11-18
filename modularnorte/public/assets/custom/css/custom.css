@@ -3847,7 +3847,10 @@ font-size: 12px;
 .ficha_blog.ficha_proceso{
 /*border: solid 1px white;*/
 border-style: dashed;
-border: 1px solid black;
+border: 1px dashed black;
+}
+.projects-grid .div_articulo h4 {
+  text-shadow: none;
 }
 
 .ficha_blog.ficha_proceso a img {

@@ -44,11 +44,12 @@ useEffect(() => {
 
           {/* Imagen principal */}
           <img
-            src={project.cover || project.img}
-            onClick={() => setActiveImg(project.cover || project.img)}
+            src={project.img}
+            onClick={() => setActiveImg(project.img)}
             className="project-main-img"
             alt={project.title}
           />
+
 
           {/* Galería */}
           <div id="_lcms_divLoad" className="ordenar_galeria ordenar_articulos">
