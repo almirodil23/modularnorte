@@ -145,8 +145,6 @@ aa
             </div>
 
           </form>
-
-
           <img src="/assets/custom/img/home.JPG" className="footer-img" />
         </div>
       </div>
