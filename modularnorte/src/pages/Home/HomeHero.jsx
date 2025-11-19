@@ -21,7 +21,7 @@ export default function HomeHero() {
           </div>
 
           <div className="col-12 boton">
-            <a href="/projects/" className="boton_linea_blanco">
+            <a href="/projects" className="boton_linea_blanco">
               Ver Proyectos
             </a>
           </div>
