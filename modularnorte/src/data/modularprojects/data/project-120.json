@@ -1,13 +1,21 @@
 {
   "slug": "project-120",
   "title": "Project 120",
-  "location": "Muchamiel, Alicante",
-  "description": "Muchamiel, Alicante",
+  "location": "San Juan. Alicante",
+  "description": "San Juan. Alicante\n\nVivienda con cubierta a dos aguas formando un juego espacial muy interesante. Esta vivienda tiene 120m2 en una sola planta con 3 dormitorios dobles y dos baños. Su precio es de 156.000€ + IVA. Actualmente en construccion.",
   "cover": "cover.jpg",
   "gallery": [
+    "img_1.jpg",
     "img_2.jpg",
     "img_3.jpg",
     "img_4.jpg",
-    "img_5.jpg"
+    "img_5.jpg",
+    "img_6.jpg",
+    "img_7.jpg",
+    "img_8.jpg",
+    "img_9.jpg",
+    "img_10.jpg",
+    "img_11.jpg",
+    "img_12.jpg"
   ]
 }

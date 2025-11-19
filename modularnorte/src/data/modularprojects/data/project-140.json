@@ -1,19 +1,11 @@
 {
   "slug": "project-140",
   "title": "Project 140",
-  "location": "Viladecavalls. Barcelona",
-  "description": "Viladecavalls. Barcelona",
+  "location": "Tijoco. Tenerife",
+  "description": "Tijoco. Tenerife\n\nVivienda de 140 m2 en tres plantas. Hemos aprovechado el desnivel de la parcela para diseñar esta vivienda con un pequeño garaje en planta baja, cocina comedor salon en planta primera y 3 dormitorios en planta segunda. Esteticamente hemos realizado unos cubos superpuestos blancos acabados en Sate Blanco y Viroc con nuestros toques de celosia de Abeto. Su precio es de 182.000€ mas IVA llave en mano.",
   "cover": "cover.jpeg",
   "gallery": [
-    "img_2.jpg",
-    "img_3.jpg",
-    "img_4.jpg",
-    "img_5.jpeg",
-    "img_6.jpeg",
-    "img_7.jpeg",
-    "img_8.jpeg",
-    "img_9.jpeg"
-
-
+    "img_1.jpeg",
+    "img_2.jpeg"
   ]
 }

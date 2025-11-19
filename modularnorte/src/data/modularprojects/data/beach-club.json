@@ -1,0 +1,12 @@
+{
+  "slug": "beach-club",
+  "title": "Beach Club",
+  "location": "Alicante",
+  "description": "Alicante",
+  "cover": "cover.jpg",
+  "gallery": [
+    "img_1.jpg",
+    "img_2.jpg",
+    "img_3.jpg"
+  ]
+}

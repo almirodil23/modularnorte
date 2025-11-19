@@ -20,9 +20,16 @@ def download_img(url, dest_path):
         if r.status_code == 200:
             with open(dest_path, "wb") as f:
                 f.write(r.content)
-            print("✓ Imagen descargada:", dest_path)
+            print("✓ Imagen:", dest_path)
     except Exception as e:
         print("ERROR descargando:", url, e)
+
+def clean_url(src):
+    if not src:
+        return None
+    if src.startswith("//"):
+        return "https:" + src
+    return src
 
 def scrape_project_page(url, slug):
     print("\n--- SCRAPING DETALLE:", url)
@@ -30,50 +37,107 @@ def scrape_project_page(url, slug):
     html = requests.get(url).text
     soup = BeautifulSoup(html, "html.parser")
 
-    # Título + ubicación
+    # ---------------------------
+    # TÍTULO + UBICACIÓN
+    # ---------------------------
     h1 = soup.select_one("h1.titulo")
-    title = h1.contents[0].strip()
-    location = h1.find("p").text.strip() if h1.find("p") else ""
+    title = h1.contents[0].strip() if h1 else slug
 
-    # Descripción
-    p = soup.select_one(".contenido p")
-    description = p.text.strip() if p else ""
+    location = ""
+    p_loc = h1.find("p") if h1 else None
+    if p_loc:
+        location = p_loc.text.strip()
 
-    # Imagen principal
+    # ---------------------------
+    # DESCRIPCIÓN REAL
+    # ---------------------------
+
+    # Buscar TODA la sección descriptiva
+    description_container = soup.select_one(".contenido")
+    description = ""
+
+    if description_container:
+        # Unir todos los <p>, no solo el primero
+        paragraphs = [p.text.strip() for p in description_container.select("p")]
+        description = "\n\n".join(p for p in paragraphs if p)
+
+    # Fallback si no hay nada
+    if not description:
+        p = soup.select_one(".contenido p")
+        description = p.text.strip() if p else ""
+
+    # ---------------------------
+    # IMÁGENES PRINCIPALES
+    # ---------------------------
+
+    all_imgs = set()
+
+    # Imagen de cabecera
     main_img = soup.select_one(".fragmento_scroll img")
-    main_img_url = urljoin(BASE, main_img["src"])
+    if main_img:
+        src = clean_url(main_img.get("data-src") or main_img.get("src"))
+        if src:
+            all_imgs.add(urljoin(BASE, src))
 
-    # Galería
-    gallery = []
-    gallery_divs = soup.select("#_lcms_divLoad .div_articulo img")
+    # Galería normal
+    for img in soup.select(".div_articulo img"):
+        src = clean_url(img.get("data-src") or img.get("src"))
+        if src:
+            all_imgs.add(urljoin(BASE, src))
 
-    for img in gallery_divs:
-        img_url = urljoin(BASE, img["src"])
-        gallery.append(img_url)
+    # Slider lazyload tipo data-lazy
+    for img in soup.select("img[data-lazy]"):
+        src = clean_url(img.get("data-lazy"))
+        if src:
+            all_imgs.add(urljoin(BASE, src))
 
+    # Imágenes en CSS (background-image)
+    for div in soup.find_all(style=True):
+        style = div.get("style")
+        if "background-image" in style:
+            start = style.find("url(")
+            end = style.find(")", start)
+            url_css = style[start+4:end].replace('"', "").replace("'", "")
+            all_imgs.add(urljoin(BASE, url_css))
+
+    all_imgs = list(all_imgs)
+    print(f"Encontradas {len(all_imgs)} imágenes")
+
+    # ---------------------------
     # GUARDAR IMÁGENES
+    # ---------------------------
     proj_folder = os.path.join(IMG_DIR, slug)
     os.makedirs(proj_folder, exist_ok=True)
 
-    # Portada
-    cover_filename = "cover" + os.path.splitext(main_img_url)[1]
-    download_img(main_img_url, os.path.join(proj_folder, cover_filename))
-
     gallery_local = []
-    for i, g in enumerate(gallery):
-        ext = os.path.splitext(g)[1]
-        name = f"img_{i+1}{ext}"
-        download_img(g, os.path.join(proj_folder, name))
-        gallery_local.append(f"/projects/{slug}/{name}")
+    cover_filename = None
 
-    # JSON DETALLE
+    for i, img_url in enumerate(all_imgs):
+        ext = os.path.splitext(img_url)[1] or ".jpg"
+
+        if i == 0:
+            cover_filename = "cover" + ext
+            local_path = os.path.join(proj_folder, cover_filename)
+            download_img(img_url, local_path)
+        else:
+            name = f"img_{i}{ext}"
+            local_path = os.path.join(proj_folder, name)
+            download_img(img_url, local_path)
+            gallery_local.append(f"/projects/{slug}/{name}")
+
+    if not cover_filename:
+        cover_filename = "cover.jpg"
+
+    # ---------------------------
+    # GUARDAR JSON DETALLE
+    # ---------------------------
     detail_data = {
         "slug": slug,
         "title": title,
         "location": location,
         "description": description,
         "cover": f"/projects/{slug}/{cover_filename}",
-        "gallery": gallery_local
+        "gallery": gallery_local,
     }
 
     with open(os.path.join(DATA_DIR, f"{slug}.json"), "w", encoding="utf8") as f:
@@ -92,18 +156,16 @@ def scrape_list():
     soup = BeautifulSoup(html, "html.parser")
 
     items = soup.select(".div_articulo a")
-
     list_data = []
 
     for a in items:
-        href = a["href"]  # ejemplo: producto/69/modulos-palcos-vip...
+        href = a["href"]
         full_url = urljoin(BASE, href)
 
-        # slug único
-        slug = href.split("/", 2)[2]  # coge "modulos-palcos-..."
-        slug = slug.replace(".", "").replace(" ", "-").lower()
+        # SLUG
+        slug = href.split("/")[-1].strip().lower().replace(" ", "-")
 
-        print("Encontrado proyecto:", slug)
+        print("Proyecto encontrado:", slug)
 
         detail = scrape_project_page(full_url, slug)
         list_data.append(detail)
@@ -112,8 +174,6 @@ def scrape_list():
         json.dump(list_data, f, indent=2, ensure_ascii=False)
 
     print("\n✓ SCRAPING COMPLETADO")
-    print("→ Imágenes en:", IMG_DIR)
-    print("→ JSON generado en:", DATA_DIR)
 
 if __name__ == "__main__":
     scrape_list()

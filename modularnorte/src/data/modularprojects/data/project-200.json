@@ -1,18 +1,15 @@
 {
   "slug": "project-200",
   "title": "Project 200",
-  "location": "Finestrat, Alicante.",
-  "description": "Finestrat, Alicante.",
+  "location": "San Vicente del Real. Toledo",
+  "description": "San Vicente del Real. Toledo\n\nSe trata de una ampliacion muy interesante de una vivienda rustica ya existente. La nueva obra se plantea de la manera mas respetuosa con el medio rural adaptandose milimetricamente a la topografia existente. Actualmente en construccion.",
   "cover": "cover.jpg",
   "gallery": [
+    "img_1.jpg",
     "img_2.jpg",
     "img_3.jpg",
     "img_4.jpg",
     "img_5.jpg",
-    "img_6.jpg",
-    "img_7.jpg",
-    "img_8.jpg",
-    "img_9.jpg"
-
+    "img_6.jpg"
   ]
 }
