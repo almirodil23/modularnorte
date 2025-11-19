@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+# Permite acceder a archivos reales
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Redirige todo lo demás a index.html (React Router)
+RewriteRule ^ index.html [L]
