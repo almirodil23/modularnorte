@@ -1,13 +1,13 @@
 {
   "slug": "project-120",
   "title": "Project 120",
-  "location": "Algeciras, Cádiz",
-  "description": "Algeciras, Cádiz",
+  "location": "Muchamiel, Alicante",
+  "description": "Muchamiel, Alicante",
   "cover": "cover.jpg",
   "gallery": [
     "img_2.jpg",
     "img_3.jpg",
     "img_4.jpg",
-        "img_5.jpg"
+    "img_5.jpg"
   ]
 }

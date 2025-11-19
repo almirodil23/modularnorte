@@ -18,7 +18,7 @@ export default function Nosotros() {
           <div className="contenido_texto">
 
             <p>
-              <strong>Modular Norte</strong> es el partner oficial de Modular Projects en 
+              <strong>Modular Norte</strong> es el partner oficial de Modular Norte en 
               Galicia y norte de la Península, y desde nuestros inicios hemos llevado al 
               mercado un producto de arquitectura modular basado en el sistema de 
               construcción industrializada con estructura de madera que define la marca.

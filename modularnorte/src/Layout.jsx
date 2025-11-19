@@ -8,7 +8,7 @@ return (
 <header id="header" className="">
 <div className="logo_head">
 <a href="/">
-<img src="/assets/custom/img/logo_menu.png" alt="Logo Modular Projects" />
+<img src="/assets/custom/img/logo_menu.png" alt="Logo Modular Norte" />
 </a>
 </div>
 

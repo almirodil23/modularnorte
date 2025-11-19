@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./projectDetail.css";
 import projects from "../../data/modularprojects";
-import Lightbox from "./Lightbox"; // si existe
+import Lightbox from "../../components/LightBox"
 
 export default function ProjectDetail() {
   const { slug } = useParams();

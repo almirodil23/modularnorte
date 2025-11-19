@@ -6,7 +6,7 @@ export default function ProjectsPreview() {
   const slugs = ["project-120", "project-140", "project-160", "project-220"];
 
   const preview = projects.filter(p => slugs.includes(p.slug));
-
+  console.log(preview)
 
   return (
     <>
@@ -30,7 +30,7 @@ export default function ProjectsPreview() {
                 backgroundImage: `url(${p.img})`,
               }}
             >
-              <a href={`/producto/${p.id}/${p.slug}`}>
+              <a href={`/producto/${p.slug}`}>
                 <div className="texto">
                   <h4>{p.title}</h4>
                   <h5>{p.location}</h5>

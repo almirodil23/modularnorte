@@ -32,7 +32,7 @@ export default function Intro() {
           <div className="video">
             <img
               src="/assets/custom/img/fotoxvideo.jpg"
-              alt="Modular Projects"
+              alt="Modular Norte"
             />
           </div>
         </div>
@@ -41,8 +41,8 @@ export default function Intro() {
         <div className="col-lg-6 info_home caracteristicas_home">
 
           <div className="fotos">
-            <img src="/recurso/pagina/borrar1.jpg" alt="Modular Projects" />
-            <img src="/recurso/pagina/borrar2.jpg" alt="Modular Projects" />
+            <img src="/recurso/pagina/borrar1.jpg" alt="Modular Norte" />
+            <img src="/recurso/pagina/borrar2.jpg" alt="Modular Norte" />
           </div>
 
           <div className="textos_intro centrar_al_medio">
