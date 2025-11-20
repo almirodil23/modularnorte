@@ -5,7 +5,7 @@ let projects = Object.values(modules).map((m) => {
   const p = m.default;
 
   // Carpeta pública de imágenes
-  const folder = `/projects/${p.slug}`;
+  const folder = `/proyectos/${p.slug}`;
 
   return {
     ...p,
