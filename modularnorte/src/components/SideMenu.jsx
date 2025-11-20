@@ -1,62 +1,70 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function SideMenu() {
+  const [open, setOpen] = useState(false);
 
+  // Escuchar clic en el botón #toggleMenu que está en Header
   useEffect(() => {
-    const $ = window.$;
+    const toggleBtn = document.getElementById("toggleMenu");
 
-    if ($) {
-      // Abrir/cerrar menú con el botón
-      $("#toggleMenu").on("click", () => {
-        $("#menu_lateral").toggleClass("open_menu");
-        $("#detector_click").toggleClass("activar");
-      });
+    if (!toggleBtn) return;
 
-      // Cerrar menú haciendo click fuera
-      $("#detector_click").on("click", () => {
-        $("#menu_lateral").removeClass("open_menu");
-        $("#detector_click").removeClass("activar");
-      });
-    }
+    const handler = () => {
+      setOpen((v) => !v);
+    };
+
+    toggleBtn.addEventListener("click", handler);
+
+    return () => toggleBtn.removeEventListener("click", handler);
   }, []);
+
+  const closeMenu = () => setOpen(false);
 
   return (
     <>
-      <div id="detector_click"></div>
+      {/* Cerrar al hacer click fuera */}
+      <div
+        id="detector_click"
+        className={open ? "activar" : ""}
+        onClick={closeMenu}
+      ></div>
 
-      <div id="menu_lateral" className="centrar_al_medio">
+      {/* Aquí cambiamos open_menu → abierto */}
+      <div
+        id="menu_lateral"
+        className={`centrar_al_medio ${open ? "abierto" : ""}`}
+      >
         <ul className="navbar-nav mr-auto">
 
-          {/* ENLACES EXACTOS DEL MENÚ ORIGINAL */}
           <li className="nav-item">
-            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/" className="nav-link" onClick={closeMenu}>Home</Link>
           </li>
 
           <li className="nav-item">
-            <Link to="/projects" className="nav-link">Proyectos</Link>
-          </li>
-
-  
-          <li className="nav-item">
-            <Link to="/proceso-constructivo" className="nav-link">Proceso Constructivo</Link>
+            <Link to="/projects" className="nav-link" onClick={closeMenu}>Proyectos</Link>
           </li>
 
           <li className="nav-item">
-            <Link to="/preguntas-frecuentes" className="nav-link">Preguntas</Link>
+            <Link to="/proceso-constructivo" className="nav-link" onClick={closeMenu}>
+              Proceso Constructivo
+            </Link>
           </li>
 
           <li className="nav-item">
-            <Link to="/nosotros" className="nav-link">Nosotros</Link>
+            <Link to="/preguntas-frecuentes" className="nav-link" onClick={closeMenu}>
+              Preguntas
+            </Link>
           </li>
-
-
 
           <li className="nav-item">
-            <Link to="/contactar" className="nav-link">Contacto</Link>
+            <Link to="/nosotros" className="nav-link" onClick={closeMenu}>Nosotros</Link>
           </li>
 
-          {/* REDES IGUALES AL ORIGINAL */}
+          <li className="nav-item">
+            <Link to="/contactar" className="nav-link" onClick={closeMenu}>Contacto</Link>
+          </li>
+
           <li className="redes">
             <a href="https://www.facebook.com/Modular-Projects-145924372121713" target="_blank">
               <i className="fa fa-facebook"></i>

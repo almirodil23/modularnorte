@@ -11,4 +11,9 @@
 
 .pagina_con_fragmento_fijo {
   background-color: white; /* como en Modular Norte */
+  
+}
+
+.fragmento_fijo{
+    position: relative !important;
 }

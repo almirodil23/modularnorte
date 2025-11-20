@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   gap: 0;                     /* No espacio entre celdas */
   width: 100%;
+  background-color: white;
 }
 
 /* --- CADA CELDA DEL GRID --- */

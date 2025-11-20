@@ -3,15 +3,17 @@ export default function Header() {
     <header id="header">
       <div className="logo_head">
         <a href="/">
-          <img src="/assets/custom/img/logo_menu.png" alt="Logo Modular Norte" style={{position:"fixed"}}/>
+          <img src="/assets/custom/img/logo_menu.png" alt="Logo Modular Norte" />
         </a>
       </div>
 
-
-
       <div className="boton_menu">
         <div>
-          <a id="toggleMenu">
+          <a
+            id="toggleMenu"
+            href="#"
+            onClick={(e) => e.preventDefault()} // <-- necesario
+          >
             <i className="fa fa-bars" aria-hidden="true"></i>
           </a>
         </div>
@@ -19,3 +21,4 @@ export default function Header() {
     </header>
   );
 }
+
