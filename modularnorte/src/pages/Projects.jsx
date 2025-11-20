@@ -12,7 +12,7 @@ export default function Projects() {
 
         <div className="col-xl-4 col-lg-5 centrar_al_medio fragmento_fijo">
           <div className="contenido">
-            <h1 className="titulo">Modular Norte</h1>
+            <h1 className="titulo" style={{marginTop: "2rem"}}>Modular Norte</h1>
             <p>
               Llevamos diseñando y construyendo llave en mano viviendas modulares
               basadas en la construcción industrializada modular con estructura de
