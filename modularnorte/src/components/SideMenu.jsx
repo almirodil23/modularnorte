@@ -64,6 +64,7 @@ export default function SideMenu() {
           <li className="nav-item">
             <Link to="/contactar" className="nav-link" onClick={closeMenu}>Contacto</Link>
           </li>
+          
 
           <li className="redes">
             <a href="https://www.facebook.com/Modular-Projects-145924372121713" target="_blank">
