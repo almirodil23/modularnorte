@@ -49,7 +49,7 @@ export default function Contact() {
           {/*<p className="direccion">Calle Segura, 6, 03004 Alicante</p> */}
 
           <form
-            action="https://crm.modularprojects.es/crmForm"
+            action=""
             method="post"
             className="formulario_contacto"
           >
