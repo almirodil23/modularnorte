@@ -37,9 +37,19 @@ color: black;
 text-shadow: none;
 }
 
+p{
+    color: #0000006e ;
+    text-align: justify;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 1px;
+}
+
 hr{
 border-color: #404040;
 }
+
+strong {}
 
 .preloader {
 background-color: white;
@@ -525,7 +535,7 @@ padding: 9px 35px 5px 25px;
 
 
 .boton_menu a:after{  
-content: "Menú"; 
+content: "Menu"; 
 }
 
 .boton_menu.entra a{
@@ -2184,7 +2194,7 @@ text-decoration: underline !important;
 }
 
 .pagina_con_fragmento_fijo .fragmento_fijo .contenido  p{
-color: black    ;
+color: #0000006e    ;
 text-align: justify;
 line-height: 24px;
 font-size: 15px;
@@ -2761,8 +2771,13 @@ transition: all 0.0s ease-in-out;
 PÁGINA ESTANDARD
 ======================================================*/
 
+.card-body{
+    margin-top: 20px;
+}
+
 .pagina_standard{
-color: #BABABA;
+margin-top: 10px;
+color: #0000006e;
 }
 
 .pagina_standard p{
@@ -4153,7 +4168,9 @@ font-size: 17px;
 line-height: 27px;
 letter-spacing: 0.5px;   
 text-align: left;
+color:#000000;
 }
+
 
 .preguntas_frecuentes .card .card-header{
    

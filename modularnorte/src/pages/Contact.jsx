@@ -10,6 +10,7 @@ export default function Contact() {
     const map = new window.google.maps.Map(document.getElementById("map"), {
       center: { lat: 43.320117, lng: -8.313211 }, // 43°19'12.8"N 8°18'47.6"W 43.320117, -8.313211
 
+      
 
       zoom: 15,
       styles: [
@@ -24,6 +25,29 @@ export default function Contact() {
     });
 
   }, []);
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
+
+  const res = await fetch("https://modularnorte.com/api/email.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+
+  const json = await res.json();
+
+  if (json.status === "ok") {
+    alert("Tu mensaje fue enviado correctamente. Gracias!");
+    e.target.reset();
+  } else {
+    alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
+  }
+};
+
 
   return (
     <div className="pagina_con_fragmento_fijo container-fluid contact-page" style={{ backgroundColor: "white" }}>
@@ -52,6 +76,8 @@ export default function Contact() {
             action=""
             method="post"
             className="formulario_contacto"
+            onSubmit={handleSubmit} 
+
           >
             {/* Campos ocultos */}
             <input type="hidden" name="receptor" value="clientes@modularprojects.es" />

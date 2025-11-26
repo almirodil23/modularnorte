@@ -1,3 +1,5 @@
+import "./proceso.css"
+
 export default function ProcesoConstructivo() {
   return (
     <>
@@ -21,6 +23,7 @@ export default function ProcesoConstructivo() {
             <div className="col-12 ficha_blog ficha_proceso">
               <div className="row">
                 <div className="col-md-6 col-12">
+
                   <a data-gallery="example-gallery" data-toggle="lightbox" href="/recurso/pagina/imagen/proceso_constructivo/proceso1.jpg">
                     <img src="/recurso/pagina/imagen/proceso_constructivo/proceso1.jpg" alt="Paso 1"/>
                   </a>

@@ -13,7 +13,7 @@ export default function Projects() {
         <div className="col-xl-4 col-lg-5 centrar_al_medio fragmento_fijo">
           <div className="contenido">
             <h1 className="titulo" style={{marginTop: "2rem"}}>Modular Norte</h1>
-            <p>
+            <p style={{color:"#0000006e"}}>
               Llevamos diseñando y construyendo llave en mano viviendas modulares
               basadas en la construcción industrializada modular con estructura de
               madera más de 15 años. Con más de 400 viviendas realizadas por toda España,
@@ -40,10 +40,10 @@ export default function Projects() {
               <div className="div_articulo" key={p.id}>
                 <a href={`/producto/${p.slug}`} className="centrar_al_medio">
                   <img src={p.img} alt={p.title} loading="lazy" />
-                  <h4 className="titulo">
+                  <h4 className="titulo" style={{textAlign:"center", color:"#0000006e"}}>
                     {p.title}
-                    <br />
-                    {p.location && <p>{p.location}</p>}
+                    <br style={{color:"#0000006e"}}/>
+                    {p.location && <p style={{textAlign:"center", color:"#0000006e"}}>{p.location} </p>}
                   </h4>
                 </a>
               </div>
