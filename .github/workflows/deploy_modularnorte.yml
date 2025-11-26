@@ -28,7 +28,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            rm -rf /var/www/vhosts/modularnorte.com/httpdocs/*
+             find /var/www/vhosts/modularnorte.com/httpdocs -maxdepth 1 ! -name 'api' ! -name '.' -exec rm -rf {} +
 
       - name: 📤 Upload dist/ to server
         uses: appleboy/scp-action@v0.1.4
