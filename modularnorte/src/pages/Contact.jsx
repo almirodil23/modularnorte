@@ -49,8 +49,6 @@ export default function Contact() {
 };
 
 
-
-
   return (
     <div className="pagina_con_fragmento_fijo container-fluid contact-page" style={{ backgroundColor: "white" }}>
       <div className="row justify-content-between">
