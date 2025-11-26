@@ -3,15 +3,16 @@ export default function Intro() {
     <div className="container-fluid">
       <div className="row">
         
+        
         {/* COLUMNA IZQUIERDA */}
         <div className="col-lg-6 info_home">
-
+  {/* 
           <li className="redes_intro">
             <a href="https://www.facebook.com/Modular-Projects-145924372121713" target="_blank"><i className="fa fa-facebook"></i></a>
             <a href="https://twitter.com/modularprojects?lang=es" target="_blank"><i className="fa fa-twitter"></i></a>
             <a href="https://www.instagram.com/explore/tags/modularprojects/" target="_blank"><i className="fa fa-instagram"></i></a>
           </li>
-
+*/}
           <div className="fragmento_sup">
             <div className="texto_vertical"><span>Modular Norte</span></div>
 

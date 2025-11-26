@@ -65,7 +65,7 @@ export default function SideMenu() {
             <Link to="/contactar" className="nav-link" onClick={closeMenu}>Contacto</Link>
           </li>
           
-
+{/* 
           <li className="redes">
             <a href="https://www.facebook.com/Modular-Projects-145924372121713" target="_blank">
               <i className="fa fa-facebook"></i>
@@ -77,7 +77,7 @@ export default function SideMenu() {
               <i className="fa fa-instagram"></i>
             </a>
           </li>
-
+*/}
         </ul>
       </div>
     </>
