@@ -1,4 +1,4 @@
-name: 🚀 Deploy modularnorte.com (Vite Build)
+name: Deploy modularnorte.com
 
 on:
   push:
@@ -10,18 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🧩 Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: 🏗️ Build project with Vite
+      - name: Build project with Vite
         run: |
           cd modularnorte
           npm install --legacy-peer-deps
           npm run build
-          echo "--- FINAL STRUCTURE ---"
-          ls -R dist
+          echo "Build finished"
 
-      - name: 🧹 Clean remote directory (keep /api)
+      - name: Clean remote directory except /api
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -30,10 +29,8 @@ jobs:
           script: |
             set -x
             find /var/www/vhosts/modularnorte.com/httpdocs -maxdepth 1 ! -name 'api' ! -name '.' -exec rm -rf {} +
-          debug: true
-          capture_stdout: true
 
-      - name: 📤 Upload dist/ to server
+      - name: Upload dist to server
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -44,7 +41,7 @@ jobs:
           overwrite: true
           strip_components: 2
 
-      - name: 🔧 Fix permissions
+      - name: Fix permissions on server
         uses: appleboy/ssh-action@v0.1.8
         with:
           host: ${{ secrets.SERVER_HOST }}
