@@ -30,8 +30,9 @@ jobs:
           script: |
             set -x
             find /var/www/vhosts/modularnorte.com/httpdocs -maxdepth 1 ! -name 'api' ! -name '.' -exec rm -rf {} +
-          capture_stdout: true
           debug: true
+          capture_stdout: true
+
 
       - name: 📤 Upload dist/ to server
         uses: appleboy/scp-action@v0.1.4
