@@ -33,7 +33,6 @@ jobs:
           debug: true
           capture_stdout: true
 
-
       - name: 📤 Upload dist/ to server
         uses: appleboy/scp-action@v0.1.4
         with:
@@ -44,7 +43,6 @@ jobs:
           target: "/var/www/vhosts/modularnorte.com/httpdocs"
           overwrite: true
           strip_components: 2
-
 
       - name: 🔧 Fix permissions
         uses: appleboy/ssh-action@v0.1.8
