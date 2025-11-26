@@ -3,6 +3,7 @@ export default function Intro() {
     <div className="container-fluid">
       <div className="row">
         
+        
         {/* COLUMNA IZQUIERDA */}
         <div className="col-lg-6 info_home">
   {/* 
