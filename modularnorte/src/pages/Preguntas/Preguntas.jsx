@@ -42,7 +42,7 @@ export default function Preguntas() {
                         {/* El HTML de la pregunta (por si lleva entidades &iacute; etc.) */}
                         <p
                           dangerouslySetInnerHTML={{ __html: faq.question }}
-                          style={{ marginBottom: 0 }}
+                          style={{ marginBottom: 0 , fontWeight:700}}
                         />
                       </button>
                     </h5>

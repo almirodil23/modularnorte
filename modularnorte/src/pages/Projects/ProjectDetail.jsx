@@ -33,7 +33,7 @@ export default function ProjectDetail() {
               {project.location && <p>{project.location}</p>}
             </h1>
 
-            <p style={{color:"#0000006e"}}>{project.description}</p>
+            <p style={{color:"black"}}>{project.description}</p>
           </div>
         </div>
 

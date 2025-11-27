@@ -40,10 +40,10 @@ export default function Projects() {
               <div className="div_articulo" key={p.id}>
                 <a href={`/producto/${p.slug}`} className="centrar_al_medio">
                   <img src={p.img} alt={p.title} loading="lazy" />
-                  <h4 className="titulo" style={{textAlign:"center", color:"#0000006e"}}>
+                  <h4 className="titulo" style={{textAlign:"center", color:"black"}}>
                     {p.title}
                     <br style={{color:"#0000006e"}}/>
-                    {p.location && <p style={{textAlign:"center", color:"#0000006e"}}>{p.location} </p>}
+                    {p.location && <p style={{textAlign:"center", color:"black"}}>{p.location} </p>}
                   </h4>
                 </a>
               </div>

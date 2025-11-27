@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import useIsLargeScreen from "../../hooks/useLargeScreen"
+
 
 export default function HomeHero() {
+  const isSmall= useIsLargeScreen(765)
   return (
     <section
       id="slide_home"
@@ -10,11 +13,12 @@ export default function HomeHero() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         minHeight: "100vh",
+        marginTop: isSmall? "": "-100px"
       }}
     >
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12 textos">
+          <div className="col-12 textos" style={{marginTop: isSmall? "":"300px"}}>
             <div className="contenido">
               <h1 className="titulo">MODULAR NORTE</h1>
               <h3 className="subtitulo">
@@ -23,7 +27,7 @@ export default function HomeHero() {
             </div>
           </div>
 
-          <div className="col-12 boton">
+          <div className="col-12 boton" style={{top: isSmall? "":"-200px"}}>
             <Link to="/projects" className="boton_linea_blanco">
               Ver Proyectos
             </Link>

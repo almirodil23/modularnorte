@@ -1,14 +1,16 @@
 import React from "react";
+import useIsLargeScreen from "./hooks/useLargeScreen";
 
 
 export default function Layout({ children }) {
+    const isSmall= useIsLargeScreen(765)
 return (
 <>
 {/* Header */}
 <header id="header" className="">
 <div className="logo_head">
 <a href="/">
-<img src="/assets/custom/img/logo_menu.png" alt="Logo Modular Norte" />
+<img src="/assets/custom/img/logo_menu.png" alt="Logo Modular Norte"  style={{marginTop: isSmall? "80px": "80px"}}/>
 </a>
 </div>
 

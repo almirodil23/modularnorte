@@ -2,11 +2,13 @@ import projects from "../../data/modularprojects";
 import "./projectspreview.css";
 
 export default function ProjectsPreview() {
-  // Tomamos los 4 primeros proyectos (o los que quieras)
-  const slugs = ["tenerife", "muchamiel", "denia", "project-220"];
+const slugs = ["tenerife", "project-220", "denia", "muchamiel"];
 
-  const preview = projects.filter(p => slugs.includes(p.slug));
-  console.log(preview)
+const preview = projects
+  .filter(p => slugs.includes(p.slug))
+  .sort((a, b) => slugs.indexOf(a.slug) - slugs.indexOf(b.slug));
+
+  console.log(preview);
 
   return (
     <>
