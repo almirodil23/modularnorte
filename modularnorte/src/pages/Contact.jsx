@@ -158,7 +158,7 @@ export default function Contact() {
 
 
                 <div className="g-recaptcha" data-sitekey="6LeD7xgsAAAAAORldtn2u3y2wNTBQJhxNgRoy1h2"></div>
-
+{/* 6LeD7xgsAAAAAFGZOjZqS7hqtxjrMO0Y_TrfriBp */}
                 <button type="submit" className="btn enviar">ENVIAR</button>
               </div>
 
