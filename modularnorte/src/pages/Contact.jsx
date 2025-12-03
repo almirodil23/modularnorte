@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import "./contact.css";
 
 export default function Contact() {
-  const token = document.querySelector('[name="g-recaptcha-response"]').value;
 
 
   // Inicializar Google Map
@@ -31,14 +30,24 @@ export default function Contact() {
 const handleSubmit = async (e) => {
   e.preventDefault();
 
+  // 1) OBTENER TOKEN DE RECAPTCHA
+  const recaptchaInput = document.querySelector('[name="g-recaptcha-response"]');
+
+  if (!recaptchaInput || !recaptchaInput.value) {
+    alert("Por favor, confirma que no eres un robot.");
+    return;
+  }
+
+  const token = recaptchaInput.value;
+
+  // 2) OBTENER CAMPOS DEL FORMULARIO
   const formData = new FormData(e.target);
   const data = Object.fromEntries(formData.entries());
 
-  // 👇 AQUI OBTENEMOS EL TOKEN DE RECAPTCHA
-  const token = document.querySelector('[name="g-recaptcha-response"]').value;
+  // 3) AÑADIR TOKEN AL JSON
+  data.token = token;
 
-  data.token = token; // lo enviamos al backend
-
+  // 4) ENVIAR AL BACKEND
   const res = await fetch("https://modularnorte.com/api/email.php", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -50,7 +59,7 @@ const handleSubmit = async (e) => {
   if (json.status === "ok") {
     alert("Tu mensaje fue enviado correctamente. Gracias!");
     e.target.reset();
-    grecaptcha.reset(); // resetea captcha
+    grecaptcha.reset();
   } 
   else if (json.status === "captcha_error") {
     alert("Por favor, confirma que no eres un robot antes de enviar el formulario.");
@@ -59,6 +68,7 @@ const handleSubmit = async (e) => {
     alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
   }
 };
+
 
 
   return (
@@ -170,8 +180,12 @@ const handleSubmit = async (e) => {
                 </label>
 
 
-                <div class="g-recaptcha" data-sitekey="6Ldy-h8sAAAAAK2vMk8ED3JJJIpjRPsvqCkBYhVn"></div>
-
+            <div className="captcha-wrapper">
+              <div 
+                class="g-recaptcha" 
+                data-sitekey="6Ldy-h8sAAAAAK2vMk8ED3JJJIpjRPsvqCkBYhVn">
+              </div>
+            </div>
                 <button type="submit" className="btn enviar">ENVIAR</button>
               </div>
 

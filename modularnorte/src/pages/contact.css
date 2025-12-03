@@ -37,6 +37,18 @@ p{
   resize: vertical;
 }
 
+.captcha-wrapper {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  min-height: 80px;     /* 📌 fuerza altura mínima */
+}
+
+.g-recaptcha {
+  transform: scale(1);  /* por si está colapsado */
+  transform-origin: 0 0;
+}
+
+
 input{
     margin-bottom: 10px;
 }
