@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import "./contact.css";
 
 export default function Contact() {
+  const token = document.querySelector('[name="g-recaptcha-response"]').value;
+
 
   // Inicializar Google Map
   useEffect(() => {
@@ -26,11 +28,16 @@ export default function Contact() {
 
   }, []);
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
 
   const formData = new FormData(e.target);
   const data = Object.fromEntries(formData.entries());
+
+  // 👇 AQUI OBTENEMOS EL TOKEN DE RECAPTCHA
+  const token = document.querySelector('[name="g-recaptcha-response"]').value;
+
+  data.token = token; // lo enviamos al backend
 
   const res = await fetch("https://modularnorte.com/api/email.php", {
     method: "POST",
@@ -43,10 +50,16 @@ export default function Contact() {
   if (json.status === "ok") {
     alert("Tu mensaje fue enviado correctamente. Gracias!");
     e.target.reset();
-  } else {
+    grecaptcha.reset(); // resetea captcha
+  } 
+  else if (json.status === "captcha_error") {
+    alert("Por favor, confirma que no eres un robot antes de enviar el formulario.");
+  }
+  else {
     alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
   }
 };
+
 
   return (
     <div className="pagina_con_fragmento_fijo container-fluid contact-page" style={{ backgroundColor: "white" }}>
@@ -157,8 +170,8 @@ export default function Contact() {
                 </label>
 
 
-                <div className="g-recaptcha" data-sitekey="6LeD7xgsAAAAAFGZOjZqS7hqtxjrMO0Y_TrfriBp"></div>
-{/* 6LeD7xgsAAAAAFGZOjZqS7hqtxjrMO0Y_TrfriBp */}
+                <div class="g-recaptcha" data-sitekey="6Ldy-h8sAAAAAK2vMk8ED3JJJIpjRPsvqCkBYhVn"></div>
+
                 <button type="submit" className="btn enviar">ENVIAR</button>
               </div>
 
