@@ -1,4 +1,16 @@
 export default function Intro() {
+  const styles = {
+    button:{
+      width:"130px",
+      backgroundColor:'black',
+      padding:"10px",
+      textAlign:'center',
+      letterSpacing: "2px",
+      textTransform: "uppercase",
+      fontSize: "10px",
+      fontWeight: "800",
+    }
+  }
   return (
     <div className="container-fluid">
       <div className="row">
@@ -24,9 +36,9 @@ export default function Intro() {
               <p>Nuestro equipo formado por arquitectos, aparejadores, ingenieros y decoradores estudiará minuciosamente tus necesidades para proponerte la mejor vivienda posible con la mayor eficiencia energética, el mejor diseño al mejor precio y en el menor tiempo.</p>
               <p>Modular Norte da forma a tus ideas e ilusiones</p>
 
-
-
-              <a href="/web/131" className="boton_adicional">Conócenos</a>
+            <div  style={styles.button}>
+              <a style={{color:'white'}}href="/conocenos">Conócenos</a>
+            </div>
             </div>
           </div>
 

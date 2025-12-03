@@ -9,7 +9,7 @@ export default function ParallaxBlock() {
           <div className="row">
             <div className="col-12 centrar_al_medio texto">
               <div className="contenido">
-                <p><strong>¿Tienes un terreno? ¿Una vivienda antigua? ¿Un local? ¿O una idea?</strong></p>
+                <p><strong style={{color:"black"}}>¿Tienes un terreno? ¿Una vivienda antigua? ¿Un local? ¿O una idea?</strong></p>
                 <p style={{color:"#0000006e" ,textAlign: "justify",fontWeight:500}}
     >
                   En Modular Norte construimos y damos forma a todo lo que pase<br />

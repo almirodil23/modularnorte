@@ -1,0 +1,64 @@
+strong{
+ color:black;
+}
+
+.conocenos-section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #0000006e;
+}
+
+.conocenos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.conocenos-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #1f2937;
+}
+
+.conocenos-button {
+  padding: 10px 20px;
+  background-color: #0a84ff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.conocenos-button:hover {
+  background-color: #006fe0;
+}
+
+.conocenos-subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.conocenos-paragraph {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+.conocenos-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.conocenos-list li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
