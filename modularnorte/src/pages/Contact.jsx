@@ -22,7 +22,6 @@ export default function Contact() {
   // Envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("DATA QUE SE ENVÍA:", data);
 
 
     const formData = new FormData(e.target);
@@ -34,14 +33,15 @@ export default function Contact() {
       body: JSON.stringify(data),
     });
 
-    const json = await res.json();
 
-    if (json.status === "ok") {
-      alert("Tu mensaje fue enviado correctamente. Gracias!");
-      e.target.reset();
-    } else {
-      alert("Hubo un error al enviar tu mensaje.");
-    }
+const json = await res.json();
+console.log("RESPUESTA COMPLETA DEL SERVIDOR:", json);
+
+if (json.status === "ok") {
+  alert("Correo enviado correctamente!");
+} else {
+  alert("Error del servidor: " + (json.mail_error ?? "desconocido"));
+}
   };
 
   return (
