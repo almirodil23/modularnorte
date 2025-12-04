@@ -1,60 +1,51 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import "./contact.css";
 
 export default function Contact() {
-
 
   // Inicializar Google Map
   useEffect(() => {
     if (!window.google) return;
 
     const map = new window.google.maps.Map(document.getElementById("map"), {
-      center: { lat: 43.320117, lng: -8.313211 }, // 43°19'12.8"N 8°18'47.6"W 43.320117, -8.313211
-
-      
-
+      center: { lat: 43.320117, lng: -8.313211 },
       zoom: 15,
-      styles: [
-        { featureType: "all", stylers: [{ saturation: -20 }] }
-      ]
     });
 
     new window.google.maps.Marker({
       position: { lat: 43.320117, lng: -8.313211 },
       map,
-      title: "Modular Norte"
+      title: "Modular Norte",
     });
-
   }, []);
 
+  // Envío del formulario
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("DATA QUE SE ENVÍA:", data);
 
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
 
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData.entries());
+    const res = await fetch("https://modularnorte.com/api/email.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
 
-  const res = await fetch("https://modularnorte.com/api/email.php", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
+    const json = await res.json();
 
-  const json = await res.json();
-
-  if (json.status === "ok") {
-    alert("Tu mensaje fue enviado correctamente. Gracias!");
-    e.target.reset();
-  } else {
-    alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
-  }
-};
-
-
+    if (json.status === "ok") {
+      alert("Tu mensaje fue enviado correctamente. Gracias!");
+      e.target.reset();
+    } else {
+      alert("Hubo un error al enviar tu mensaje.");
+    }
+  };
 
   return (
-    <div className="pagina_con_fragmento_fijo container-fluid contact-page" style={{ backgroundColor: "white" }}>
+    <div className="pagina_con_fragmento_fijo container-fluid contact-page">
       <div className="row justify-content-between">
 
         {/* COLUMNA IZQUIERDA */}
@@ -62,9 +53,8 @@ const handleSubmit = async (e) => {
           <div className="contenido">
             <h1 className="titulo">Cuéntanos tu proyecto</h1>
             <p>
-              Estaremos encantados de atenderte, que nos cuentes tu proyecto y resolver todas tus dudas online o en nuestra oficina de A CORUÑA.<br /><br />
-              Déjanos tus datos y el motivo de la consulta y nos pondremos en contacto contigo lo antes posible.
-              También puedes llamarnos al <a href="tel:722782240">722 782 240</a>, mandarnos un email a{" "}
+              Estaremos encantados de atenderte. También puedes llamarnos al{" "}
+              <a href="tel:722782240">722 782 240</a> o escribirnos a{" "}
               <a href="mailto:info@modularnorte.com">info@modularnorte.com</a>.
             </p>
           </div>
@@ -72,96 +62,56 @@ const handleSubmit = async (e) => {
 
         {/* COLUMNA DERECHA */}
         <div className="col-xl-8 col-lg-7 fragmento_scroll contact-form-area">
-
           <div id="map" className="contact-map"></div>
-          {/*<p className="direccion">Calle Segura, 6, 03004 Alicante</p> */}
 
-          <form
-            action=""
-            method="post"
-            className="formulario_contacto"
-            onSubmit={handleSubmit} 
-
-          >
-            {/* Campos ocultos */}
-            <input type="hidden" name="receptor" value="info@modularprojects.es" />
-            <input type="hidden" name="emisor" value="info@modularprojects.es" />
-            <input type="hidden" name="asunto" value="Formulario Web: Solicitud de Información" />
-            <input type="hidden" name="orden" value="nombre,email,telefono,motivo_consulta,plazo,entidad,mensaje" />
-            <input type="hidden" name="obligatorios" value="nombre,email,telefono,motivo_consulta,plazo,entidad,mensaje,aceptocondiciones" />
-            <input type="hidden" name="webok" value="https://www.modularprojects.es/formok" />
-            <input type="hidden" name="weberror" value="https://www.modularprojects.es/formko" />
-            <input type="hidden" name="mailhtml" value="si" />
-            <input type="hidden" name="ajax" value="no" />
-
+          <form className="formulario_contacto" onSubmit={handleSubmit}>
             <h3 className="titulo">Formulario de Contacto</h3>
 
             <div className="row">
-              <div className="col-md-6">
 
+              <div className="col-md-6">
                 <label>Nombre:</label>
-                <input type="text" name="nombre" required placeholder="Tu Nombre" className="form-control" />
+                <input type="text" name="nombre" required className="form-control" />
 
                 <label>Email:</label>
-                <input type="email" name="email" required placeholder="Tu Email" className="form-control" />
+                <input type="email" name="email" required className="form-control" />
 
                 <label>Teléfono:</label>
-                <input type="text" name="telefono" required placeholder="Tu teléfono" className="form-control" />
-
+                <input type="text" name="telefono" required className="form-control" />
               </div>
 
               <div className="col-md-6">
-
                 <label>Motivo de la consulta:</label>
-                <select name="motivo_consulta" className="form-control" required>
+                <select name="motivo_consulta" required className="form-control">
                   <option value="quiero_informacion">Quiero Información</option>
                   <option value="tengo_terreno">Tengo un terreno</option>
-                  <option value="reformar_o_ampliar_inmueble">Reforma o ampliación</option>
+                  <option value="reformar_o_ampliar">Reforma o ampliación</option>
                   <option value="otros">Otros</option>
                 </select>
 
                 <label>Plazo:</label>
-                <select name="plazo" className="form-control" required>
+                <select name="plazo" required className="form-control">
                   <option value="corto">Corto Plazo</option>
                   <option value="medio">Medio Plazo</option>
                   <option value="largo">Largo Plazo</option>
                 </select>
 
                 <label>Entidad:</label>
-                <select name="entidad" className="form-control" required>
+                <select name="entidad" required className="form-control">
                   <option value="profesional">Soy Profesional</option>
                   <option value="particular">Soy Particular</option>
                   <option value="organismo_publico">Organismo Público</option>
                   <option value="otros">Otros</option>
                 </select>
-
               </div>
 
               <div className="col-12">
                 <label>Mensaje:</label>
-                <textarea name="mensaje" required rows="7" placeholder="Escribe tu mensaje..." className="form-control" />
+                <textarea name="mensaje" required rows="6" className="form-control"></textarea>
 
                 <label className="checkbox">
-                <span>
-                    <input
-                    type="checkbox"
-                    name="aceptocondiciones"
-                    required
-                    style={{ height: "auto" }}
-                    />{" "}
-                    Confirmo que he leído y acepto la{" "}
-                    <a
-                    href="/politica-de-privacidad"
-                    target="_blank"
-                    style={{ textDecoration: "underline" }}
-                    >
-                    política de privacidad
-                    </a>
-                    , así como la suscripción al boletín y envío de comunicaciones comerciales.
-                </span>
+                  <input type="checkbox" required /> Acepto la política de privacidad
                 </label>
-
-
 
                 <button type="submit" className="btn enviar">ENVIAR</button>
               </div>
@@ -169,10 +119,10 @@ const handleSubmit = async (e) => {
             </div>
 
             <div className="legal_pag_contact">
-              Responsable: Modular Norte (Construcciones Laminadas SL)...  
+              Responsable: Modular Norte
             </div>
-
           </form>
+
           <img src="/assets/custom/img/home.JPG" className="footer-img" />
         </div>
       </div>
