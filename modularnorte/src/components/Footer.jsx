@@ -10,7 +10,7 @@ export default function Footer() {
       <footer>
         <div className="enlaces_legales">
           <ul style={textStyle}>
-            <li><a style={textStyle}>Política de privacidad</a></li>
+            <li><a href="/privacy" style={textStyle}>Política de privacidad</a></li>
             <li style={textStyle}>|</li>
             <li><a style={textStyle}>Aviso legal</a></li>
             <li style={textStyle}>|</li>
@@ -20,11 +20,11 @@ export default function Footer() {
 
         <div className="enlaces_contacto">
           <ul style={textStyle}>
-            <li><a href="tel:657156065" style={textStyle}>695 88 48 96</a></li>
+            <li><a href="tel:657156065" style={textStyle}>722 782 240</a></li>
             <li className="separador" style={textStyle}>|</li>
             <li>
               <a href="mailto:clientes@modularnorte.com" style={textStyle}>
-                clientes@modularnorte.com
+                info@modularnorte.com
               </a>
             </li>
             <li className="separador" style={textStyle}>|</li>

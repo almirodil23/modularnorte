@@ -15,6 +15,7 @@ import TourVirtual from './pages/TourVirtual/TourVirtual'
 import Preguntas from './pages/Preguntas/Preguntas'
 import ProjectDetail from './pages/Projects/ProjectDetail'
 import Conocenos from './pages/Conocenos'
+import Policy from './pages/Policy'
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/producto/:slug" element={<ProjectDetail />} />
         <Route path="/proceso-constructivo" element={<ProcesoConstructivo />} />
         <Route path="/conocenos" element={<Conocenos />} />
+        <Route path="/privacy" element={<Policy />} />
       </Routes>
 
       <Footer />

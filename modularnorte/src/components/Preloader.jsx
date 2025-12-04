@@ -1,17 +1,20 @@
 import { useEffect } from "react";
+import "./preloader.css";
 
 export default function Preloader() {
   useEffect(() => {
-    if (window.$) {
-      window.$(".preloader").fadeOut("fast");
-    }
+    // Desaparece después de cargar
+    const timer = setTimeout(() => {
+      const el = document.querySelector(".preloader");
+      if (el) el.classList.add("hide-preloader");
+    }, 500); // delay opcional
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="preloader">
-      <div>
-        <div className="tenor-gif-embed" data-postid="22299362" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/loading-gif-22299362">Loading GIF</a>from <a href="https://tenor.com/search/loading-gifs">Loading GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-      </div>
+      <img src="/preloader.gif" alt="loading" className="preloader-img" />
     </div>
   );
 }
