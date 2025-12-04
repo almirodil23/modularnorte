@@ -80,8 +80,8 @@ export default function Contact() {
             <p>
               Estaremos encantados de atenderte, que nos cuentes tu proyecto y resolver todas tus dudas online o en nuestra oficina de A CORUÑA.<br /><br />
               Déjanos tus datos y el motivo de la consulta y nos pondremos en contacto contigo lo antes posible.
-              También puedes llamarnos al <a href="tel:657156065">695 884 896</a>, mandarnos un email a{" "}
-              <a href="mailto:clientes@modularnorte.com">clientes@modularnorte.com</a>.
+              También puedes llamarnos al <a href="tel:722782240">722 782 240</a>, mandarnos un email a{" "}
+              <a href="mailto:info@modularnorte.com">info@modularnorte.com</a>.
             </p>
           </div>
         </div>
@@ -100,8 +100,8 @@ export default function Contact() {
 
           >
             {/* Campos ocultos */}
-            <input type="hidden" name="receptor" value="clientes@modularprojects.es" />
-            <input type="hidden" name="emisor" value="clientes@modularprojects.es" />
+            <input type="hidden" name="receptor" value="info@modularprojects.es" />
+            <input type="hidden" name="emisor" value="info@modularprojects.es" />
             <input type="hidden" name="asunto" value="Formulario Web: Solicitud de Información" />
             <input type="hidden" name="orden" value="nombre,email,telefono,motivo_consulta,plazo,entidad,mensaje" />
             <input type="hidden" name="obligatorios" value="nombre,email,telefono,motivo_consulta,plazo,entidad,mensaje,aceptocondiciones" />
