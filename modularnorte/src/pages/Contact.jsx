@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./contact.css";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
 
@@ -27,47 +28,35 @@ export default function Contact() {
 
   }, []);
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+    const recaptchaRef = useRef(null);
 
-  // 1) OBTENER TOKEN DE RECAPTCHA
-  const recaptchaInput = document.querySelector('[name="g-recaptcha-response"]');
 
-  if (!recaptchaInput || !recaptchaInput.value) {
-    alert("Por favor, confirma que no eres un robot.");
-    return;
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const token = recaptchaInput.value;
+    // Obtener token de reCAPTCHA v2
+    const token = await recaptchaRef.current.executeAsync();
+    recaptchaRef.current.reset();
 
-  // 2) OBTENER CAMPOS DEL FORMULARIO
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData.entries());
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    data.token = token;
 
-  // 3) AÑADIR TOKEN AL JSON
-  data.token = token;
+    const res = await fetch("https://modularnorte.com/api/email.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
 
-  // 4) ENVIAR AL BACKEND
-  const res = await fetch("https://modularnorte.com/api/email.php", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
+    const json = await res.json();
 
-  const json = await res.json();
-
-  if (json.status === "ok") {
-    alert("Tu mensaje fue enviado correctamente. Gracias!");
-    e.target.reset();
-    grecaptcha.reset();
-  } 
-  else if (json.status === "captcha_error") {
-    alert("Por favor, confirma que no eres un robot antes de enviar el formulario.");
-  }
-  else {
-    alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
-  }
-};
+    if (json.status === "ok") {
+      alert("Tu mensaje fue enviado correctamente. Gracias!");
+      e.target.reset();
+    } else {
+      alert("Hubo un error al enviar el mensaje");
+    }
+  };
 
 
 
@@ -181,10 +170,11 @@ const handleSubmit = async (e) => {
 
 
             <div className="captcha-wrapper">
-              <div 
-                class="g-recaptcha" 
-                data-sitekey="6Ldy-h8sAAAAAK2vMk8ED3JJJIpjRPsvqCkBYhVn">
-              </div>
+                <ReCAPTCHA
+                  sitekey="6Ldy-h8sAAAAAK2vMk8ED3JJJIpjRPsvqCkBYhVn"
+                  size="normal"
+                  ref={recaptchaRef}
+                />
             </div>
                 <button type="submit" className="btn enviar">ENVIAR</button>
               </div>
