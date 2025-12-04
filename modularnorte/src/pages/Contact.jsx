@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import "./contact.css";
-import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
 
@@ -28,23 +27,13 @@ export default function Contact() {
 
   }, []);
 
-    const recaptchaRef = useRef(null);
 
 
- const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
-
-  // Obtener token del captcha visible
-  const token = document.querySelector('[name="g-recaptcha-response"]').value;
-
-  if (!token) {
-    alert("Por favor, completa el captcha.");
-    return;
-  }
 
   const formData = new FormData(e.target);
   const data = Object.fromEntries(formData.entries());
-  data.token = token;
 
   const res = await fetch("https://modularnorte.com/api/email.php", {
     method: "POST",
@@ -57,13 +46,8 @@ export default function Contact() {
   if (json.status === "ok") {
     alert("Tu mensaje fue enviado correctamente. Gracias!");
     e.target.reset();
-    grecaptcha.reset(); // reset visible captcha
-  } 
-  else if (json.status === "captcha_error") {
-    alert("Por favor, verifica el captcha.");
-  }
-  else {
-    alert("Hubo un error al enviar tu mensaje.");
+  } else {
+    alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
   }
 };
 
@@ -178,13 +162,7 @@ export default function Contact() {
                 </label>
 
 
-            <div className="captcha-wrapper">
-                <ReCAPTCHA
-                  sitekey="6Ldy-h8sAAAAAK2vMk8ED3JJJIpjRPsvqCkBYhVn"
-                  size="normal"
-                  ref={recaptchaRef}
-                />
-            </div>
+
                 <button type="submit" className="btn enviar">ENVIAR</button>
               </div>
 
