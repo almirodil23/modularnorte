@@ -31,32 +31,41 @@ export default function Contact() {
     const recaptchaRef = useRef(null);
 
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    // Obtener token de reCAPTCHA v2
-    const token = await recaptchaRef.current.executeAsync();
-    recaptchaRef.current.reset();
+  // Obtener token del captcha visible
+  const token = document.querySelector('[name="g-recaptcha-response"]').value;
 
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
-    data.token = token;
+  if (!token) {
+    alert("Por favor, completa el captcha.");
+    return;
+  }
 
-    const res = await fetch("https://modularnorte.com/api/email.php", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
+  data.token = token;
 
-    const json = await res.json();
+  const res = await fetch("https://modularnorte.com/api/email.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
 
-    if (json.status === "ok") {
-      alert("Tu mensaje fue enviado correctamente. Gracias!");
-      e.target.reset();
-    } else {
-      alert("Hubo un error al enviar el mensaje");
-    }
-  };
+  const json = await res.json();
+
+  if (json.status === "ok") {
+    alert("Tu mensaje fue enviado correctamente. Gracias!");
+    e.target.reset();
+    grecaptcha.reset(); // reset visible captcha
+  } 
+  else if (json.status === "captcha_error") {
+    alert("Por favor, verifica el captcha.");
+  }
+  else {
+    alert("Hubo un error al enviar tu mensaje.");
+  }
+};
 
 
 
