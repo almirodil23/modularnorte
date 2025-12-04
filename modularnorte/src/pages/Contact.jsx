@@ -54,7 +54,7 @@ if (json.status === "ok") {
             <h1 className="titulo">Cuéntanos tu proyecto</h1>
             <p>
               Estaremos encantados de atenderte. También puedes llamarnos al{" "}
-              <a href="tel:722782240">722 782 240</a> o escribirnos a{" "}
+              <a href="tel:722782240">722782240</a> o escribirnos a{" "}
               <a href="mailto:info@modularnorte.com">info@modularnorte.com</a>.
             </p>
           </div>
