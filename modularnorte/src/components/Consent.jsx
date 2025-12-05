@@ -69,6 +69,7 @@ const bannerStyles = {
     margin: 0,
     maxWidth: "70%",
     fontSize: "14px",
+    color:"white"
   },
   buttons: {
     display: "flex",
