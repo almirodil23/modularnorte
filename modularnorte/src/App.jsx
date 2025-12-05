@@ -17,6 +17,7 @@ import ProjectDetail from './pages/Projects/ProjectDetail'
 import Conocenos from './pages/Conocenos'
 import Policy from './pages/Policy'
 import ConsentBanner from './components/Consent'
+import Gracias from './components/Gracias'
 
 function App() {
   return (
@@ -39,6 +40,8 @@ function App() {
         <Route path="/proceso-constructivo" element={<ProcesoConstructivo />} />
         <Route path="/conocenos" element={<Conocenos />} />
         <Route path="/privacy" element={<Policy />} />
+        <Route path="/gracias" element={<Gracias />} />
+
       </Routes>
 
       <Footer />

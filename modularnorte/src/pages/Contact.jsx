@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import "./contact.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
+  const navigate = useNavigate();
 
   // Inicializar Google Map
   useEffect(() => {
@@ -39,6 +41,7 @@ console.log("RESPUESTA COMPLETA DEL SERVIDOR:", json);
 
 if (json.status === "ok") {
   alert("Correo enviado correctamente!");
+  navigate("/gracias");
 } else {
   alert("Error del servidor: " + (json.mail_error ?? "desconocido"));
 }
