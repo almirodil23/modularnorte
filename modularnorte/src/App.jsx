@@ -16,12 +16,14 @@ import Preguntas from './pages/Preguntas/Preguntas'
 import ProjectDetail from './pages/Projects/ProjectDetail'
 import Conocenos from './pages/Conocenos'
 import Policy from './pages/Policy'
+import ConsentBanner from './components/Consent'
 
 function App() {
   return (
     <BrowserRouter>
       
       <Preloader />
+      <ConsentBanner />
       <Header />
       <SideMenu />
 
