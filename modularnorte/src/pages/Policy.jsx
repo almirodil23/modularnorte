@@ -19,7 +19,7 @@ const Policy = () => {
       <p className="conocenos-paragraph">
         <strong>MODULAR NORTE</strong> <br />Roberto Figueiral Prada/CIF 32833278L
         <br />Dirección: Calle Arenaza 18 cp 15171 Oleiros - A Coruña 
-        <br />Email: <strong>info@modularnorte.com</strong>  
+        <br />Email: <strong>infomodularnorte@gmail.com</strong>  
         <br />Teléfono: <strong>722 782 240</strong>
       </p>
 
@@ -70,7 +70,7 @@ const Policy = () => {
       </ul>
 
       <p className="conocenos-paragraph">
-        Para ejercer tus derechos, escribe a <strong>info@modularnorte.com</strong> adjuntando una prueba
+        Para ejercer tus derechos, escribe a <strong>infomodularnorte@gmail.com</strong> adjuntando una prueba
         de identidad.
       </p>
 
@@ -99,7 +99,7 @@ const Policy = () => {
       <h2 className="conocenos-subtitle">10. Contacto del Delegado de Protección de Datos</h2>
       <p className="conocenos-paragraph">
         Puedes contactar con nuestro equipo de protección de datos en:  
-        <strong> info@modularnorte.com</strong>
+        <strong> infomodularnorte@gmail.com</strong>
       </p>
 
       {/* 11 Modificaciones */}

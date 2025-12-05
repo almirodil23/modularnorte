@@ -24,7 +24,7 @@ export default function Footer() {
             <li className="separador" style={textStyle}>|</li>
             <li>
               <a href="mailto:clientes@modularnorte.com" style={textStyle}>
-                info@modularnorte.com
+                infomodularnorte@gmail.com
               </a>
             </li>
             <li className="separador" style={textStyle}>|</li>

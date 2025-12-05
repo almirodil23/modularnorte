@@ -55,7 +55,7 @@ if (json.status === "ok") {
             <p>
               Estaremos encantados de atenderte. También puedes llamarnos al
               <a href="tel:722782240">722782240</a> o escribirnos a
-              <a href="mailto:info@modularnorte.com">info@modularnorte.com</a>.
+              <a href="mailto:infomodularnorte@gmail.com">infomodularnorte@gmail.com</a>.
             </p>
           </div>
         </div>
