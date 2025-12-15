@@ -40,7 +40,6 @@ const json = await res.json();
 console.log("RESPUESTA COMPLETA DEL SERVIDOR:", json);
 
 if (json.status === "ok") {
-  alert("Correo enviado correctamente!");
   navigate("/gracias");
 } else {
   alert("Error del servidor: " + (json.mail_error ?? "desconocido"));

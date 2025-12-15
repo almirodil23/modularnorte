@@ -14,7 +14,7 @@ export default function ConsentBanner() {
         ad_storage: "granted",
         ad_user_data: "granted",
         ad_personalization: "granted",
-        analytics_storage: "granted"
+        analytics_storage: "granted",
       });
       localStorage.setItem("cookie-consent", "accepted");
     } else {
@@ -22,73 +22,106 @@ export default function ConsentBanner() {
         ad_storage: "denied",
         ad_user_data: "denied",
         ad_personalization: "denied",
-        analytics_storage: "denied"
+        analytics_storage: "denied",
       });
       localStorage.setItem("cookie-consent", "denied");
     }
-
     setShow(false);
   };
 
   if (!show) return null;
 
   return (
-    <div style={bannerStyles.container}>
-      <p style={bannerStyles.text}>
-        Usamos cookies para mejorar tu experiencia y analizar el tráfico. Elige tu configuración.
-      </p>
+    <div style={banner.container}>
+      <div style={banner.content}>
+        <p style={banner.text}>
+          Usamos cookies para mejorar tu experiencia y analizar el tráfico. Puedes aceptarlas o rechazarlas.
+        </p>
 
-      <div style={bannerStyles.buttons}>
-        <button style={bannerStyles.reject} onClick={() => handleConsent("reject")}>
-          Rechazar
-        </button>
+        <div style={banner.buttons}>
+          <button style={banner.btnSecondary} onClick={() => handleConsent("reject")}>
+            Rechazar
+          </button>
 
-        <button style={bannerStyles.accept} onClick={() => handleConsent("accept")}>
-          Aceptar
-        </button>
+          <button style={banner.btnPrimary} onClick={() => handleConsent("accept")}>
+            Aceptar
+          </button>
+        </div>
       </div>
     </div>
   );
 }
 
-const bannerStyles = {
+/* -----------------------------
+   ESTILOS MINIMALISTAS
+------------------------------ */
+const banner = {
   container: {
     position: "fixed",
     bottom: 0,
     left: 0,
     right: 0,
-    background: "#222",
-    color: "white",
-    padding: "20px",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
+    padding: "16px",
+    background: "rgba(20, 20, 20, 0.95)",
+    backdropFilter: "blur(6px)",
     zIndex: 999999,
+    animation: "fadeIn 0.3s ease-out",
   },
+
+  content: {
+    maxWidth: "900px",
+    margin: "0 auto",
+    display: "flex",
+    flexDirection: "column",
+    gap: "16px",
+  },
+
   text: {
     margin: 0,
-    maxWidth: "70%",
-    fontSize: "14px",
-    color:"white"
+    fontSize: "15px",
+    lineHeight: "1.4",
+    color: "white",
   },
+
   buttons: {
     display: "flex",
     gap: "10px",
+    flexWrap: "wrap",
   },
-  accept: {
-    background: "#4caf50",
-    padding: "10px 20px",
-    border: "none",
+
+  btnPrimary: {
+    flex: 1,
+    background: "#ffffff",
+    color: "#111",
+    border: "1px solid #ddd",
+    padding: "12px",
+    borderRadius: "8px",
     cursor: "pointer",
-    color: "white",
-    borderRadius: "5px",
+    fontSize: "15px",
+    transition: "0.2s",
+    fontWeight: 500,
   },
-  reject: {
-    background: "#f44336",
-    padding: "10px 20px",
-    border: "none",
-    cursor: "pointer",
+
+  btnSecondary: {
+    flex: 1,
+    background: "transparent",
     color: "white",
-    borderRadius: "5px",
+    border: "1px solid #555",
+    padding: "12px",
+    borderRadius: "8px",
+    cursor: "pointer",
+    fontSize: "15px",
+    transition: "0.2s",
+    fontWeight: 500,
   },
 };
+
+/* Animación opcional */
+const style = document.createElement("style");
+style.innerHTML = `
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+`;
+document.head.appendChild(style);
