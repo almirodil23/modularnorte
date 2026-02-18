@@ -23,8 +23,8 @@ export default function Footer() {
             <li><a href="tel:657156065" style={textStyle}>722 782 240</a></li>
             <li className="separador" style={textStyle}>|</li>
             <li>
-              <a href="mailto:clientes@modularnorte.com" style={textStyle}>
-                infomodularnorte@gmail.com
+              <a href="mailto:info@modularnorte.com" style={textStyle}>
+                info@modularnorte.com
               </a>
             </li>
             <li className="separador" style={textStyle}>|</li>
