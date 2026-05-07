@@ -1,37 +1,63 @@
-    import { useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./gracias.css"; // estilos opcionales
+import "./gracias.css";
 
 export default function Gracias() {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/"); // redirige a Home
-    }, 4000); // 4 segundos
-
-    return () => clearTimeout(timer);
-  }, [navigate]);
 
   return (
-    <div className="gracias-container">
-      <div className="gracias-card">
-        <img
-          src="/images/gracias.png"  // cambia por la imagen que quieras
-          alt="Gracias"
-          className="gracias-img"
-        />
+    <main className="gracias-page">
 
-        <h1>¡Gracias por tu mensaje!</h1>
-        <p>
-          Hemos recibido tu formulario correctamente.  
-          Nuestro equipo se pondrá en contacto contigo lo antes posible.
-        </p>
+      <section className="gracias-content">
+        <div className="gracias-card">
+          <div className="gracias-check-wrap">
+            <img
+              src="/images/check-green.png"
+              alt=""
+              className="gracias-check"
+              aria-hidden="true"
+            />
+          </div>
 
-        <p className="redirect-text">
-          Serás redirigido automáticamente en unos segundos...
-        </p>
-      </div>
-    </div>
+          <h1>¡Gracias por tu mensaje!</h1>
+
+          <span className="gracias-line" />
+
+          <p className="gracias-text">
+            Hemos recibido tu formulario correctamente.
+            <br />
+            Nuestro equipo se pondrá en contacto contigo
+            <br />
+            lo antes posible.
+          </p>
+
+          <div className="gracias-divider" />
+
+          <div className="gracias-redirect">
+            <img
+              src="/images/clock-green.png"
+              alt=""
+              className="gracias-clock"
+              aria-hidden="true"
+            />
+
+            <p>
+              Serás redirigido automáticamente en
+              <br />
+              unos segundos...
+            </p>
+          </div>
+
+          <button
+            type="button"
+            className="gracias-home-btn"
+            onClick={() => navigate("/")}
+          >
+            Volver al inicio <span>→</span>
+          </button>
+        </div>
+      </section>
+    </main>
   );
 }
