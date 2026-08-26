@@ -58,6 +58,12 @@ export default function SideMenu() {
           </li>
 
           <li className="nav-item">
+            <Link to="/blogs" className="nav-link" onClick={closeMenu}>
+              Blog
+            </Link>
+          </li>
+
+          <li className="nav-item">
             <Link to="/nosotros" className="nav-link" onClick={closeMenu}>Nosotros</Link>
           </li>
 

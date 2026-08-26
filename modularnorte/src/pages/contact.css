@@ -1,88 +1,420 @@
+.contact-page {
+  background: #fff;
+}
+
+
+/* =========================
+   MAPA
+========================= */
+
 .contact-map {
   width: 100%;
-  height: 350px;
-  margin-bottom: 15px;
+  height: 420px;
+  margin-bottom: 60px;
 }
 
-.direccion {
-  text-align: center;
-  color: white;
-  margin-bottom: 25px;
+
+/* =========================
+   BLOQUE IZQUIERDO
+========================= */
+
+.contact-page .contenido {
+  max-width: 440px;
 }
-p{
-    color: #0000006e;
-    text-align: justify;
-    line-height: 24px;
-    font-size: 15px;
-    margin-bottom: 13px; 
+
+.contact-page .contenido .titulo {
+  margin-bottom: 20px;
+
+  color: #111;
+
+  font-size: 34px;
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
+
+.contact-page .contenido p {
+  margin: 0;
+
+  color: #8b8b8b;
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  letter-spacing: 0.025em;
+
+  text-align: left;
+}
+
+.contact-page .contenido a {
+  color: #111;
+
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+/* =========================
+   ÁREA FORMULARIO
+========================= */
+
+.contact-form-area {
+  padding-bottom: 80px;
+}
+
+.formulario_contacto {
+  max-width: 1120px;
+
+  margin: 0 auto;
+
+  padding: 0 45px;
+}
+
+
+/* CABECERA FORMULARIO */
+
+.formulario_contacto > .titulo {
+  margin: 0 0 35px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #dedede;
+
+  color: #111;
+
+  font-size: 18px;
+  line-height: 1.3;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   LABELS
+========================= */
+
 .formulario_contacto label {
-  font-weight: 500;
-  margin-top: 15px;
   display: block;
-  color: black;
+
+  margin: 0 0 10px;
+
+  color: #111;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
 }
+
+
+/* =========================
+   CAMPOS
+========================= */
 
 .formulario_contacto .form-control {
-  background-color: white;
-  border: 1px solid #333;
-    color: #0000006e;
-  border-radius: 0;
-  font-weight: bold;
+  width: 100%;
 
-  padding: 7px 12px;
+  min-height: 52px;
+
+  margin-bottom: 26px;
+
+  padding: 13px 15px;
+
+  border: 1px solid #d5d5d5;
+
+  border-radius: 0;
+
+  background: #fff;
+
+  color: #111;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  box-shadow: none;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
 }
 
-.formulario_contacto textarea {
+.formulario_contacto .form-control:focus {
+  border-color: #111;
+
+  background: #fafafa;
+
+  box-shadow: none;
+}
+
+.formulario_contacto .form-control::placeholder {
+  color: #b5b5b5;
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.formulario_contacto select.form-control {
+  appearance: none;
+  -webkit-appearance: none;
+
+  cursor: pointer;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #111 50%),
+    linear-gradient(135deg, #111 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 13px) 50%;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+
+  padding-right: 42px;
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.formulario_contacto textarea.form-control {
+  min-height: 160px;
+
+  padding-top: 15px;
+
   resize: vertical;
 }
 
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.formulario_contacto .checkbox {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 2px 0 0;
+
+  color: #777;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+
+  text-transform: none;
+}
+
+.formulario_contacto .checkbox input {
+  width: 17px;
+  height: 17px;
+
+  margin: 0;
+
+  accent-color: #111;
+
+  cursor: pointer;
+}
+
+.formulario_contacto .checkbox a {
+  color: #111;
+
+  text-decoration: underline;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+.btn.enviar {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 170px;
+
+  min-height: 46px;
+
+  margin-top: 30px;
+
+  padding: 0 28px;
+
+  border: 1px solid #111;
+
+  border-radius: 0;
+
+  background: #111;
+
+  color: #fff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn.enviar:hover {
+  background: #fff;
+
+  color: #111;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   LEGAL
+========================= */
+
+.legal_pag_contact {
+  margin-top: 35px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #e2e2e2;
+
+  color: #999;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+
+  letter-spacing: 0.07em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   IMAGEN FINAL
+========================= */
+
+.footer-img {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 70px;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   CAPTCHA
+========================= */
+
 .captcha-wrapper {
+  min-height: 80px;
+
   margin-top: 20px;
   margin-bottom: 25px;
-  min-height: 80px;     /* 📌 fuerza altura mínima */
 }
 
 .g-recaptcha {
-  transform: scale(1);  /* por si está colapsado */
+  transform: scale(1);
+
   transform-origin: 0 0;
 }
 
 
-input{
-    margin-bottom: 10px;
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+  .contact-map {
+    height: 360px;
+
+    margin-bottom: 45px;
+  }
+
+  .formulario_contacto {
+    padding: 0 30px;
+  }
+
+  .contact-page .contenido {
+    max-width: none;
+  }
 }
 
 
-.checkbox {
-  margin-top: 15px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #ccc;
-}
+/* =========================
+   MOBILE
+========================= */
 
-.checkbox a {
-  color: black;
-  text-decoration: underline;
-}
+@media (max-width: 767px) {
+  .contact-page .contenido .titulo {
+    font-size: 27px;
+  }
 
-.btn.enviar {
-  margin-top: 15px;
-  background: black;
-  border: 2px solid black;
-  padding: 10px 25px;
-  color: white;
-  font-weight: bold;
-  border-radius: 0;
-}
+  .contact-map {
+    height: 300px;
 
-.footer-img {
-  width: 100%;
-  margin-top: 40px;
-}
+    margin-bottom: 35px;
+  }
 
-.legal_pag_contact {
-  font-size: 12px;
-  color: black;
-  margin-top: 25px;
+  .formulario_contacto {
+    padding: 0 18px;
+  }
+
+  .formulario_contacto > .titulo {
+    margin-bottom: 28px;
+
+    font-size: 16px;
+  }
+
+  .formulario_contacto .form-control {
+    margin-bottom: 22px;
+  }
+
+  .btn.enviar {
+    width: 100%;
+
+    min-height: 50px;
+  }
+
+  .footer-img {
+    margin-top: 50px;
+  }
 }

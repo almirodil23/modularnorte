@@ -18,10 +18,15 @@ import Conocenos from './pages/Conocenos'
 import Policy from './pages/Policy'
 import ConsentBanner from './components/Consent'
 import Gracias from './components/Gracias'
+import BlogDetail from './components/BlogDetail'
+import BlogSection from './components/BlogSection'
+import ScrollToTop from './components/ScrollToTop'
+
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       
       <Preloader />
       <ConsentBanner />
@@ -33,7 +38,8 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contactar" element={<Contact />} />
         <Route path="/nosotros" element={<Nosotros />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blogs" element={<BlogSection />} />
+        <Route path="/blogs/:slug" element={<BlogDetail />} />
         <Route path="/tour-virtual" element={<TourVirtual />} />
         <Route path="/preguntas-frecuentes" element={<Preguntas />} />
         <Route path="/producto/:slug" element={<ProjectDetail />} />
