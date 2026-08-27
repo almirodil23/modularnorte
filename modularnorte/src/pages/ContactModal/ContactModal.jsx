@@ -197,11 +197,7 @@ export default function ContactModal({
                         </option>
 
                         <option value="vivienda_nueva">
-                          Vivienda nueva
-                        </option>
-
-                        <option value="ampliacion">
-                          Ampliación
+                          Vivienda Modular
                         </option>
 
                         <option value="reforma">
@@ -209,7 +205,7 @@ export default function ContactModal({
                         </option>
 
                         <option value="local">
-                          Local / negocio
+                          Local / Negocio
                         </option>
 
                         <option value="otro">
@@ -289,11 +285,11 @@ export default function ContactModal({
                       </option>
 
                       <option value="terreno">
-                        Tengo un terreno
+                        Quiero construir una casa
                       </option>
 
                       <option value="reforma">
-                        Reforma o ampliación
+                        Quiero hacer una reforma
                       </option>
 
                       <option value="otro">

@@ -192,7 +192,7 @@ const blogs = [
     shortTitle: "¿Cuánto cuesta una casa modular?",
     date: "21 Agosto 2026",
     category: "PRECIOS",
-    image: "/proyectos/centro-multiusos/cover.jpg",
+    image: "/proyectos/project-vivienda-muchamiel/img_2.jpg",
     excerpt:
       "Analizamos el precio por metro cuadrado, cimentación, licencias, acometidas y otros gastos necesarios para conocer el coste real.",
 
@@ -371,7 +371,7 @@ const blogs = [
     shortTitle: "Madera y resistencia al fuego",
     date: "14 Agosto 2026",
     category: "TÉCNICA",
-    image: "/proyectos/centro-multiusos/img_1.jpg",
+    image: "/proyectos/project-300/img_11.jpg",
     excerpt:
       "La madera moderna puede ofrecer un excelente comportamiento frente al fuego. Explicamos cómo funciona y qué exige la normativa.",
 
@@ -521,7 +521,8 @@ const blogs = [
     shortTitle: "Cómo elegir tu terreno",
     date: "07 Agosto 2026",
     category: "TERRENOS",
-    image: "/proyectos/atico-project-50/img_4.jpg",
+
+    image: "/proyectos/varias/pasiaje_galicia.jpg",
     excerpt:
       "Suelo urbano, núcleo rural, accesos y suministros: qué debes comprobar antes de comprar una parcela para construir.",
 
@@ -602,7 +603,7 @@ const blogs = [
     shortTitle: "Casas ecológicas en A Coruña",
     date: "04 Agosto 2026",
     category: "SOSTENIBILIDAD",
-    image: "/proyectos/centro-multiusos/img_2.jpg",
+    image: "/proyectos/denia/imagen_3.jpg",
     excerpt:
       "Madera certificada, aerotermia, aislamiento y eficiencia energética para conseguir viviendas de menor impacto ambiental.",
 
@@ -678,7 +679,7 @@ const blogs = [
     shortTitle: "El futuro de la vivienda modular",
     date: "31 Julio 2026",
     category: "INNOVACIÓN",
-    image: "/proyectos/atico-project-50/img_5.jpg",
+    image: "/proyectos/project-80-en-tarragona/img_1.jpg",
     excerpt:
       "Domótica, nuevos sistemas constructivos y energías renovables están transformando la forma de construir viviendas.",
 
@@ -757,7 +758,7 @@ const blogs = [
     shortTitle: "5 errores que debes evitar",
     date: "28 Julio 2026",
     category: "GUÍA",
-    image: "/proyectos/centro-multiusos/img_3.jpg",
+    image: "/proyectos/project-120/img_2.jpg",
     excerpt:
       "Terrenos no edificables, presupuestos incompletos o empresas sin referencias: repasamos los errores que debes evitar.",
 
@@ -855,7 +856,7 @@ const blogs = [
     shortTitle: 'Cuidado con las "gangas"',
     date: "24 Julio 2026",
     category: "CONSEJOS",
-    image: "/proyectos/atico-project-50/img_6.jpg",
+    image: "/proyectos/project-180/cover.jpg",
     excerpt:
       "Casas sorprendentemente baratas, promesas de construir sin licencia y materiales sin garantías pueden convertir el ahorro en un problema.",
 

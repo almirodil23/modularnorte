@@ -1,38 +1,674 @@
+/* =========================================================
+   HOME HERO
+========================================================= */
+
 .home-hero {
   position: relative;
+
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
+  height: 100vh;
+  height: 100svh;
+
+  min-height: 680px;
+
   overflow: hidden;
+
   background: #7890b1;
 }
 
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
 .home-hero__picture {
   position: absolute;
+
   inset: 0;
+
   z-index: 0;
+
   display: block;
+
   width: 100%;
   height: 100%;
 }
 
+
 .home-hero__bg {
+  display: block;
+
   width: 100%;
   height: 100%;
-  display: block;
+
   object-fit: cover;
+
   object-position: center center;
 }
 
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
 .home-hero__overlay {
   position: absolute;
+
   inset: 0;
+
   z-index: 1;
+
   pointer-events: none;
-  background: rgba(120, 144, 177, 0.12);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08) 0%,
+      rgba(0, 0, 0, 0.12) 45%,
+      rgba(0, 0, 0, 0.28) 100%
+    );
 }
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
 
 .home-hero__content {
   position: relative;
+
   z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    clamp(100px, 12vh, 150px)
+    40px
+    clamp(55px, 8vh, 90px);
 }
+
+
+.home-hero__main {
+  width: 100%;
+
+  max-width: 1500px;
+
+  min-height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+/*
+ * Anulamos explícitamente las reglas
+ * antiguas de #slide_home.
+ */
+
+#slide_home .contenido {
+  margin: 0;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+
+#slide_home .titulo {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    "Mulish",
+    sans-serif;
+
+  font-size:
+    clamp(
+      3.5rem,
+      6vw,
+      7rem
+    );
+
+  line-height: 0.95;
+
+  font-weight: 500;
+
+  letter-spacing:
+    clamp(
+      0.25rem,
+      0.8vw,
+      0.8rem
+    );
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 3px 20px
+    rgba(0, 0, 0, 0.12);
+}
+
+
+#slide_home .subtitulo {
+  width: auto;
+
+  max-width: 850px;
+
+  margin:
+    30px
+    auto
+    0;
+
+  padding:
+    18px
+    45px
+    0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.38);
+
+  color:
+    rgba(255, 255, 255, 0.92);
+
+  font-family:
+    "Mulish",
+    sans-serif;
+
+  font-size:
+    clamp(
+      1.15rem,
+      1.45vw,
+      1.55rem
+    );
+
+  line-height: 1.45;
+
+  font-weight: 300;
+
+  letter-spacing:
+    clamp(
+      0.12rem,
+      0.25vw,
+      0.28rem
+    );
+}
+
+
+/* =========================================================
+   BUTTON WRAPPER
+========================================================= */
+
+#slide_home .boton {
+  position: static;
+
+  width: 100%;
+
+  margin-top:
+    clamp(
+      45px,
+      7vh,
+      80px
+    );
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+#slide_home .boton .boton_linea_blanco {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 245px;
+
+  margin: 0;
+
+  padding:
+    19px
+    42px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.6);
+
+  background:
+    rgba(0, 0, 0, 0.08);
+
+  color: #ffffff;
+
+  font-family:
+    "Mulish",
+    sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: 0.23rem;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  backdrop-filter:
+    blur(3px);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+#slide_home
+.boton
+.boton_linea_blanco:hover {
+  background: #ffffff;
+
+  border-color:
+    #ffffff;
+
+  color:
+    #1c1c1c;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   LAPTOPS
+========================================================= */
+
+@media (max-width: 1300px) {
+
+  .home-hero {
+    min-height: 620px;
+  }
+
+
+  .home-hero__content {
+    padding:
+      105px
+      32px
+      55px;
+  }
+
+
+  #slide_home .titulo {
+    /*
+     * Sobrescribe el antiguo
+     * font-size: 1.5rem.
+     */
+    font-size:
+      clamp(
+        3rem,
+        5.5vw,
+        5.5rem
+      );
+
+    letter-spacing:
+      clamp(
+        0.2rem,
+        0.7vw,
+        0.65rem
+      );
+  }
+
+
+  #slide_home .subtitulo {
+    margin-top: 25px;
+
+    padding:
+      16px
+      30px
+      0;
+
+    font-size:
+      clamp(
+        1rem,
+        1.4vw,
+        1.3rem
+      );
+  }
+
+
+  #slide_home .boton {
+    margin-top: 50px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+  .home-hero {
+    min-height: 600px;
+  }
+
+
+  .home-hero__content {
+    padding:
+      90px
+      24px
+      45px;
+  }
+
+
+  #slide_home .titulo {
+    font-size:
+      clamp(
+        2.5rem,
+        9vw,
+        4rem
+      );
+
+    line-height: 1;
+
+    letter-spacing:
+      clamp(
+        0.2rem,
+        1.3vw,
+        0.45rem
+      );
+  }
+
+
+  #slide_home .subtitulo {
+    max-width: 600px;
+
+    margin-top: 23px;
+
+    padding:
+      14px
+      20px
+      0;
+
+    font-size: 1rem;
+
+    line-height: 1.45;
+
+    letter-spacing:
+      0.16rem;
+  }
+
+
+  #slide_home .boton {
+    margin-top: 42px;
+  }
+
+
+  #slide_home
+  .boton
+  .boton_linea_blanco {
+    min-width: 220px;
+
+    padding:
+      17px
+      32px;
+
+    font-size: 11px;
+
+    letter-spacing:
+      0.18rem;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+  .home-hero {
+    /*
+     * svh evita el problema de la barra
+     * del navegador en Safari/Chrome móvil.
+     */
+
+    height: 100svh;
+
+    min-height: 560px;
+  }
+
+
+  .home-hero__bg {
+    /*
+     * Puedes mover este valor si el punto
+     * importante de la foto queda desplazado.
+     */
+
+    object-position:
+      52% center;
+  }
+
+
+  .home-hero__content {
+    /*
+     * Todo queda contenido dentro
+     * de la primera pantalla.
+     */
+
+    padding:
+      82px
+      20px
+      35px;
+
+    align-items: center;
+  }
+
+
+  .home-hero__main {
+    /*
+     * Centrado ligeramente por encima
+     * del centro óptico.
+     */
+
+    justify-content:
+      center;
+
+    transform:
+      translateY(-2vh);
+  }
+
+
+  #slide_home .contenido {
+    margin: 0;
+  }
+
+
+  #slide_home .titulo {
+    margin: 0;
+
+    font-size:
+      clamp(
+        2.25rem,
+        11vw,
+        3.25rem
+      );
+
+    line-height: 0.98;
+
+    font-weight: 600;
+
+    letter-spacing:
+      clamp(
+        0.15rem,
+        1.5vw,
+        0.3rem
+      );
+  }
+
+
+  #slide_home .subtitulo {
+    width: 100%;
+
+    max-width: 340px;
+
+    margin:
+      20px
+      auto
+      0;
+
+    padding:
+      13px
+      0
+      0;
+
+    font-size:
+      clamp(
+        0.82rem,
+        3.5vw,
+        1rem
+      );
+
+    line-height: 1.5;
+
+    letter-spacing:
+      0.1rem;
+  }
+
+
+  #slide_home .boton {
+    /*
+     * Antes estaba demasiado lejos.
+     * Ahora queda unos 30px debajo
+     * del subtítulo.
+     */
+
+    margin-top: 32px;
+  }
+
+
+  #slide_home
+  .boton
+  .boton_linea_blanco {
+    min-width: 205px;
+
+    margin: 0;
+
+    padding:
+      15px
+      25px;
+
+    font-size: 10px;
+
+    letter-spacing:
+      0.14rem;
+  }
+}
+
+
+/* =========================================================
+   MÓVILES BAJOS
+   Ej: landscape o pantallas pequeñas
+========================================================= */
+
+@media (
+  max-width: 575.98px
+)
+and (
+  max-height: 700px
+) {
+
+  .home-hero {
+    min-height: 520px;
+  }
+
+
+  .home-hero__content {
+    padding:
+      68px
+      18px
+      24px;
+  }
+
+
+  .home-hero__main {
+    transform: none;
+  }
+
+
+  #slide_home .titulo {
+    font-size:
+      clamp(
+        2rem,
+        9vw,
+        2.8rem
+      );
+  }
+
+
+  #slide_home .subtitulo {
+    margin-top: 16px;
+
+    font-size: 0.8rem;
+
+    line-height: 1.4;
+  }
+
+
+  #slide_home .boton {
+    margin-top: 24px;
+  }
+
+
+  #slide_home
+  .boton
+  .boton_linea_blanco {
+    padding:
+      13px
+      23px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+
+  #slide_home
+  .boton
+  .boton_linea_blanco {
+    transition: none;
+  }
+} 
