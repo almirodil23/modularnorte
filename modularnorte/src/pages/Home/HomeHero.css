@@ -189,7 +189,7 @@
     rgba(255, 255, 255, 0.38);
 
   color:
-    rgba(255, 255, 255, 0.92);
+    #000;
 
   font-family:
     "Mulish",
@@ -484,7 +484,7 @@
      */
 
     padding:
-      82px
+      120px
       20px
       35px;
 
@@ -612,7 +612,7 @@ and (
 
   .home-hero__content {
     padding:
-      68px
+      120px
       18px
       24px;
   }
