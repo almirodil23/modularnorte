@@ -30,9 +30,9 @@ export default function HomeHero({
         <div className="home-hero__main">
           <div className="contenido">
             <h1 className="titulo">
-              MODULAR NORTE
+              <span className="titulo__modular">MODULAR</span>
+              <span className="titulo__norte">NORTE</span>
             </h1>
-
             <h2 className="subtitulo">
               Arquitectura modular de diseño vanguardista
             </h2>
