@@ -23,6 +23,7 @@
 
 .home-hero__picture {
   position: absolute;
+
   inset: 0;
 
   z-index: 0;
@@ -41,6 +42,7 @@
   height: 100%;
 
   object-fit: cover;
+
   object-position: center center;
 }
 
@@ -51,22 +53,19 @@
 
 .home-hero__overlay {
   position: absolute;
+
   inset: 0;
 
   z-index: 1;
 
   pointer-events: none;
 
-  /*
-   * Muy ligero.
-   * Queremos conservar el aspecto luminoso de la fotografía.
-   */
   background:
     linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.03) 0%,
-      rgba(0, 0, 0, 0.04) 48%,
-      rgba(0, 0, 0, 0.18) 100%
+      rgba(0, 0, 0, 0.08) 0%,
+      rgba(0, 0, 0, 0.12) 45%,
+      rgba(0, 0, 0, 0.28) 100%
     );
 }
 
@@ -84,170 +83,155 @@
   height: 100%;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   padding:
-    clamp(110px, 13vh, 160px)
+    clamp(100px, 12vh, 150px)
     40px
-    clamp(50px, 7vh, 80px);
+    clamp(55px, 8vh, 90px);
 }
 
 
 .home-hero__main {
   width: 100%;
+
   max-width: 1500px;
+
+  min-height: 100%;
 
   margin: 0 auto;
 
   display: flex;
+
   flex-direction: column;
 
   align-items: center;
-  justify-content: center;
 
-  /*
-   * Controlamos desde aquí las proporciones verticales.
-   */
-  gap: clamp(42px, 6vh, 72px);
+  justify-content: center;
 
   text-align: center;
 }
 
 
 /* =========================================================
-   RESET DE ESTILOS ANTIGUOS
+   TEXT
 ========================================================= */
 
-#slide_home .contenido,
-#slide_home .boton {
-  position: static;
-
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
-
-  transform: none;
-
-  width: 100%;
-  height: auto;
-
-  margin: 0;
-  padding: 0;
-}
-
-
-/* =========================================================
-   TEXT BLOCK
-========================================================= */
+/*
+ * Anulamos explícitamente las reglas
+ * antiguas de #slide_home.
+ */
 
 #slide_home .contenido {
-  display: flex;
-  flex-direction: column;
+  margin: 0;
 
-  align-items: center;
+  text-align: center;
 
   color: #ffffff;
 }
 
-
-/* =========================================================
-   TITLE
-========================================================= */
 
 #slide_home .titulo {
   margin: 0;
 
-  max-width: 1000px;
-
   color: #ffffff;
 
-  font-family: "Mulish", sans-serif;
+  font-family:
+    "Mulish",
+    sans-serif;
 
   font-size:
     clamp(
-      3.4rem,
-      5.4vw,
-      6.5rem
+      3.5rem,
+      6vw,
+      7rem
     );
 
-  line-height: 0.92;
+  line-height: 0.95;
 
-  /*
-   * 600 funciona mucho mejor sobre fotografía
-   * que el 500 anterior.
-   */
-  font-weight: 600;
+  font-weight: 500;
 
   letter-spacing:
     clamp(
-      0.22rem,
-      0.65vw,
-      0.7rem
+      0.25rem,
+      0.8vw,
+      0.8rem
     );
 
   text-transform: uppercase;
 
   text-shadow:
-    0 2px 14px
-    rgba(0, 0, 0, 0.18);
+    0 3px 20px
+    rgba(0, 0, 0, 0.12);
 }
 
 
-/* =========================================================
-   SUBTITLE
-========================================================= */
-
 #slide_home .subtitulo {
-  width: min(780px, 90%);
+  width: auto;
+
+  max-width: 850px;
 
   margin:
-    clamp(26px, 3.5vh, 38px)
+    30px
     auto
     0;
 
   padding:
-    clamp(20px, 2.5vh, 28px)
-    20px
+    45px
+    45px
     0;
 
   border-top:
     1px solid
-    rgba(255, 255, 255, 0.72);
+    rgba(255, 255, 255, 0.38);
 
-  /*
-   * Mucho más legible que #000 puro + weight 300.
-   */
-  color: rgba(20, 24, 28, 0.94);
+  color:
+    #000;
 
-  font-family: "Mulish", sans-serif;
+  font-family:
+    "Mulish",
+    sans-serif;
 
   font-size:
     clamp(
       1.15rem,
       1.45vw,
-      1.5rem
+      1.55rem
     );
 
-  line-height: 1.5;
+  line-height: 1.45;
 
-  font-weight: 500;
+  font-weight: 300;
 
-  /*
-   * Aquí estaba uno de los problemas:
-   * demasiado tracking para un texto pequeño.
-   */
   letter-spacing:
     clamp(
-      0.06rem,
-      0.12vw,
-      0.11rem
+      0.12rem,
+      0.25vw,
+      0.28rem
+    );
+}
+
+
+/* =========================================================
+   BUTTON WRAPPER
+========================================================= */
+
+#slide_home .boton {
+  position: static;
+
+  width: 100%;
+
+  margin-top:
+    clamp(
+      45px,
+      7vh,
+      80px
     );
 
-  text-shadow:
-    0 1px 3px
-    rgba(255, 255, 255, 0.35);
+  text-align: center;
 }
 
 
@@ -255,58 +239,48 @@
    BUTTON
 ========================================================= */
 
-#slide_home .boton {
-  text-align: center;
-}
-
-
 #slide_home .boton .boton_linea_blanco {
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
-  min-width: 260px;
-
-  min-height: 58px;
+  min-width: 245px;
 
   margin: 0;
 
-  padding: 18px 38px;
+  padding:
+    19px
+    42px;
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.85);
+    rgba(255, 255, 255, 0.6);
 
   background:
-    rgba(15, 15, 15, 0.14);
+    rgba(0, 0, 0, 0.08);
 
   color: #ffffff;
 
-  font-family: "Mulish", sans-serif;
+  font-family:
+    "Mulish",
+    sans-serif;
 
-  /*
-   * Antes estaba en 10–12px.
-   * En móvil resulta demasiado pequeño.
-   */
-  font-size: 13px;
+  font-size: 12px;
 
-  line-height: 1.2;
+  line-height: 1;
 
-  font-weight: 700;
+  font-weight: 800;
 
-  letter-spacing: 0.16rem;
+  letter-spacing: 0.23rem;
 
   text-transform: uppercase;
 
   cursor: pointer;
 
-  text-shadow:
-    0 1px 5px
-    rgba(0, 0, 0, 0.28);
-
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter:
+    blur(3px);
 
   transition:
     background 0.25s ease,
@@ -321,18 +295,19 @@
 .boton_linea_blanco:hover {
   background: #ffffff;
 
-  border-color: #ffffff;
+  border-color:
+    #ffffff;
 
-  color: #1c1c1c;
+  color:
+    #1c1c1c;
 
-  text-shadow: none;
-
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 }
 
 
 /* =========================================================
-   LAPTOP
+   LAPTOPS
 ========================================================= */
 
 @media (max-width: 1300px) {
@@ -346,45 +321,50 @@
     padding:
       105px
       32px
-      50px;
-  }
-
-
-  .home-hero__main {
-    gap: clamp(38px, 5vh, 56px);
+      55px;
   }
 
 
   #slide_home .titulo {
+    /*
+     * Sobrescribe el antiguo
+     * font-size: 1.5rem.
+     */
     font-size:
       clamp(
         3rem,
-        5vw,
-        5rem
+        5.5vw,
+        5.5rem
       );
 
     letter-spacing:
       clamp(
-        0.18rem,
-        0.55vw,
-        0.5rem
+        0.2rem,
+        0.7vw,
+        0.65rem
       );
   }
 
 
   #slide_home .subtitulo {
-    width: min(720px, 90%);
+    margin-top: 25px;
 
-    margin-top: 27px;
-
-    padding-top: 19px;
+    padding:
+      16px
+      30px
+      0;
 
     font-size:
       clamp(
-        1.08rem,
-        1.35vw,
+        1rem,
+        1.4vw,
         1.3rem
       );
+  }
+
+
+  #slide_home .boton {
+    margin-top: 50px;
   }
 }
 
@@ -402,72 +382,68 @@
 
   .home-hero__content {
     padding:
-      100px
+      90px
       24px
-      42px;
-  }
-
-
-  .home-hero__main {
-    gap: 42px;
+      45px;
   }
 
 
   #slide_home .titulo {
-    max-width: 650px;
-
     font-size:
       clamp(
-        2.65rem,
-        8vw,
-        3.8rem
+        2.5rem,
+        9vw,
+        4rem
       );
 
-    line-height: 0.95;
+    line-height: 1;
 
     letter-spacing:
       clamp(
-        0.16rem,
-        1vw,
-        0.34rem
+        0.2rem,
+        1.3vw,
+        0.45rem
       );
   }
 
 
   #slide_home .subtitulo {
-    width: min(570px, 92%);
+    max-width: 600px;
 
-    margin-top: 24px;
+    margin-top: 23px;
 
     padding:
-      17px
-      15px
+      14px
+      20px
       0;
 
-    font-size: 1.05rem;
+    font-size: 1rem;
 
-    line-height: 1.5;
+    line-height: 1.45;
 
-    font-weight: 500;
+    letter-spacing:
+      0.16rem;
+  }
 
-    letter-spacing: 0.08rem;
+
+  #slide_home .boton {
+    margin-top: 42px;
   }
 
 
   #slide_home
   .boton
   .boton_linea_blanco {
-    min-width: 235px;
-
-    min-height: 56px;
+    min-width: 220px;
 
     padding:
       17px
-      30px;
+      32px;
 
-    font-size: 12px;
+    font-size: 11px;
 
-    letter-spacing: 0.14rem;
+    letter-spacing:
+      0.18rem;
   }
 }
 
@@ -479,97 +455,148 @@
 @media (max-width: 575.98px) {
 
   .home-hero {
+    /*
+     * svh evita el problema de la barra
+     * del navegador en Safari/Chrome móvil.
+     */
+
     height: 100svh;
-    min-height: 600px;
+
+    min-height: 560px;
   }
+
 
   .home-hero__bg {
-    object-position: 52% center;
+    /*
+     * Puedes mover este valor si el punto
+     * importante de la foto queda desplazado.
+     */
+
+    object-position:
+      52% center;
   }
+
 
   .home-hero__content {
-    height: 100%;
-    padding: 0 20px 24px;
-    align-items: stretch;
+    /*
+     * Todo queda contenido dentro
+     * de la primera pantalla.
+     */
+
+    padding:
+      82px
+      20px
+      35px;
+
+    align-items: center;
   }
+
 
   .home-hero__main {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
     /*
-     * Esto baja el bloque al cielo
-     * y evita que choque con logo/menu.
+     * Centrado ligeramente por encima
+     * del centro óptico.
      */
-    padding-top: clamp(200px, 19vh, 175px);
 
-    transform: none;
+    justify-content:
+      center;
+
+    transform:
+      translateY(-2vh);
   }
+
 
   #slide_home .contenido {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0;
   }
+
 
   #slide_home .titulo {
     margin: 0;
+    margin-top:120px;
 
-    max-width: 320px;
+    font-size:
+      clamp(
+        2.25rem,
+        11vw,
+        3.25rem
+      );
 
-    font-size: clamp(2.35rem, 9vw, 3rem);
-    line-height: 0.94;
-    font-weight: 650;
-    letter-spacing: 0.12rem;
+    line-height: 0.98;
 
-    color: #ffffff;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    font-weight: 600;
+
+    letter-spacing:
+      clamp(
+        0.15rem,
+        1.5vw,
+        0.3rem
+      );
   }
+
 
   #slide_home .subtitulo {
     width: 100%;
-    max-width: 320px;
 
-    margin: 18px auto 0;
-    padding: 14px 6px 0;
+    max-width: 340px;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.65);
+    margin:
+      20px
+      auto
+      0;
 
-    font-size: clamp(1rem, 3.8vw, 1.08rem);
-    line-height: 1.45;
-    font-weight: 500;
-    letter-spacing: 0.04rem;
+    padding:
+      13px
+      0
+      0;
 
-    color: rgba(20, 24, 28, 0.9);
+    font-size:
+      clamp(
+        0.82rem,
+        3.5vw,
+        1rem
+      );
+
+    line-height: 1.5;
+
+    letter-spacing:
+      0.1rem;
   }
+
 
   #slide_home .boton {
-    width: 100%;
-    margin-top: auto;
-    padding-top: 32px;
-    text-align: center;
+    /*
+     * Antes estaba demasiado lejos.
+     * Ahora queda unos 30px debajo
+     * del subtítulo.
+     */
+
+    margin-top: 32px;
   }
 
-  #slide_home .boton .boton_linea_blanco {
-    min-width: 235px;
-    min-height: 54px;
 
-    padding: 16px 26px;
+  #slide_home
+  .boton
+  .boton_linea_blanco {
+    min-width: 205px;
 
-    font-size: 12px;
-    line-height: 1.2;
-    font-weight: 750;
-    letter-spacing: 0.13rem;
+    margin: 0;
+
+    padding:
+      15px
+      25px;
+
+    font-size: 10px;
+
+    letter-spacing:
+      0.14rem;
   }
 }
 
 
 /* =========================================================
-   MÓVILES MUY BAJOS
+   MÓVILES BAJOS
+   Ej: landscape o pantallas pequeñas
 ========================================================= */
 
 @media (
@@ -580,21 +607,19 @@ and (
 ) {
 
   .home-hero {
-    min-height: 540px;
+    min-height: 520px;
   }
 
 
   .home-hero__content {
     padding:
-      100px
+      68px
       18px
-      25px;
+      24px;
   }
 
 
   .home-hero__main {
-    gap: 28px;
-
     transform: none;
   }
 
@@ -602,36 +627,33 @@ and (
   #slide_home .titulo {
     font-size:
       clamp(
-        2.25rem,
-        8.5vw,
-        2.75rem
+        2rem,
+        9vw,
+        2.8rem
       );
   }
 
 
   #slide_home .subtitulo {
-    max-width: 340px;
+    margin-top: 16px;
 
-    margin-top: 18px;
-
-    padding-top: 14px;
-
-    font-size: 0.95rem;
+    font-size: 0.8rem;
 
     line-height: 1.4;
+  }
+
+
+  #slide_home .boton {
+    margin-top: 24px;
   }
 
 
   #slide_home
   .boton
   .boton_linea_blanco {
-    min-height: 50px;
-
     padding:
-      14px
-      25px;
-
-    font-size: 11px;
+      13px
+      23px;
   }
 }
 
@@ -640,11 +662,14 @@ and (
    ACCESSIBILITY
 ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
 
   #slide_home
   .boton
   .boton_linea_blanco {
     transition: none;
   }
-}
+} 
