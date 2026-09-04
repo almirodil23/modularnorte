@@ -23,7 +23,6 @@
 
 .home-hero__picture {
   position: absolute;
-
   inset: 0;
 
   z-index: 0;
@@ -42,7 +41,6 @@
   height: 100%;
 
   object-fit: cover;
-
   object-position: center center;
 }
 
@@ -53,19 +51,22 @@
 
 .home-hero__overlay {
   position: absolute;
-
   inset: 0;
 
   z-index: 1;
 
   pointer-events: none;
 
+  /*
+   * Muy ligero.
+   * Queremos conservar el aspecto luminoso de la fotografía.
+   */
   background:
     linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.08) 0%,
-      rgba(0, 0, 0, 0.12) 45%,
-      rgba(0, 0, 0, 0.28) 100%
+      rgba(0, 0, 0, 0.03) 0%,
+      rgba(0, 0, 0, 0.04) 48%,
+      rgba(0, 0, 0, 0.18) 100%
     );
 }
 
@@ -83,155 +84,170 @@
   height: 100%;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   padding:
-    clamp(100px, 12vh, 150px)
+    clamp(110px, 13vh, 160px)
     40px
-    clamp(55px, 8vh, 90px);
+    clamp(50px, 7vh, 80px);
 }
 
 
 .home-hero__main {
   width: 100%;
-
   max-width: 1500px;
-
-  min-height: 100%;
 
   margin: 0 auto;
 
   display: flex;
-
   flex-direction: column;
 
   align-items: center;
-
   justify-content: center;
+
+  /*
+   * Controlamos desde aquí las proporciones verticales.
+   */
+  gap: clamp(42px, 6vh, 72px);
 
   text-align: center;
 }
 
 
 /* =========================================================
-   TEXT
+   RESET DE ESTILOS ANTIGUOS
 ========================================================= */
 
-/*
- * Anulamos explícitamente las reglas
- * antiguas de #slide_home.
- */
+#slide_home .contenido,
+#slide_home .boton {
+  position: static;
+
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+
+  transform: none;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   TEXT BLOCK
+========================================================= */
 
 #slide_home .contenido {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
 
-  text-align: center;
+  align-items: center;
 
   color: #ffffff;
 }
 
 
+/* =========================================================
+   TITLE
+========================================================= */
+
 #slide_home .titulo {
   margin: 0;
 
+  max-width: 1000px;
+
   color: #ffffff;
 
-  font-family:
-    "Mulish",
-    sans-serif;
+  font-family: "Mulish", sans-serif;
 
   font-size:
     clamp(
-      3.5rem,
-      6vw,
-      7rem
+      3.4rem,
+      5.4vw,
+      6.5rem
     );
 
-  line-height: 0.95;
+  line-height: 0.92;
 
-  font-weight: 500;
+  /*
+   * 600 funciona mucho mejor sobre fotografía
+   * que el 500 anterior.
+   */
+  font-weight: 600;
 
   letter-spacing:
     clamp(
-      0.25rem,
-      0.8vw,
-      0.8rem
+      0.22rem,
+      0.65vw,
+      0.7rem
     );
 
   text-transform: uppercase;
 
   text-shadow:
-    0 3px 20px
-    rgba(0, 0, 0, 0.12);
+    0 2px 14px
+    rgba(0, 0, 0, 0.18);
 }
 
 
-#slide_home .subtitulo {
-  width: auto;
+/* =========================================================
+   SUBTITLE
+========================================================= */
 
-  max-width: 850px;
+#slide_home .subtitulo {
+  width: min(780px, 90%);
 
   margin:
-    30px
+    clamp(26px, 3.5vh, 38px)
     auto
     0;
 
   padding:
-    18px
-    45px
+    clamp(20px, 2.5vh, 28px)
+    20px
     0;
 
   border-top:
     1px solid
-    rgba(255, 255, 255, 0.38);
+    rgba(255, 255, 255, 0.72);
 
-  color:
-    #000;
+  /*
+   * Mucho más legible que #000 puro + weight 300.
+   */
+  color: rgba(20, 24, 28, 0.94);
 
-  font-family:
-    "Mulish",
-    sans-serif;
+  font-family: "Mulish", sans-serif;
 
   font-size:
     clamp(
       1.15rem,
       1.45vw,
-      1.55rem
+      1.5rem
     );
 
-  line-height: 1.45;
+  line-height: 1.5;
 
-  font-weight: 300;
+  font-weight: 500;
 
+  /*
+   * Aquí estaba uno de los problemas:
+   * demasiado tracking para un texto pequeño.
+   */
   letter-spacing:
     clamp(
-      0.12rem,
-      0.25vw,
-      0.28rem
-    );
-}
-
-
-/* =========================================================
-   BUTTON WRAPPER
-========================================================= */
-
-#slide_home .boton {
-  position: static;
-
-  width: 100%;
-
-  margin-top:
-    clamp(
-      45px,
-      7vh,
-      80px
+      0.06rem,
+      0.12vw,
+      0.11rem
     );
 
-  text-align: center;
+  text-shadow:
+    0 1px 3px
+    rgba(255, 255, 255, 0.35);
 }
 
 
@@ -239,48 +255,58 @@
    BUTTON
 ========================================================= */
 
+#slide_home .boton {
+  text-align: center;
+}
+
+
 #slide_home .boton .boton_linea_blanco {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
-  min-width: 245px;
+  min-width: 260px;
+
+  min-height: 58px;
 
   margin: 0;
 
-  padding:
-    19px
-    42px;
+  padding: 18px 38px;
 
   border:
     1px solid
-    rgba(255, 255, 255, 0.6);
+    rgba(255, 255, 255, 0.85);
 
   background:
-    rgba(0, 0, 0, 0.08);
+    rgba(15, 15, 15, 0.14);
 
   color: #ffffff;
 
-  font-family:
-    "Mulish",
-    sans-serif;
+  font-family: "Mulish", sans-serif;
 
-  font-size: 12px;
+  /*
+   * Antes estaba en 10–12px.
+   * En móvil resulta demasiado pequeño.
+   */
+  font-size: 13px;
 
-  line-height: 1;
+  line-height: 1.2;
 
-  font-weight: 800;
+  font-weight: 700;
 
-  letter-spacing: 0.23rem;
+  letter-spacing: 0.16rem;
 
   text-transform: uppercase;
 
   cursor: pointer;
 
-  backdrop-filter:
-    blur(3px);
+  text-shadow:
+    0 1px 5px
+    rgba(0, 0, 0, 0.28);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
   transition:
     background 0.25s ease,
@@ -295,19 +321,18 @@
 .boton_linea_blanco:hover {
   background: #ffffff;
 
-  border-color:
-    #ffffff;
+  border-color: #ffffff;
 
-  color:
-    #1c1c1c;
+  color: #1c1c1c;
 
-  transform:
-    translateY(-2px);
+  text-shadow: none;
+
+  transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   LAPTOPS
+   LAPTOP
 ========================================================= */
 
 @media (max-width: 1300px) {
@@ -321,50 +346,45 @@
     padding:
       105px
       32px
-      55px;
+      50px;
+  }
+
+
+  .home-hero__main {
+    gap: clamp(38px, 5vh, 56px);
   }
 
 
   #slide_home .titulo {
-    /*
-     * Sobrescribe el antiguo
-     * font-size: 1.5rem.
-     */
     font-size:
       clamp(
         3rem,
-        5.5vw,
-        5.5rem
+        5vw,
+        5rem
       );
 
     letter-spacing:
       clamp(
-        0.2rem,
-        0.7vw,
-        0.65rem
+        0.18rem,
+        0.55vw,
+        0.5rem
       );
   }
 
 
   #slide_home .subtitulo {
-    margin-top: 25px;
+    width: min(720px, 90%);
 
-    padding:
-      16px
-      30px
-      0;
+    margin-top: 27px;
+
+    padding-top: 19px;
 
     font-size:
       clamp(
-        1rem,
-        1.4vw,
+        1.08rem,
+        1.35vw,
         1.3rem
       );
-  }
-
-
-  #slide_home .boton {
-    margin-top: 50px;
   }
 }
 
@@ -382,68 +402,72 @@
 
   .home-hero__content {
     padding:
-      90px
+      100px
       24px
-      45px;
+      42px;
+  }
+
+
+  .home-hero__main {
+    gap: 42px;
   }
 
 
   #slide_home .titulo {
+    max-width: 650px;
+
     font-size:
       clamp(
-        2.5rem,
-        9vw,
-        4rem
+        2.65rem,
+        8vw,
+        3.8rem
       );
 
-    line-height: 1;
+    line-height: 0.95;
 
     letter-spacing:
       clamp(
-        0.2rem,
-        1.3vw,
-        0.45rem
+        0.16rem,
+        1vw,
+        0.34rem
       );
   }
 
 
   #slide_home .subtitulo {
-    max-width: 600px;
+    width: min(570px, 92%);
 
-    margin-top: 23px;
+    margin-top: 24px;
 
     padding:
-      14px
-      20px
+      17px
+      15px
       0;
 
-    font-size: 1rem;
+    font-size: 1.05rem;
 
-    line-height: 1.45;
+    line-height: 1.5;
 
-    letter-spacing:
-      0.16rem;
-  }
+    font-weight: 500;
 
-
-  #slide_home .boton {
-    margin-top: 42px;
+    letter-spacing: 0.08rem;
   }
 
 
   #slide_home
   .boton
   .boton_linea_blanco {
-    min-width: 220px;
+    min-width: 235px;
+
+    min-height: 56px;
 
     padding:
       17px
-      32px;
+      30px;
 
-    font-size: 11px;
+    font-size: 12px;
 
-    letter-spacing:
-      0.18rem;
+    letter-spacing: 0.14rem;
   }
 }
 
@@ -455,147 +479,97 @@
 @media (max-width: 575.98px) {
 
   .home-hero {
-    /*
-     * svh evita el problema de la barra
-     * del navegador en Safari/Chrome móvil.
-     */
-
     height: 100svh;
-
-    min-height: 560px;
+    min-height: 600px;
   }
-
 
   .home-hero__bg {
-    /*
-     * Puedes mover este valor si el punto
-     * importante de la foto queda desplazado.
-     */
-
-    object-position:
-      52% center;
+    object-position: 52% center;
   }
-
 
   .home-hero__content {
-    /*
-     * Todo queda contenido dentro
-     * de la primera pantalla.
-     */
-
-    padding:
-      120px
-      20px
-      35px;
-
-    align-items: center;
+    height: 100%;
+    padding: 0 20px 24px;
+    align-items: stretch;
   }
-
 
   .home-hero__main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
     /*
-     * Centrado ligeramente por encima
-     * del centro óptico.
+     * Esto baja el bloque al cielo
+     * y evita que choque con logo/menu.
      */
+    padding-top: clamp(200px, 19vh, 175px);
 
-    justify-content:
-      center;
-
-    transform:
-      translateY(-2vh);
+    transform: none;
   }
-
 
   #slide_home .contenido {
-    margin: 0;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
   }
-
 
   #slide_home .titulo {
     margin: 0;
 
-    font-size:
-      clamp(
-        2.25rem,
-        11vw,
-        3.25rem
-      );
+    max-width: 320px;
 
-    line-height: 0.98;
+    font-size: clamp(2.35rem, 9vw, 3rem);
+    line-height: 0.94;
+    font-weight: 650;
+    letter-spacing: 0.12rem;
 
-    font-weight: 600;
-
-    letter-spacing:
-      clamp(
-        0.15rem,
-        1.5vw,
-        0.3rem
-      );
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
   }
-
 
   #slide_home .subtitulo {
     width: 100%;
+    max-width: 320px;
 
-    max-width: 340px;
+    margin: 18px auto 0;
+    padding: 14px 6px 0;
 
-    margin:
-      20px
-      auto
-      0;
+    border-top: 1px solid rgba(255, 255, 255, 0.65);
 
-    padding:
-      13px
-      0
-      0;
+    font-size: clamp(1rem, 3.8vw, 1.08rem);
+    line-height: 1.45;
+    font-weight: 500;
+    letter-spacing: 0.04rem;
 
-    font-size:
-      clamp(
-        0.82rem,
-        3.5vw,
-        1rem
-      );
-
-    line-height: 1.5;
-
-    letter-spacing:
-      0.1rem;
+    color: rgba(20, 24, 28, 0.9);
   }
-
 
   #slide_home .boton {
-    /*
-     * Antes estaba demasiado lejos.
-     * Ahora queda unos 30px debajo
-     * del subtítulo.
-     */
-
-    margin-top: 32px;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 32px;
+    text-align: center;
   }
 
+  #slide_home .boton .boton_linea_blanco {
+    min-width: 235px;
+    min-height: 54px;
 
-  #slide_home
-  .boton
-  .boton_linea_blanco {
-    min-width: 205px;
+    padding: 16px 26px;
 
-    margin: 0;
-
-    padding:
-      15px
-      25px;
-
-    font-size: 10px;
-
-    letter-spacing:
-      0.14rem;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 750;
+    letter-spacing: 0.13rem;
   }
 }
 
 
 /* =========================================================
-   MÓVILES BAJOS
-   Ej: landscape o pantallas pequeñas
+   MÓVILES MUY BAJOS
 ========================================================= */
 
 @media (
@@ -606,19 +580,21 @@ and (
 ) {
 
   .home-hero {
-    min-height: 520px;
+    min-height: 540px;
   }
 
 
   .home-hero__content {
     padding:
-      120px
+      100px
       18px
-      24px;
+      25px;
   }
 
 
   .home-hero__main {
+    gap: 28px;
+
     transform: none;
   }
 
@@ -626,33 +602,36 @@ and (
   #slide_home .titulo {
     font-size:
       clamp(
-        2rem,
-        9vw,
-        2.8rem
+        2.25rem,
+        8.5vw,
+        2.75rem
       );
   }
 
 
   #slide_home .subtitulo {
-    margin-top: 16px;
+    max-width: 340px;
 
-    font-size: 0.8rem;
+    margin-top: 18px;
+
+    padding-top: 14px;
+
+    font-size: 0.95rem;
 
     line-height: 1.4;
-  }
-
-
-  #slide_home .boton {
-    margin-top: 24px;
   }
 
 
   #slide_home
   .boton
   .boton_linea_blanco {
+    min-height: 50px;
+
     padding:
-      13px
-      23px;
+      14px
+      25px;
+
+    font-size: 11px;
   }
 }
 
@@ -661,14 +640,11 @@ and (
    ACCESSIBILITY
 ========================================================= */
 
-@media (
-  prefers-reduced-motion:
-  reduce
-) {
+@media (prefers-reduced-motion: reduce) {
 
   #slide_home
   .boton
   .boton_linea_blanco {
     transition: none;
   }
-} 
+}
