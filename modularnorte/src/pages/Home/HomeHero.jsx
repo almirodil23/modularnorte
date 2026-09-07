@@ -34,7 +34,7 @@ export default function HomeHero({
               <span className="titulo__norte">NORTE</span>
             </h1>
             <h2 className="subtitulo">
-              Arquitectura modular de diseño vanguardista
+              Arquitectura Modular de Diseño
             </h2>
           </div>
 

@@ -23,9 +23,6 @@ export default function ParallaxBlock({
               ¿TIENES UN TERRENO?
               <br />
 
-              ¿UNA VIVIENDA ANTIGUA?
-              <br />
-
               ¿O SIMPLEMENTE UNA IDEA?
             </h2>
 

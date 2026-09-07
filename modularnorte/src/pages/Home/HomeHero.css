@@ -560,6 +560,7 @@
 
   #slide_home .subtitulo {
     width: 100%;
+    font-weight: 600;
 
     max-width: 340px;
 
@@ -576,8 +577,8 @@
     font-size:
       clamp(
         0.82rem,
-        4vw,
-        2rem
+        5vw,
+        2.5rem
       );
 
     line-height: 1.5;

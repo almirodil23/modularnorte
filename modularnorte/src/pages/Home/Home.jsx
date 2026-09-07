@@ -48,8 +48,10 @@ export default function Home() {
       />
 
       <Intro />
+      
+      <BlogSection />
 
-      <ProjectsPreview />
+
 
       <ParallaxBlock
         onContactClick={() =>
@@ -60,7 +62,7 @@ export default function Home() {
         }
       />
 
-      <BlogSection />
+    
 
       {/* MODAL CONTACTO */}
 
@@ -77,6 +79,8 @@ export default function Home() {
         mode="budget"
         onClose={closeModal}
       />
+
+            <ProjectsPreview />
     </>
   );
 }

@@ -709,7 +709,7 @@ transition: all 0.0s ease-in-out;
     
     .boton_menu a {
     padding: 14px 28px 5px 10px;
-    font-size: 10px;
+    font-size: 30px;
     }
     
     #menu_lateral {
@@ -2849,7 +2849,7 @@ letter-spacing: 0.1rem;
 @media (max-width: 767.98px){
 
     .titulo_pagina_standard h1{
-    font-size: 1.2rem;
+    font-size: 29px;
     letter-spacing: 4px;
     padding: 7px 21px;
     }
@@ -2864,7 +2864,7 @@ letter-spacing: 0.1rem;
     padding: 0px;
     letter-spacing: 6px;
     font-weight: 600;
-    line-height: 27px;
+    line-height: 32px;
     text-align: right;  
     width: 90%;
     }

@@ -7,7 +7,7 @@ export default function ProcesoConstructivo() {
       <div className="titulo_pagina_standard container-fluid">
         <div className="row">
           <div className="col-12">
-            <h1>Proceso Constructivo</h1>
+            <h1 style={{fontSize:34}}>Proceso Constructivo</h1>
           </div>
         </div>
       </div>
