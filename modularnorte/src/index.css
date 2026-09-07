@@ -191,7 +191,7 @@ width: 100%;
 }
 
 .boton_linea_blanco{
-color: white;
+color: #000;
 letter-spacing: 4px;
 text-transform: uppercase;
 font-weight: bold;
@@ -201,8 +201,8 @@ padding: 21px 59px;
 }
 
 .boton_linea_blanco:hover{
-background-color: white;
-color: black;    
+background-color:#000;
+color: #fff;    
 }
 
 .boton_flotante{
@@ -2009,7 +2009,7 @@ background-size: cover;
     
     .info_home .textos_intro {
     padding-top: 170px;
-    padding-bottom: 170px;
+    padding-bottom: 0px;
     max-width: 65%;
     }
     
@@ -2100,7 +2100,7 @@ background-size: cover;
     
     .info_home .textos_intro {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 0px;
     max-width: 86%;
     padding-left: 25px;
     padding-right: 25px;
