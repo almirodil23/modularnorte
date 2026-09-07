@@ -139,46 +139,22 @@
   margin-top:120px;
 
   display: flex;
-  align-items: baseline;
-  justify-content: center;
-
-  gap: 0.35em;
+  flex-direction: column;
+  align-items: center;
 
   color: #ffffff;
 
   font-family: "Open Sans", sans-serif;
 
-  font-weight: 600;
+  line-height: 0.92;
 
-  line-height: 1;
+  font-weight: 600;
 
   text-transform: uppercase;
 
   text-shadow:
     0 3px 20px
     rgba(0, 0, 0, 0.12);
-}
-
-#slide_home .titulo__modular {
-  font-size: clamp(37.5px, 4vw, 75px);
-
-  letter-spacing:
-    clamp(
-      0.12rem,
-      0.4vw,
-      0.4rem
-    );
-}
-
-#slide_home .titulo__norte {
-  font-size: clamp(57.5px, 6.13vw, 115px);
-
-  letter-spacing:
-    clamp(
-      0.1rem,
-      0.32vw,
-      0.32rem
-    );
 }
 
 #slide_home .titulo__modular {
@@ -216,7 +192,6 @@
       0.5rem
     );
 }
-
 #slide_home .subtitulo {
   width: auto;
 
