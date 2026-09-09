@@ -12,7 +12,7 @@ return (
 </div>
 </div>
 <div className="col-12 boton">
-<a href="/projects" className="boton_linea_blanco">Ver Proyectos</a>
+<a href="/proyectos" className="boton_linea_blanco">Ver Proyectos</a>
 </div>
 </div>
 </div>

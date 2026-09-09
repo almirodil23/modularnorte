@@ -106,7 +106,7 @@ const Policy = () => {
       <h2 className="conocenos-subtitle">11. Modificaciones de esta política</h2>
       <p className="conocenos-paragraph">
         Podemos actualizar esta política para adaptarla a cambios normativos.  
-        Última actualización: <strong>{new Date().toLocaleDateString()}</strong>.
+        Última actualización: <strong>9 de septiembre de 2026</strong>.
       </p>
     </section>
   

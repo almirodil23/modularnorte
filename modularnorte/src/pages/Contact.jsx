@@ -129,7 +129,7 @@ if (json.status === "ok") {
             </div>
           </form>
 
-          <img src="/assets/custom/img/home.JPG" className="footer-img" />
+          <img src="/assets/custom/img/home.JPG" className="footer-img" alt="Casa modular de diseño de Modular Norte" loading="lazy" />
         </div>
       </div>
     </div>

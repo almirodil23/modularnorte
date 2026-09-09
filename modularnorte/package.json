@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/generate-seo.mjs --dist",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prebuild": "node scripts/generate-seo.mjs --public",
+    "seo": "node scripts/generate-seo.mjs --all"
   },
   "dependencies": {
     "framer-motion": "^12.23.24",

@@ -5,7 +5,7 @@ const Conocenos = () => {
   return (
     <section className="conocenos-section">
       <div className="conocenos-header">
-        <h2 className="conocenos-title">Conócenos</h2>
+        <h1 className="conocenos-title">Conócenos</h1>
       </div>
 
       <h3 className="conocenos-subtitle">La Esencia de Modular Norte</h3>

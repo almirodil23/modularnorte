@@ -1,4 +1,4 @@
-import projects from "../../data/modularprojects";
+import projects from "../data/modularprojects";
 
 export function ProyectosGrid() {
   const preview = projects.slice(0, 4); // Los 4 primeros
@@ -13,7 +13,7 @@ export function ProyectosGrid() {
             className="col-lg-3 col-md-6 miniatura_proyecto"
             style={{ backgroundImage: `url(${p.img})` }}
           >
-            <a href={`/producto/${p.slug}`}>
+            <a href={`/proyecto/${p.slug}`}>
               <div className="texto">
                 <h4>{p.title}</h4>
                 <h5>{p.location}</h5>

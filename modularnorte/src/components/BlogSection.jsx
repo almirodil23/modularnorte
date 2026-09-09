@@ -79,7 +79,7 @@ function BlogCard({ blog, featured = false, grid = false }) {
         .join(" ")}
     >
       <Link
-        to={`/blogs/${blog.slug}`}
+        to={`/blog/${blog.slug}`}
         className="mn-blog-card__image"
       >
         <img
@@ -96,7 +96,7 @@ function BlogCard({ blog, featured = false, grid = false }) {
         </div>
 
         <h2>
-          <Link to={`/blogs/${blog.slug}`}>
+          <Link to={`/blog/${blog.slug}`}>
             {blog.title}
           </Link>
         </h2>
@@ -106,7 +106,7 @@ function BlogCard({ blog, featured = false, grid = false }) {
         </p>
 
         <Link
-          to={`/blogs/${blog.slug}`}
+          to={`/blog/${blog.slug}`}
           className="mn-blog-card__button"
         >
           LEER MÁS

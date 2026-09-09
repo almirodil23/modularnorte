@@ -36,7 +36,7 @@ export default function BlogDetail() {
       <main className="blog-detail-not-found">
         <h1>Artículo no encontrado</h1>
 
-        <Link to="/">
+        <Link to="/blog">
           VOLVER AL BLOG
         </Link>
       </main>
@@ -50,7 +50,7 @@ export default function BlogDetail() {
 
         {/* VOLVER */}
         <Link
-          to="/"
+          to="/blog"
           className="blog-detail__back"
         >
           ← VOLVER AL BLOG

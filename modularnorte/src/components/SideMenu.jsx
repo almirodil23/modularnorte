@@ -42,7 +42,7 @@ export default function SideMenu() {
           </li>
 
           <li className="nav-item">
-            <Link to="/projects" className="nav-link" onClick={closeMenu}>Proyectos</Link>
+            <Link to="/proyectos" className="nav-link" onClick={closeMenu}>Proyectos</Link>
           </li>
 
           <li className="nav-item">
@@ -58,7 +58,7 @@ export default function SideMenu() {
           </li>
 
           <li className="nav-item">
-            <Link to="/blogs" className="nav-link" onClick={closeMenu}>
+            <Link to="/blog" className="nav-link" onClick={closeMenu}>
               Blog
             </Link>
           </li>

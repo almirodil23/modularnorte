@@ -38,7 +38,7 @@ export default function Projects() {
 
             {projects.map((p) => (
               <div className="div_articulo" key={p.id}>
-                <a href={`/producto/${p.slug}`} className="centrar_al_medio">
+                <a href={`/proyecto/${p.slug}`} className="centrar_al_medio">
                   <img src={p.img} alt={p.title} loading="lazy" />
                   <h4 className="titulo" style={{textAlign:"center", color:"black"}}>
                     {p.title}

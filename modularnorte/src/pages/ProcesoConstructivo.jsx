@@ -129,7 +129,7 @@ export default function ProcesoConstructivo() {
                   data-toggle="lightbox"
                   href={`/recurso/pagina/imagen/proceso_constructivo/acabado${i+1}.jpg`}
                 >
-                  <img src={`/recurso/pagina/imagen/proceso_constructivo/acabado${i+1}.jpg`} />
+                  <img src={`/recurso/pagina/imagen/proceso_constructivo/acabado${i+1}.jpg`} alt={`Acabado de vivienda modular ${i + 1}`} loading="lazy" />
                 </a>
               ))}
             </div>

@@ -1,10 +1,33 @@
+Options -MultiViews
 RewriteEngine On
 RewriteBase /
 
-# Permite acceder a archivos reales
+# ---------------------------------------------------------
+# Redirecciones SEO permanentes desde las URLs antiguas
+# ---------------------------------------------------------
+RewriteRule ^projects/?$ /proyectos [R=301,L,NE]
+RewriteRule ^producto/(.+?)/?$ /proyecto/$1 [R=301,L,NE]
+RewriteRule ^blogs/?$ /blog [R=301,L,NE]
+RewriteRule ^blogs/(.+?)/?$ /blog/$1 [R=301,L,NE]
+RewriteRule ^privacy/?$ /politica-privacidad [R=301,L,NE]
+
+# ---------------------------------------------------------
+# HTML SEO generado: /proyectos -> /proyectos.html
+# y /proyecto/slug -> /proyecto/slug.html
+# Va antes de -d porque /blog tiene además subrutas /blog/:slug.
+# ---------------------------------------------------------
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# ---------------------------------------------------------
+# Archivos y carpetas reales (assets, imágenes, sitemap...)
+# ---------------------------------------------------------
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Redirige todo lo demás a index.html (React Router)
-RewriteRule ^ index.html [L]
+# ---------------------------------------------------------
+# 404 real para evitar soft-404 indexables
+# ---------------------------------------------------------
+ErrorDocument 404 /404.html
+RewriteRule ^ - [R=404,L]

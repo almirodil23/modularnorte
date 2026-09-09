@@ -1,4 +1,3 @@
-import useIsLargeScreen from "../../hooks/useLargeScreen";
 import "./HomeHero.css";
 
 export default function HomeHero({
@@ -34,7 +33,7 @@ export default function HomeHero({
               <span className="titulo__norte">NORTE</span>
             </h1>
             <h2 className="subtitulo">
-              Arquitectura Modular de Diseño
+              Casas modulares de diseño en A Coruña y Galicia
             </h2>
           </div>
 

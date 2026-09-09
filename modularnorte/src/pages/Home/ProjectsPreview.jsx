@@ -8,7 +8,6 @@ const preview = projects
   .filter(p => slugs.includes(p.slug))
   .sort((a, b) => slugs.indexOf(a.slug) - slugs.indexOf(b.slug));
 
-  console.log(preview);
 
   return (
     <>
@@ -32,7 +31,7 @@ const preview = projects
                 backgroundImage: `url(${p.img})`,
               }}
             >
-              <a href={`/producto/${p.slug}`}>
+              <a href={`/proyecto/${p.slug}`}>
                 <div className="texto">
                   <h4>{p.title}</h4>
                   <h5>{p.location}</h5>
@@ -61,7 +60,7 @@ const preview = projects
       <div className="container-fluid titulo_negro">
         <div className="row">
           <div className="col-12">
-            <a href="/projects" className="boton_linea_blanco">
+            <a href="/proyectos" className="boton_linea_blanco">
               Ver Más Proyectos
             </a>
           </div>
