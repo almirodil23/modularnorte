@@ -88,6 +88,7 @@ if (json.status === "ok") {
               <div className="col-md-6">
                 <label>Motivo de la consulta:</label>
                 <select name="motivo_consulta" required className="form-control">
+                  <option value="septiembre_sin_iva">Promo Septiembre sin IVA</option>
                   <option value="quiero_informacion">Quiero Información</option>
                   <option value="tengo_terreno">Tengo un terreno</option>
                   <option value="reformar_o_ampliar">Reforma o ampliación</option>

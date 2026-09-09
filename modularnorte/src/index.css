@@ -191,7 +191,7 @@ width: 100%;
 }
 
 .boton_linea_blanco{
-color: #000;
+color: white;
 letter-spacing: 4px;
 text-transform: uppercase;
 font-weight: bold;
@@ -201,8 +201,8 @@ padding: 21px 59px;
 }
 
 .boton_linea_blanco:hover{
-background-color:#000;
-color: #fff;    
+background-color: white;
+color: black;    
 }
 
 .boton_flotante{
@@ -502,7 +502,7 @@ color: #f1f1f1;
 .boton_menu{
 position: fixed;
 right: 0px;
-top: 30px;  
+top: 75px !important;  
 z-index: 10;
 }
 
@@ -650,7 +650,7 @@ transition: all 0.0s ease-in-out;
     }
     
     .logo_head img{
-    width: 140px;   
+    width: 140px;  
     }
     
 }
@@ -704,7 +704,7 @@ transition: all 0.0s ease-in-out;
     }
     
     .boton_menu {
-    top: 20px;
+    top: 75px !important;
     }
     
     .boton_menu a {
@@ -4427,3 +4427,4 @@ margin-bottom: 15px;
     }
     
 }
+

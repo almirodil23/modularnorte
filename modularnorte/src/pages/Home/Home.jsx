@@ -6,6 +6,7 @@ import ProjectsPreview from "./ProjectsPreview";
 import ParallaxBlock from "./ParallaxBlock";
 import BlogSection from "../../components/BlogSection";
 import ContactModal from "../ContactModal/ContactModal";
+import SeptemberPromo from "./SeptemberPromo";
 
 export default function Home() {
   const [modal, setModal] = useState(null);
@@ -43,9 +44,16 @@ export default function Home() {
 
   return (
     <>
+          <SeptemberPromo
+        onBudgetClick={() =>
+          setModal("budget")
+        }
+      />
       <HomeHero
         onBudgetClick={openBudgetFromHero}
       />
+
+
 
       <Intro />
       

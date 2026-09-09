@@ -1,9 +1,14 @@
+import useIsLargeScreen from "../hooks/useLargeScreen";
+
 export default function Header() {
+
+      const isSmall= useIsLargeScreen(765)
+
   return (
     <header id="header">
       <div className="logo_head">
         <a href="/">
-          <img src="/assets/custom/img/logo_menu.png" alt="Logo Modular Norte" />
+          <img src="/assets/custom/img/logo_menu.png" style={{marginTop:isSmall?20:40}} alt="Logo Modular Norte" />
         </a>
       </div>
 

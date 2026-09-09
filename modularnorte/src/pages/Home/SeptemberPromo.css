@@ -1,0 +1,777 @@
+/* =========================================================
+   POPUP OVERLAY
+========================================================= */
+
+.promo-popup__overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px;
+
+  background: rgba(0, 0, 0, 0.58);
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  animation: promoOverlayIn 0.25s ease;
+}
+
+
+/* =========================================================
+   POPUP
+========================================================= */
+
+.promo-popup {
+  position: relative;
+
+  width: min(90vw, 560px);
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(190, 45, 45, 0.28),
+      transparent 65%
+    ),
+    linear-gradient(
+      135deg,
+      #5a1919 0%,
+      #8c2929 50%,
+      #5b1919 100%
+    );
+
+  color: white;
+
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.45);
+
+  animation: promoPopupIn 0.35s ease;
+}
+
+
+/* =========================================================
+   BOTÓN CERRAR
+========================================================= */
+
+.promo-popup__close {
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+
+  z-index: 10;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: white;
+
+  font-size: 25px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.promo-popup__close:hover {
+  background: rgba(0, 0, 0, 0.35);
+
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   CONTENIDO POPUP
+========================================================= */
+
+.promo-popup__content {
+  position: relative;
+  z-index: 2;
+
+  padding: 44px 42px 34px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   PROMOCIÓN SEPTIEMBRE
+========================================================= */
+
+.promo-popup__eyebrow {
+  margin-bottom: 9px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   TU CASA / SIN IVA
+========================================================= */
+
+.promo-popup__title {
+  margin: 0;
+
+  font-size: clamp(42px, 6vw, 60px);
+
+  line-height: 0.9;
+
+  letter-spacing: -0.035em;
+}
+
+/* TU CASA ahora es lo más fuerte */
+
+.promo-popup__title strong {
+  display: block;
+
+  font-size: 1.16em;
+  font-weight: 900;
+}
+
+/* SIN IVA más pequeño */
+
+.promo-popup__title span {
+  display: block;
+
+  margin-top: 7px;
+
+  font-size: 0.92em;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FECHA
+========================================================= */
+
+.promo-popup__deadline {
+  position: relative;
+
+  margin-top: 23px;
+
+  padding: 9px 26px;
+
+  background: #d30817;
+
+  font-size: clamp(15px, 2vw, 19px);
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   TEXTO DESCRIPTIVO
+========================================================= */
+
+.promo-popup__text {
+  max-width: 410px;
+
+  margin: 17px 0 0;
+
+  font-size: 13px;
+  line-height: 1.45;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================================
+   CTA POPUP
+========================================================= */
+
+.promo-popup__button {
+  margin-top: 20px;
+
+  padding: 11px 22px;
+
+  border: 2px solid white;
+
+  background: white;
+
+  color: #792121;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.promo-popup__button:hover {
+  background: transparent;
+
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SEGUIR NAVEGANDO
+========================================================= */
+
+.promo-popup__skip {
+  margin-top: 11px;
+
+  padding: 4px 6px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-family: inherit;
+  font-size: 10px;
+
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
+.promo-popup__skip:hover {
+  color: white;
+}
+
+
+/* =========================================================
+   DECORACIÓN POPUP
+========================================================= */
+
+.promo-popup__decoration {
+  position: absolute;
+
+  width: 130px;
+  height: 4px;
+
+  background: rgba(255, 30, 30, 0.85);
+
+  box-shadow:
+    0 7px 0 rgba(255, 30, 30, 0.38),
+    0 14px 0 rgba(255, 30, 30, 0.2);
+
+  transform: rotate(-40deg);
+}
+
+.promo-popup__decoration--left {
+  left: -70px;
+  bottom: 30px;
+}
+
+.promo-popup__decoration--right {
+  right: -70px;
+  top: 34px;
+}
+
+
+/* =========================================================
+   HEADER PROMOCIONAL
+========================================================= */
+
+.promo-bar {
+  position: sticky;
+  top: 0;
+
+  z-index: 9999;
+
+  width: 100%;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(180, 35, 35, 0.28),
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      #651d1d 0%,
+      #922828 50%,
+      #651d1d 100%
+    );
+
+  color: white;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.16);
+
+  animation: promoBarIn 0.3s ease;
+}
+
+
+/* decoración header */
+
+.promo-bar::before,
+.promo-bar::after {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 4px;
+
+  background: rgba(255, 30, 30, 0.8);
+
+  box-shadow:
+    0 9px 0 rgba(255, 30, 30, 0.35),
+    0 18px 0 rgba(255, 30, 30, 0.18);
+
+  transform: rotate(-35deg);
+
+  pointer-events: none;
+}
+
+.promo-bar::before {
+  left: -80px;
+  bottom: 10px;
+}
+
+.promo-bar::after {
+  right: -80px;
+  top: 10px;
+}
+
+
+/* =========================================================
+   CONTENIDO HEADER
+========================================================= */
+
+.promo-bar__inner {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 12px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 24px;
+
+  flex-wrap: nowrap;
+}
+
+.promo-bar__copy {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: nowrap;
+
+  white-space: nowrap;
+}
+
+
+/* PROMOCIÓN SEPTIEMBRE */
+
+.promo-bar__small {
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  opacity: 0.9;
+
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+/* TU CASA SIN IVA */
+
+.promo-bar__main {
+  font-size: 24px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.promo-bar__main strong {
+  font-weight: 900;
+}
+
+.promo-bar__main span {
+  font-weight: 600;
+}
+
+
+/* FECHA */
+
+.promo-bar__date {
+  padding: 9px 13px;
+
+  background: #d30616;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+/* CTA HEADER */
+
+.promo-bar__button {
+  flex-shrink: 0;
+
+  padding: 12px 20px;
+
+  border: 2px solid white;
+
+  background: white;
+
+  color: #792121;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.promo-bar__button:hover {
+  background: transparent;
+
+  color: white;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes promoOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes promoPopupIn {
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.95)
+      translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+}
+
+@keyframes promoBarIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+  .promo-bar__inner {
+    gap: 10px;
+
+    padding: 10px 12px;
+  }
+
+  .promo-bar__copy {
+    gap: 10px;
+  }
+
+  .promo-bar__small {
+    font-size: 9px;
+  }
+
+  .promo-bar__main {
+    font-size: 18px;
+  }
+
+  .promo-bar__date {
+    padding: 7px 8px;
+
+    font-size: 11px;
+  }
+
+  .promo-bar__button {
+    padding: 9px 10px;
+
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 600px) {
+  /* ---------- POPUP ---------- */
+
+  .promo-popup__overlay {
+    padding: 14px;
+  }
+
+  .promo-popup {
+    width: min(92vw, 420px);
+  }
+
+  .promo-popup__content {
+    padding:
+      40px
+      20px
+      27px;
+  }
+
+  .promo-popup__eyebrow {
+    margin-bottom: 7px;
+
+    font-size: 8px;
+  }
+
+  .promo-popup__title {
+    font-size: clamp(
+      38px,
+      13vw,
+      50px
+    );
+  }
+
+  .promo-popup__title strong {
+    font-size: 1.12em;
+  }
+
+  .promo-popup__title span {
+    margin-top: 5px;
+
+    font-size: 0.9em;
+  }
+
+  .promo-popup__deadline {
+    margin-top: 18px;
+
+    padding: 8px 13px;
+
+    font-size: 14px;
+  }
+
+  .promo-popup__text {
+    max-width: 320px;
+
+    margin-top: 15px;
+
+    font-size: 12px;
+  }
+
+  .promo-popup__button {
+    margin-top: 17px;
+
+    padding: 10px 17px;
+
+    font-size: 10px;
+  }
+
+  .promo-popup__skip {
+    margin-top: 9px;
+
+    font-size: 9px;
+  }
+
+  .promo-popup__close {
+    top: 8px;
+    right: 8px;
+
+    width: 31px;
+    height: 31px;
+
+    font-size: 23px;
+  }
+
+
+  /* ---------- HEADER ---------- */
+
+  .promo-bar {
+    overflow: hidden;
+  }
+
+  .promo-bar__inner {
+    padding: 8px 10px;
+
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto;
+
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  .promo-bar__copy {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 2px;
+
+    white-space: normal;
+  }
+
+  .promo-bar__small {
+    font-size: 7px;
+
+    letter-spacing: 0.1em;
+
+    white-space: nowrap;
+  }
+
+  .promo-bar__main {
+    font-size: 16px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+  }
+
+  .promo-bar__date {
+    margin-top: 2px;
+
+    padding: 3px 6px;
+
+    font-size: 8px;
+
+    white-space: nowrap;
+  }
+
+  .promo-bar__button {
+    max-width: 105px;
+
+    padding: 8px 9px;
+
+    font-size: 8px;
+
+    line-height: 1.15;
+
+    white-space: normal;
+
+    text-align: center;
+  }
+}
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 380px) {
+  .promo-popup__content {
+    padding:
+      37px
+      16px
+      24px;
+  }
+
+  .promo-popup__title {
+    font-size: 36px;
+  }
+
+  .promo-popup__deadline {
+    font-size: 12px;
+  }
+
+  .promo-bar__main {
+    font-size: 14px;
+  }
+
+  .promo-bar__button {
+    max-width: 90px;
+
+    font-size: 7px;
+  }
+}
+
+/* HEMOS PUESTO MARGINTOP 20 al LOGO y a .boton_menu top 75 cuando antes estaba en 30px (tambien en custom.css)

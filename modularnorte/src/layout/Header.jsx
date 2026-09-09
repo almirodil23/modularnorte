@@ -3,7 +3,7 @@ export default function Header() {
     <header id="header">
       <div className="logo_head">
         <a href="/">
-          <img src="/assets/custom/img/logo_menu.png" alt="Logo Modular Norte" />
+          <img src="/assets/custom/img/logo_menu.png"  style={{marginTop:20}} alt="Logo Modular Norte" />
         </a>
       </div>
 
