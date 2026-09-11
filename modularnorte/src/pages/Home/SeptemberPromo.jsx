@@ -66,7 +66,7 @@ export default function SeptemberPromo({
               </h2>
 
               <div className="promo-popup__deadline">
-                Solo hasta el 30 de septiembre
+                Solo del 14 hasta el 30 de septiembre
               </div>
 
         
@@ -110,7 +110,7 @@ export default function SeptemberPromo({
               </span>
 
               <span className="promo-bar__date">
-                Solo hasta el 30 de septiembre
+                Del 14 hasta el 30 de septiembre
               </span>
             </div>
 
