@@ -33,7 +33,7 @@ export default function HomeHero({
               <span className="titulo__norte">NORTE</span>
             </h1>
             <h2 className="subtitulo">
-              Casas modulares de diseño en A Coruña y Galicia
+              Casas modulares de diseño
             </h2>
           </div>
 
