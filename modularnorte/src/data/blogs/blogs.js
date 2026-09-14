@@ -245,13 +245,13 @@ const blogs = [
       {
         type: "list",
         items: [
-          "Vivienda modular: 1.700 €/m² × 100 m² = 170.000 €.",
-          "Cimentación estimada: 19.000 €.",
-          "Licencia y proyecto: 8.000 €.",
-          "Acometidas: 5.000 €.",
-          "Total estimado sin IVA: 202.000 €.",
-          "IVA estimado: 20.200 €.",
-          "Total orientativo: 222.200 €.",
+          "Vivienda modular: entre 1.800 y 2.500 €/m² según acabados × 100 m² = entre 180.000 € y 250.000 €.",
+          "Cimentación y preparación del terreno: aproximadamente entre 18.000 y 40.000 €, dependiendo de la topografía y las características del suelo.",
+          "Licencia, proyecto y tasas: aproximadamente entre 15.000 y 30.000 €, dependiendo del tamaño de la vivienda, la complejidad del proyecto y el municipio.",
+          "Acometidas: aproximadamente 5.000 €.",
+          "Total estimado sin IVA: entre 218.000 € y 325.000 €.",
+          "IVA estimado: entre 21.800 € y 32.500 €.",
+          "Total orientativo: entre 239.800 € y 357.500 €.",
         ],
       },
 
