@@ -58,9 +58,9 @@ function App() {
         <Route path="/gracias" element={<Gracias />} />
 
         {/* Compatibilidad con URLs antiguas. En producción .htaccess las redirige con 301. */}
-        <Route path="/projects" element={<Navigate to="/proyectos" replace />} />
+        <Route path="/projects" element={<Navigate to="/proyectos/" replace />} />
         <Route path="/producto/:slug" element={<LegacyProjectRedirect />} />
-        <Route path="/blogs" element={<Navigate to="/blog" replace />} />
+        <Route path="/blogs" element={<Navigate to="/blog/" replace />} />
         <Route path="/blogs/:slug" element={<LegacyBlogRedirect />} />
         <Route path="/privacy" element={<Navigate to="/politica-privacidad" replace />} />
 

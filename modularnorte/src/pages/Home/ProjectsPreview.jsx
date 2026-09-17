@@ -60,7 +60,7 @@ const preview = projects
       <div className="container-fluid titulo_negro">
         <div className="row">
           <div className="col-12">
-            <a href="/proyectos" className="boton_linea_blanco">
+            <a href="/proyectos/" className="boton_linea_blanco">
               Ver Más Proyectos
             </a>
           </div>

@@ -27,12 +27,12 @@ return (
 <div id="menu_lateral" className="centrar_al_medio">
 <ul className="navbar-nav mr-auto">
 <li className="nav-item"><a href="/" className="nav-link">Home</a></li>
-<li className="nav-item"><a href="/proyectos" className="nav-link">Proyectos</a></li>
+<li className="nav-item"><a href="/proyectos/" className="nav-link">Proyectos</a></li>
 <li className="nav-item"><a href="/tour-virtual" className="nav-link">Tours Virtuales</a></li>
 <li className="nav-item"><a href="/proceso-constructivo" className="nav-link">Proceso Constructivo</a></li>
 <li className="nav-item"><a href="/preguntas-frecuentes" className="nav-link">Preguntas</a></li>
 <li className="nav-item"><a href="/nosotros" className="nav-link">Nosotros</a></li>
-<li className="nav-item"><a href="/blog" className="nav-link">Blog</a></li>
+<li className="nav-item"><a href="/blog/" className="nav-link">Blog</a></li>
 <li className="nav-item"><a href="/contactar" className="nav-link">Contacto</a></li>
 </ul>
 </div>

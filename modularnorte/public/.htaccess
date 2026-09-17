@@ -1,20 +1,39 @@
-Options -MultiViews
+Options -MultiViews -Indexes
+DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /
 
 # ---------------------------------------------------------
+# Evita que los HTML generados sean URLs duplicadas públicas
+# ---------------------------------------------------------
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[?\s]) [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L,NE]
+
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html(?:[?\s]) [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+
+# ---------------------------------------------------------
 # Redirecciones SEO permanentes desde las URLs antiguas
 # ---------------------------------------------------------
-RewriteRule ^projects/?$ /proyectos [R=301,L,NE]
+RewriteRule ^projects/?$ /proyectos/ [R=301,L,NE]
 RewriteRule ^producto/(.+?)/?$ /proyecto/$1 [R=301,L,NE]
-RewriteRule ^blogs/?$ /blog [R=301,L,NE]
+RewriteRule ^blogs/?$ /blog/ [R=301,L,NE]
 RewriteRule ^blogs/(.+?)/?$ /blog/$1 [R=301,L,NE]
 RewriteRule ^privacy/?$ /politica-privacidad [R=301,L,NE]
 
 # ---------------------------------------------------------
-# HTML SEO generado: /proyectos -> /proyectos.html
+# Una única variante por URL
+# ---------------------------------------------------------
+# /blog/ y /proyectos/ son directorios reales con index.html.
+RewriteRule ^(blog|proyectos)$ /$1/ [R=301,L,NE]
+
+# El resto de páginas canónicas no lleva barra final.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L,NE]
+
+# ---------------------------------------------------------
+# HTML SEO generado: /contactar -> /contactar.html
 # y /proyecto/slug -> /proyecto/slug.html
-# Va antes de -d porque /blog tiene además subrutas /blog/:slug.
 # ---------------------------------------------------------
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^(.+?)/?$ $1.html [L]
