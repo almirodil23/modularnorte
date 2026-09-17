@@ -2,12 +2,12 @@
 
 ## Qué se ha añadido
 
-- URLs canónicas en español: `/proyectos`, `/proyecto/:slug`, `/blog` y `/blog/:slug`.
+- URLs canónicas en español: `/proyectos/`, `/proyecto/:slug`, `/blog/` y `/blog/:slug`.
 - Redirecciones 301 desde las URLs antiguas (`/projects`, `/producto/...`, `/blogs...`, `/privacy`).
 - `<title>`, meta description, canonical, Open Graph y Twitter Cards específicos por ruta.
 - Datos estructurados JSON-LD para empresa, web, breadcrumbs, FAQ, proyectos y artículos del blog.
 - `robots.txt` y `sitemap.xml` generados automáticamente.
-- HTML SEO específico para cada URL durante el build, de forma que el `<head>` correcto ya llega en la primera respuesta del servidor.
+- HTML SEO específico para cada URL durante el build. El `<head>`, el H1 y el contenido principal de blogs y proyectos ya llegan en la primera respuesta, incluso antes de ejecutar React.
 - 404 real y `noindex` para páginas inexistentes y páginas que no interesa indexar (`/gracias`, privacidad).
 - Imagen Open Graph real en `public/images/og-modular-norte.jpg` y logo de schema válido.
 - Precarga de la imagen principal de la home para ayudar al LCP.
@@ -32,6 +32,13 @@ También puedes regenerar manualmente los archivos SEO con:
 npm run seo
 ```
 
+Para comprobar que todas las URLs del sitemap tienen HTML, canonical y robots correctos:
+
+```bash
+npm run build
+npm run seo:check
+```
+
 ## Google Search Console
 
 Después de desplegar el contenido de `dist` en `https://modularnorte.com`:
@@ -40,7 +47,8 @@ Después de desplegar el contenido de `dist` en `https://modularnorte.com`:
 2. Comprueba que abre `https://modularnorte.com/sitemap.xml`.
 3. En Google Search Console entra en **Sitemaps**.
 4. Añade `sitemap.xml`.
-5. Usa **Inspección de URL** para solicitar indexación de la home, `/proyectos`, `/blog` y las páginas prioritarias.
+5. Usa **Inspección de URL** para probar `https://modularnorte.com/proyectos/`, `https://modularnorte.com/blog/` y varias páginas de detalle.
+6. Si la prueba en vivo es correcta, solicita la indexación de las páginas prioritarias y pulsa **Validar corrección** en los informes de redirección y canonical.
 
 El sitemap actual contiene 68 URLs indexables: 48 proyectos, 11 artículos y 9 páginas principales.
 

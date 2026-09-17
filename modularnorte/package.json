@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prebuild": "node scripts/generate-seo.mjs --public",
-    "seo": "node scripts/generate-seo.mjs --all"
+    "seo": "node scripts/generate-seo.mjs --all",
+    "seo:check": "node scripts/verify-seo.mjs"
   },
   "dependencies": {
     "@microsoft/clarity": "^1.0.2",
