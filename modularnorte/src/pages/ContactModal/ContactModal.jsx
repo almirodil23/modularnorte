@@ -200,14 +200,6 @@ export default function ContactModal({
                           Vivienda Modular
                         </option>
 
-                        <option value="reforma">
-                          Reforma
-                        </option>
-
-                        <option value="local">
-                          Local / Negocio
-                        </option>
-
                         <option value="otro">
                           Otro
                         </option>
@@ -224,6 +216,7 @@ export default function ContactModal({
                         type="number"
                         min="1"
                         name="metros"
+                        required
                         placeholder="Ej. 120 m²"
                       />
                     </div>
@@ -249,10 +242,6 @@ export default function ContactModal({
                         <option value="no">
                           No
                         </option>
-
-                        <option value="buscando">
-                          Estoy buscando
-                        </option>
                       </select>
                     </div>
 
@@ -265,6 +254,7 @@ export default function ContactModal({
                         id="ubicacion"
                         type="text"
                         name="ubicacion"
+                        required
                         placeholder="Municipio o provincia"
                       />
                     </div>
