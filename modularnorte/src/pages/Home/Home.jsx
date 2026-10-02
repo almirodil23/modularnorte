@@ -44,7 +44,11 @@ export default function Home() {
 
   return (
     <>
-          
+          <SeptemberPromo
+        onBudgetClick={() =>
+          setModal("budget")
+        }
+      />
       <HomeHero
         onBudgetClick={openBudgetFromHero}
       />

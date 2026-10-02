@@ -89,34 +89,7 @@ export default function SeptemberPromo({
           aparece al cerrar popup
       ========================= */}
 
-      {!popupOpen && (
-        <div className="promo-bar">
-          <div className="promo-bar__inner">
-            <div className="promo-bar__copy">
-              <span className="promo-bar__small">
-                PROMOCIÓN SEPTIEMBRE
-              </span>
 
-              <span className="promo-bar__main">
-                <strong>TU CASA</strong>{" "}
-                <span>SIN IVA</span>
-              </span>
-
-              <span className="promo-bar__date">
-                Del 14 hasta el 30 de septiembre
-              </span>
-            </div>
-
-            <button
-              type="button"
-              className="promo-bar__button"
-              onClick={onBudgetClick}
-            >
-              SOLICITAR PRESUPUESTO
-            </button>
-          </div>
-        </div>
-      )}
     </>
   );
 }
