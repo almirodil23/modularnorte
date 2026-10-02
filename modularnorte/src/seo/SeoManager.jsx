@@ -4,7 +4,15 @@ import blogs from "../data/blogs/blogs";
 import projects from "../data/modularprojects";
 import faqs from "../data/faqs";
 
-import { SITE_URL, SITE_NAME, DEFAULT_IMAGE, STATIC_SEO } from "./staticSeo";
+import {
+  SITE_URL,
+  SITE_NAME,
+  DEFAULT_IMAGE,
+  STATIC_SEO,
+  canonicalPathname,
+  canonicalUrl,
+  normalizePathname,
+} from "./staticSeo";
 
 
 const SPANISH_MONTHS = {
@@ -22,8 +30,8 @@ function spanishDateToIso(value) {
 }
 
 const LEGACY_CANONICALS = {
-  "/projects": "/proyectos",
-  "/blogs": "/blog",
+  "/projects": "/proyectos/",
+  "/blogs": "/blog/",
   "/privacy": "/politica-privacidad",
 };
 
@@ -46,11 +54,6 @@ function absoluteUrl(value) {
   return `${SITE_URL}${value.startsWith("/") ? value : `/${value}`}`;
 }
 
-function normalizePath(pathname) {
-  if (!pathname || pathname === "/") return "/";
-  return pathname.replace(/\/+$/, "") || "/";
-}
-
 function breadcrumbSchema(path, label) {
   if (path === "/") return null;
   return {
@@ -67,24 +70,25 @@ function breadcrumbSchema(path, label) {
         "@type": "ListItem",
         position: 2,
         name: label,
-        item: `${SITE_URL}${path}`,
+        item: canonicalUrl(path),
       },
     ],
   };
 }
 
 function getSeo(pathname) {
-  const path = normalizePath(pathname);
+  const path = normalizePathname(pathname);
 
   if (STATIC_SEO[path]) {
     const base = STATIC_SEO[path];
+    const canonicalPath = canonicalPathname(path);
     const schemas = [
       {
         "@context": "https://schema.org",
         "@type": base.schemaType || "WebPage",
         name: base.title,
         description: base.description,
-        url: `${SITE_URL}${path === "/" ? "/" : path}`,
+        url: canonicalUrl(canonicalPath),
         inLanguage: "es-ES",
         isPartOf: { "@id": `${SITE_URL}/#website` },
       },
@@ -105,14 +109,14 @@ function getSeo(pathname) {
       });
     }
 
-    const breadcrumb = breadcrumbSchema(path, base.title.split("|")[0].trim());
+    const breadcrumb = breadcrumbSchema(canonicalPath, base.title.split("|")[0].trim());
     if (breadcrumb) schemas.push(breadcrumb);
 
     return {
       ...base,
-      path,
+      path: canonicalPath,
       image: DEFAULT_IMAGE,
-      type: path === "/blog" ? "website" : "website",
+      type: "website",
       schemas,
     };
   }
@@ -140,7 +144,7 @@ function getSeo(pathname) {
             "@type": "CreativeWork",
             name: project.title,
             description,
-            url: `${SITE_URL}${canonicalPath}`,
+            url: canonicalUrl(canonicalPath),
             image: absoluteUrl(project.img),
             about: "Arquitectura modular y construcción industrializada",
             creator: { "@id": `${SITE_URL}/#organization` },
@@ -180,8 +184,8 @@ function getSeo(pathname) {
             headline: blog.title,
             description,
             image: absoluteUrl(blog.image),
-            url: `${SITE_URL}${canonicalPath}`,
-            mainEntityOfPage: `${SITE_URL}${canonicalPath}`,
+            url: canonicalUrl(canonicalPath),
+            mainEntityOfPage: canonicalUrl(canonicalPath),
             ...(published ? { datePublished: published, dateModified: published } : {}),
             author: { "@id": `${SITE_URL}/#organization` },
             publisher: { "@id": `${SITE_URL}/#organization` },
@@ -195,9 +199,9 @@ function getSeo(pathname) {
 
   // URLs antiguas: canonical hacia la nueva URL hasta que se produzca la redirección.
   if (LEGACY_CANONICALS[path]) {
-    const canonicalPath = LEGACY_CANONICALS[path];
+    const canonicalPath = canonicalPathname(LEGACY_CANONICALS[path]);
     return {
-      ...(STATIC_SEO[canonicalPath] || STATIC_SEO["/"]),
+      ...(STATIC_SEO[normalizePathname(canonicalPath)] || STATIC_SEO["/"]),
       path: canonicalPath,
       image: DEFAULT_IMAGE,
       noindex: true,
@@ -244,7 +248,7 @@ export default function SeoManager() {
   const seo = useMemo(() => getSeo(pathname), [pathname]);
 
   useEffect(() => {
-    const canonical = `${SITE_URL}${seo.path === "/" ? "/" : seo.path}`;
+    const canonical = canonicalUrl(seo.path);
     const image = absoluteUrl(seo.image);
     const robots = seo.noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large";
 
@@ -285,4 +289,3 @@ export default function SeoManager() {
 
   return null;
 }
-

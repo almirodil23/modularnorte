@@ -2,6 +2,25 @@ export const SITE_URL = "https://modularnorte.com";
 export const SITE_NAME = "Modular Norte";
 export const DEFAULT_IMAGE = "/images/og-modular-norte.jpg";
 
+// Estas dos rutas son directorios reales en el build final. Apache las sirve
+// con barra final, por lo que sitemap, canonical, enlaces internos y datos
+// estructurados deben apuntar siempre a la misma variante.
+export const TRAILING_SLASH_ROUTES = new Set(["/blog", "/proyectos"]);
+
+export function normalizePathname(pathname) {
+  if (!pathname || pathname === "/") return "/";
+  return pathname.replace(/\/+$/, "") || "/";
+}
+
+export function canonicalPathname(pathname) {
+  const normalized = normalizePathname(pathname);
+  return TRAILING_SLASH_ROUTES.has(normalized) ? `${normalized}/` : normalized;
+}
+
+export function canonicalUrl(pathname) {
+  return new URL(canonicalPathname(pathname), SITE_URL).href;
+}
+
 export const STATIC_SEO = {
   "/": {
     title: "Casas Modulares en A Coruña y Galicia | Modular Norte",

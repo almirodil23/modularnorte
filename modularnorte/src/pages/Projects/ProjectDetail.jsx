@@ -15,7 +15,7 @@ export default function ProjectDetail() {
         <div style={{ textAlign: "center" }}>
           <h1>Proyecto no encontrado</h1>
           <p>El proyecto que buscas no existe o ha cambiado de dirección.</p>
-          <Link to="/proyectos">Ver todos los proyectos</Link>
+          <Link to="/proyectos/">Ver todos los proyectos</Link>
         </div>
       </main>
     );
@@ -26,7 +26,7 @@ export default function ProjectDetail() {
       <div className="row justify-content-between">
         <div className="col-xl-4 col-lg-5 centrar_al_medio fragmento_fijo">
           <div className="contenido">
-            <Link to="/proyectos" className="volver">
+            <Link to="/proyectos/" className="volver">
               <i className="fa fa-angle-left" /> Volver
             </Link>
 

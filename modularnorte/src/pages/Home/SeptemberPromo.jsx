@@ -56,20 +56,13 @@ export default function SeptemberPromo({
             <div className="promo-popup__decoration promo-popup__decoration--right" />
 
             <div className="promo-popup__content">
-              <span className="promo-popup__eyebrow">
-                PROMOCIÓN SEPTIEMBRE
-              </span>
+        
 
               <h2 className="promo-popup__title">
                 <strong>TU CASA</strong>
-                <span>SIN IVA</span>
+                <span>MODULAR</span>
               </h2>
 
-              <div className="promo-popup__deadline">
-                Solo del 14 hasta el 30 de septiembre
-              </div>
-
-        
 
               <button
                 type="button"

@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { execFileSync } from "node:child_process";
 import {
   fileURLToPath,
   pathToFileURL,
@@ -9,6 +10,9 @@ import {
   STATIC_SEO,
   SITE_URL,
   DEFAULT_IMAGE,
+  canonicalPathname,
+  canonicalUrl,
+  normalizePathname,
 } from "../src/seo/staticSeo.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -38,22 +42,6 @@ const { default: faqs } = await import(
     path.join(ROOT, "src/data/faqs.js")
   )
 );
-
-/*
- * Estas rutas coinciden con carpetas reales dentro
- * de dist/public:
- *
- * /blog       → contiene los artículos
- * /proyectos  → contiene las imágenes de proyectos
- *
- * Apache añade automáticamente la barra final cuando
- * la URL coincide con una carpeta. Por eso utilizamos
- * directamente estas URL como canónicas.
- */
-const DIRECTORY_ROUTES = new Set([
-  "/blog",
-  "/proyectos",
-]);
 
 function cleanText(value = "") {
   return String(value)
@@ -91,29 +79,8 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
-function normalizeRoute(route) {
-  if (!route || route === "/") {
-    return "/";
-  }
-
-  return route.replace(/\/+$/, "") || "/";
-}
-
-function canonicalRoute(route) {
-  const normalized = normalizeRoute(route);
-
-  if (DIRECTORY_ROUTES.has(normalized)) {
-    return `${normalized}/`;
-  }
-
-  return normalized;
-}
-
 function routeUrl(route) {
-  return new URL(
-    canonicalRoute(route),
-    SITE_URL
-  ).href;
+  return canonicalUrl(route);
 }
 
 function absoluteUrl(value) {
@@ -137,6 +104,27 @@ function absoluteUrl(value) {
 }
 
 function fileDate(file) {
+  const relativeFile = path
+    .relative(ROOT, file)
+    .split(path.sep)
+    .join("/");
+
+  try {
+    const committedDate = execFileSync(
+      "git",
+      ["log", "-1", "--format=%cs", "--", relativeFile],
+      {
+        cwd: ROOT,
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+      }
+    ).trim();
+
+    if (committedDate) return committedDate;
+  } catch {
+    // El build también puede ejecutarse fuera de un clon de Git.
+  }
+
   try {
     return fs
       .statSync(file)
@@ -211,9 +199,7 @@ function readProjects() {
 
   return fs
     .readdirSync(dir)
-    .filter((name) =>
-      name.endsWith(".json")
-    )
+    .filter((name) => name.endsWith(".json") && name !== "projects.json")
     .map((name) => {
       const file = path.join(dir, name);
 
@@ -252,7 +238,7 @@ function readProjects() {
 const projects = readProjects();
 
 function getStaticSourceFile(route) {
-  const normalized = normalizeRoute(route);
+  const normalized = normalizePathname(route);
 
   const routeFiles = {
     "/": "src/pages/Home/Home.jsx",
@@ -300,12 +286,138 @@ function breadcrumbSchema(items) {
   };
 }
 
+function renderBlogBlocks(content = []) {
+  return content
+    .map((block) => {
+      if (block.type === "heading") {
+        return `<h2>${escapeHtml(block.text || "")}</h2>`;
+      }
+
+      if (block.type === "paragraph") {
+        return `<p>${escapeHtml(block.text || "")}</p>`;
+      }
+
+      if (block.type === "list") {
+        const items = (block.items || [])
+          .map((item) => `<li>${escapeHtml(item)}</li>`)
+          .join("");
+        return `<ul>${items}</ul>`;
+      }
+
+      if (block.type === "quote") {
+        return `<blockquote>${escapeHtml(block.text || "")}</blockquote>`;
+      }
+
+      if (block.type === "image" && block.src) {
+        const caption = block.caption
+          ? `<figcaption>${escapeHtml(block.caption)}</figcaption>`
+          : "";
+        return `<figure><img src="${escapeHtml(block.src)}" alt="${escapeHtml(
+          block.alt || ""
+        )}" loading="lazy" />${caption}</figure>`;
+      }
+
+      return "";
+    })
+    .join("");
+}
+
+function renderBlogDetail(blog) {
+  const image = blog.image
+    ? `<div class="blog-detail__hero"><img src="${escapeHtml(
+        blog.image
+      )}" alt="${escapeHtml(blog.title)}" /></div>`
+    : "";
+
+  return [
+    '<main class="blog-detail">',
+    '<div class="blog-detail__container">',
+    '<a href="/blog/" class="blog-detail__back">← VOLVER AL BLOG</a>',
+    '<header class="blog-detail__header">',
+    `<div class="blog-detail__meta"><span>${escapeHtml(
+      blog.date || ""
+    )}</span><span>${escapeHtml(blog.category || "")}</span></div>`,
+    `<h1>${escapeHtml(blog.title)}</h1>`,
+    blog.excerpt
+      ? `<p class="blog-detail__intro">${escapeHtml(blog.excerpt)}</p>`
+      : "",
+    "</header>",
+    image,
+    `<article class="blog-detail__content">${renderBlogBlocks(
+      blog.content
+    )}</article>`,
+    "</div>",
+    "</main>",
+  ].join("");
+}
+
+function renderBlogIndex() {
+  const articles = blogs
+    .filter((blog) => blog?.slug && blog?.title)
+    .map(
+      (blog) =>
+        `<article><h2><a href="/blog/${escapeHtml(blog.slug)}">${escapeHtml(
+          blog.title
+        )}</a></h2><p>${escapeHtml(blog.excerpt || "")}</p></article>`
+    )
+    .join("");
+
+  return `<main class="mn-blog"><div class="mn-blog__container"><header class="mn-blog__header"><h1>BLOG</h1><p>INSPIRACIÓN, IDEAS Y CONSEJOS PARA TU PRÓXIMO HOGAR.</p></header><section aria-label="Artículos">${articles}</section></div></main>`;
+}
+
+function renderProjectDetail(project) {
+  const location = project.location
+    ? `<span class="project-location">${escapeHtml(project.location)}</span>`
+    : "";
+  const mainImage = project.img
+    ? `<img class="project-main-img" src="${escapeHtml(
+        project.img
+      )}" alt="${escapeHtml(project.title)}" />`
+    : "";
+  const gallery = (project.gallery || [])
+    .map(
+      (image, index) =>
+        `<img src="/proyectos/${escapeHtml(project.slug)}/${escapeHtml(
+          image
+        )}" alt="${escapeHtml(project.title)} - imagen ${index + 1}" loading="lazy" />`
+    )
+    .join("");
+
+  return [
+    '<main class="pagina_con_fragmento_fijo container-fluid">',
+    '<div class="row justify-content-between">',
+    '<section class="col-xl-4 col-lg-5 centrar_al_medio fragmento_fijo"><div class="contenido">',
+    '<a href="/proyectos/" class="volver">← Volver</a>',
+    `<h1 class="titulo">${escapeHtml(project.title)}${location}</h1>`,
+    `<p>${escapeHtml(project.description || "")}</p>`,
+    "</div></section>",
+    `<section class="col-xl-8 col-lg-7 fragmento_scroll">${mainImage}<div class="ordenar_galeria ordenar_articulos">${gallery}</div></section>`,
+    "</div>",
+    "</main>",
+  ].join("");
+}
+
+function renderProjectsIndex() {
+  const cards = projects
+    .map(
+      (project) =>
+        `<article><h2><a href="/proyecto/${escapeHtml(
+          project.slug
+        )}">${escapeHtml(project.title)}</a></h2>${
+          project.location ? `<p>${escapeHtml(project.location)}</p>` : ""
+        }</article>`
+    )
+    .join("");
+
+  return `<main class="projects-page"><h1>Proyectos de casas modulares</h1><p>Descubre viviendas, ampliaciones y otros proyectos de arquitectura modular realizados por Modular Norte.</p><section aria-label="Proyectos">${cards}</section></main>`;
+}
+
 function fixedRouteMeta(sourceRoute, seo) {
   const normalized =
-    normalizeRoute(sourceRoute);
+    normalizePathname(sourceRoute);
 
   const route =
-    canonicalRoute(normalized);
+    canonicalPathname(normalized);
 
   const schemas = [
     {
@@ -364,6 +476,12 @@ function fixedRouteMeta(sourceRoute, seo) {
     image: DEFAULT_IMAGE,
     type: "website",
     noindex: Boolean(seo.noindex),
+    staticBody:
+      normalized === "/blog"
+        ? renderBlogIndex()
+        : normalized === "/proyectos"
+          ? renderProjectsIndex()
+          : "",
     lastmod: fileDate(
       getStaticSourceFile(normalized)
     ),
@@ -407,6 +525,7 @@ const projectRoutes = projects.map(
       image: project.img,
       type: "article",
       noindex: false,
+      staticBody: renderProjectDetail(project),
       lastmod: fileDate(
         project.sourceFile
       ),
@@ -479,6 +598,7 @@ const blogRoutes = blogs
         blog.image || DEFAULT_IMAGE,
       type: "article",
       noindex: false,
+      staticBody: renderBlogDetail(blog),
       lastmod:
         published ||
         fileDate(
@@ -772,6 +892,13 @@ function renderRouteHtml(
     );
   }
 
+  if (meta.staticBody) {
+    html = html.replace(
+      /<div\s+id=["']root["']\s*>\s*<\/div>/i,
+      `<div id="root">${meta.staticBody}</div>`
+    );
+  }
+
   return html;
 }
 
@@ -789,7 +916,7 @@ function renderRouteHtml(
  */
 function routeOutputPath(route) {
   const canonical =
-    canonicalRoute(route);
+    canonicalPathname(route);
 
   if (canonical === "/") {
     return path.join(
