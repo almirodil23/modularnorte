@@ -4534,3 +4534,23 @@ INTERNET EXPLORER 11
     }
     
 }
+
+
+@media (max-width: 765px) {
+  #header {
+    position: relative !important;
+    top: auto !important;
+  }
+
+  #header > .logo_head {
+    position: absolute !important;
+    top: 20px !important;
+    left: 20px !important;
+    transition: none !important;
+    pointer-events: auto !important;
+  }
+
+  #header > .logo_head img {
+    margin-top: 0 !important;
+  }
+}
