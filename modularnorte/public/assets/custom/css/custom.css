@@ -4554,3 +4554,14 @@ INTERNET EXPLORER 11
     margin-top: 0 !important;
   }
 }
+@media (min-width: 766px) and (max-width: 1550px) {
+  #header > .logo_head {
+    top: -45px !important;
+    transition: none !important;
+  }
+
+  #header > .logo_head img {
+    width: 160px !important;
+    margin-top: 0 !important;
+  }
+}
