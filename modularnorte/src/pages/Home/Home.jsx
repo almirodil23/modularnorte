@@ -78,7 +78,7 @@ function Icon({ name }) {
 /** includeChrome: true only if your global layout has no header/footer. */
 export default function Home({
   includeChrome = false,
-  heroVideo = "public/assets/modularnorte-hero.mp4",
+  heroVideo = "/assets/modularnorte-hero.mp4",
 }) {
   const [modal, setModal] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -241,7 +241,7 @@ export default function Home({
               <div className="rejilla">
                 <article className="tipo">
                   <img
-                    src="public/images/SATE1.jpeg"
+                    src="/assets/images/SATE1.jpeg"
                     alt="Vivienda modular de dos plantas de Modular Norte"
                     width="1050"
                     height="700"
@@ -256,7 +256,7 @@ export default function Home({
                 </article>
                 <article className="tipo">
                   <img
-                    src="public/images/esqueleto.jpeg"
+                    src="/assets/images/esqueleto.jpeg"
                     alt="Ático modular de Modular Norte"
                     width="1620"
                     height="1080"
@@ -293,7 +293,7 @@ export default function Home({
               <div className="fotos">
                 <div className="f">
                   <img
-                    src="public/images/Madera1.jpeg"
+                    src="/assets/images/Madera1.jpeg"
                     alt="Vivienda modular terminada con revestimiento de madera"
                     width="697"
                     height="465"
@@ -302,7 +302,7 @@ export default function Home({
                 </div>
                 <div className="f">
                   <img
-                    src="public/images/Madera2.jpeg"
+                    src="/assets/images/Madera2.jpeg"
                     alt="Salón de una vivienda modular terminada"
                     width="686"
                     height="457"
@@ -311,7 +311,7 @@ export default function Home({
                 </div>
                 <div className="f">
                   <img
-                    src="public/images/Madera3.jpeg"
+                    src="/assets/images/Madera3.jpeg"
                     alt="Dormitorio con pared de madera"
                     width="793"
                     height="497"
@@ -423,7 +423,7 @@ export default function Home({
                 <div className="paso">
                   <div className="foto">
                     <img
-                      src="public/images/5SATE.jpeg"
+                      src="/assets/images/5SATE.jpeg"
                       alt="Instalaciones de luz y agua sin rozas"
                       width="690"
                       height="518"
