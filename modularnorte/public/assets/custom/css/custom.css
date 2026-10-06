@@ -4562,6 +4562,6 @@ INTERNET EXPLORER 11
 
   #header > .logo_head img {
     width: 160px !important;
-    margin-top: 0 !important;
+    margin-top: -36px !important;
   }
 }

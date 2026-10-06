@@ -484,7 +484,7 @@ export default function Home({
 
                   <img
 
-                    src="/assets/images/SATE1.jpeg"
+                    src="/images/SATE1.jpeg"
 
                     alt="Vivienda modular de dos plantas de Modular Norte"
 
@@ -514,7 +514,7 @@ export default function Home({
 
                   <img
 
-                    src="/assets/images/esqueleto.jpeg"
+                    src="/images/esqueleto.jpeg"
 
                     alt="Ático modular de Modular Norte"
 
@@ -588,7 +588,7 @@ export default function Home({
 
                   <img
 
-                    src="/assets/images/Madera1.jpeg"
+                    src="/images/Madera1.jpeg"
 
                     alt="Vivienda modular terminada con revestimiento de madera"
 
@@ -606,7 +606,7 @@ export default function Home({
 
                   <img
 
-                    src="/assets/images/Madera2.jpeg"
+                    src="/images/Madera2.jpeg"
 
                     alt="Salón de una vivienda modular terminada"
 
@@ -624,7 +624,7 @@ export default function Home({
 
                   <img
 
-                    src="/assets/images/Madera3.jpeg"
+                    src="/images/Madera3.jpeg"
 
                     alt="Dormitorio con pared de madera"
 
@@ -848,7 +848,7 @@ export default function Home({
 
                     <img
 
-                      src="/assets/images/5SATE.jpeg"
+                      src="/images/5SATE.jpeg"
 
                       alt="Instalaciones de luz y agua sin rozas"
 

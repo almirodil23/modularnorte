@@ -260,7 +260,7 @@
 .mn-home .hero p {
   font-size: clamp(18px, 1.6vw, 22px);
   max-width: 34ch;
-  margin: 20px 0 28px;
+  margin: 7px 0 28px;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 .mn-home .hero .acciones {

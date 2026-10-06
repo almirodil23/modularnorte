@@ -45,7 +45,7 @@ return (
 {/* Footer */}
 <footer>
 <div className="enlaces_legales">
-<ul>
+<ul >
 <li><a href="/politica-privacidad">Política de privacidad</a></li>
 <li>|</li>
 <li><a href="/aviso-legal">Aviso legal</a></li>

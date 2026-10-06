@@ -12,9 +12,9 @@ export default function Footer() {
           <ul style={textStyle}>
             <li><a href="/politica-privacidad" style={textStyle}>Política de privacidad</a></li>
             <li style={textStyle}>|</li>
-            <li><span style={textStyle}>Aviso legal</span></li>
+            <li><a style={textStyle}>Aviso legal</a></li>
             <li style={textStyle}>|</li>
-            <li><span style={textStyle}>Política de Cookies</span></li>
+            <li><a style={textStyle}>Política de Cookies</a></li>
           </ul>
         </div>
 
@@ -28,7 +28,7 @@ export default function Footer() {
               </a>
             </li>
             <li className="separador" style={textStyle}>|</li>
-            <li><span style={textStyle}>A CORUÑA – SPAIN</span></li>
+            <li><a style={textStyle}>A CORUÑA – SPAIN</a></li>
 
 
           </ul>
