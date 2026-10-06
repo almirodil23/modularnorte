@@ -426,7 +426,7 @@ color: #1c1c1c;
 }
 
 .logo_head{
-left: 50px;
+right: 50px;
 position: fixed;
 z-index: 10;
 top: 0px;
@@ -512,8 +512,8 @@ color: #f1f1f1;
 
 .boton_menu{
 position: fixed;
-right: 0px;
-top: 75px;  
+left: 0px;
+top:11px;  
 z-index: 10;
 }
 
@@ -557,7 +557,7 @@ transition: all .4s ease-in-out;
 }
 
 #menu_lateral.abierto{
-right: 0px;    
+left: 0px;    
 }
 
 #header.abierto .boton_menu a:after{
@@ -684,7 +684,7 @@ transition: all 0.0s ease-in-out;
     }
     
     .logo_head {
-    left: 20px;
+    right: 20px;
     top: -28px;
     }
     
@@ -716,7 +716,7 @@ transition: all 0.0s ease-in-out;
     }
     
     .boton_menu {
-    top: 75px;
+    top: 35px;
     }
     
     .boton_menu a {
@@ -4545,7 +4545,7 @@ INTERNET EXPLORER 11
   #header > .logo_head {
     position: absolute !important;
     top: 20px !important;
-    left: 20px !important;
+    right: 20px !important;
     transition: none !important;
     pointer-events: auto !important;
   }
@@ -4563,5 +4563,7 @@ INTERNET EXPLORER 11
   #header > .logo_head img {
     width: 160px !important;
     margin-top: -36px !important;
+
   }
 }
+

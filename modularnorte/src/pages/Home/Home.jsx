@@ -380,7 +380,7 @@ export default function Home({
 
               <p>
 
-                Diseñamos a medida y construimos llave en mano, desde A Coruña.
+                Diseñamos a medida y construimos llave en mano.
 
               </p>
 
@@ -420,7 +420,7 @@ export default function Home({
 
                 <div>
 
-                  <div className="cifra">+400</div>
+                  <div className="cifra">+300</div>
 
                   <h3>viviendas llave en mano</h3>
 
@@ -642,7 +642,7 @@ export default function Home({
 
               <div>
 
-                <h2>Por qué construir en madera</h2>
+                <h2>Por qué construir con estructura madera</h2>
 
                 <ul className="ventajas">
 
@@ -656,7 +656,7 @@ export default function Home({
 
                     <div>
 
-                      <h3>Calificación energética A</h3>
+                      <h3>Calificación energética A+</h3>
 
                       <p>Gran aislamiento y ausencia de puentes térmicos.</p>
 
@@ -696,7 +696,7 @@ export default function Home({
 
                       <p>
 
-                        Obra vista, piedra o monocapa. No tiene que ser madera.
+                        SATE, Fachada Ventilada, Piedra...
 
                       </p>
 
