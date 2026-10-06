@@ -1384,11 +1384,11 @@ export default function Home({
 
               <ul>
 
-                <li>Vivienda a medida</li>
+                <li>Viviendas a medida</li>
 
-                <li>Ampliaciones y áticos</li>
+                <li>Certificado A+</li>
 
-                <li>Reforma y decoración</li>
+                <li>Construcción en 90 dias</li>
 
               </ul>
 

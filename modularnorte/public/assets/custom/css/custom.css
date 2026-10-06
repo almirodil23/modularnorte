@@ -430,7 +430,7 @@ right: 50px;
 position: fixed;
 z-index: 10;
 top: 0px;
-top: -80px;    
+top: 0px;    
 webkit-transition: all .5s ease-in-out;
 -o-transition: all .5s ease-in-out;
 transition: all .5s ease-in-out;
@@ -4544,7 +4544,7 @@ INTERNET EXPLORER 11
 
   #header > .logo_head {
     position: absolute !important;
-    top: 20px !important;
+    top: 40px !important;
     right: 20px !important;
     transition: none !important;
     pointer-events: auto !important;
@@ -4556,7 +4556,7 @@ INTERNET EXPLORER 11
 }
 @media (min-width: 1006px) and (max-width: 1750px) {
   #header > .logo_head {
-    top: -45px !important;
+    top: 50px !important;
     transition: none !important;
   }
 
