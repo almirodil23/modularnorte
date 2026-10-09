@@ -142,7 +142,7 @@ const blogs = [
     {
       "type": "image",
       "kind": "chart",
-      "src": "/images/blogs/terrenos-coruna/grafico-precios-concellos.png",
+      "src": "/images/blog/terrenos-coruna/grafico-precios-concellos.png",
       "alt": "Precios por concello",
       "caption": "Medias de anuncios en Idealista · Octubre de 2026. Mezclan usos y situaciones urbanísticas; no equivalen al precio de una parcela lista para construir."
     },
@@ -173,7 +173,7 @@ const blogs = [
     {
       "type": "image",
       "kind": "chart",
-      "src": "/images/blogs/terrenos-coruna/grafico-clima-coruna-alvedro.png",
+      "src": "/images/blog/terrenos-coruna/grafico-clima-coruna-alvedro.png",
       "alt": "Costa e interior: también cambia el clima",
       "caption": "AEMET · Normales 1981–2010. Datos de dos estaciones, no de cada concello. Los paneles tienen escalas distintas."
     },
