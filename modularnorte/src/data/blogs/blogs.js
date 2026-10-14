@@ -288,257 +288,739 @@ const blogs = [
 {
   id: 12,
   slug: "comprar-terreno-a-coruna-concellos-precios-clima",
-  title: "Comprar terreno cerca de A Coruña: diez concellos y una decisión que va más allá del precio",
-  shortTitle: "Dónde construir cerca de A Coruña",
-  date: "14 Octubre 2026",
+  title: "La guía definitiva para comprar un terreno cerca de A Coruña en 2026",
+  shortTitle: "Dónde comprar terreno en A Coruña",
+  date: "09 Octubre 2026",
   category: "TERRENOS",
-
   image: "https://upload.wikimedia.org/wikipedia/commons/1/13/Praia_de_Santa_Cristina._Oleiros_e_A_Coru%C3%B1a.jpg",
-  imageAlt: "Playa de Santa Cristina y entorno residencial de Oleiros",
-  imageCaption: "Santa Cristina, Oleiros. Fotografía: Jose Luis Cernadas Iglesias · CC BY 2.0 · Sin modificar.",
-  imageSourceUrl: "https://commons.wikimedia.org/wiki/File:Praia_de_Santa_Cristina._Oleiros_e_A_Coru%C3%B1a.jpg",
-  imageLicenseUrl: "https://creativecommons.org/licenses/by/2.0/",
-
-  excerpt: "¿Oleiros, Cambre, Bergondo o más hacia el interior? Comparamos qué cambia al vivir en cada zona y cómo elegir una parcela sin perder de vista los desplazamientos, los servicios y el coste de construir.",
-
+  excerpt: "Análisis urbanístico, precios, calidad de vida y mejores concellos para construir una vivienda unifamiliar en el área metropolitana de A Coruña",
   featured: true,
-
   content: [
     {
-      type: "paragraph",
-      text: "El sábado, una parcela a media hora de A Coruña parece cerca. El lunes, cuando hay que llegar al trabajo, dejar a los niños o volver a por algo que se ha olvidado, esa distancia se mide de otra manera."
-    },
-    {
-      type: "paragraph",
-      text: "Buscar terreno en el entorno coruñés exige hacer dos mapas a la vez: el de las fincas que puedes comprar y el de los lugares a los que necesitas ir. A partir de ahí, las diferencias entre concellos empiezan a tener sentido."
-    },
-    {
-      type: "paragraph",
-      text: "Esta guía recorre diez municipios. No pretende proclamar un ganador: ayuda a distinguir qué estás comprando cuando eliges cercanía, costa, servicios o más superficie."
-    },
-
-    {
-      type: "heading",
-      text: "Oleiros: Perillo y Mera no son la misma elección"
-    },
-    {
-      type: "paragraph",
-      text: "Oleiros reúne ubicaciones que responden a necesidades diferentes. Perillo y Santa Cristina están vinculados a la entrada de A Coruña por A Pasaxe. Santa Cruz tiene su propio núcleo de actividad. Mera, Dexo y Lorbé desplazan la búsqueda hacia un entorno más costero y alejado de ese acceso inmediato."
-    },
-    {
-      type: "paragraph",
-      text: "Si tu prioridad es mantener una relación frecuente con la ciudad, empieza por localizar los servicios que utilizarías desde cada dirección. Si buscas paseos y naturaleza, la costa de Dexo-Serantes aporta otro atractivo: su tramo entre los faros de Mera y Lorbé tiene un paisaje distinto al de la fachada urbana de Perillo."
-    },
-    {
-      type: "paragraph",
-      text: "El error sería pagar por la reputación del concello sin comprobar qué ofrece la ubicación concreta. En tu primera visita, haz a pie el recorrido hasta la tienda o parada que usarías. Después prueba la salida hacia tu trabajo. Son dos comprobaciones más reveladoras que la distancia a María Pita."
-    },
-
-    {
-      type: "heading",
-      text: "Cambre y Culleredo: cuánto quieres depender del coche"
-    },
-    {
-      type: "paragraph",
-      text: "O Temple y A Barcala, en Cambre, y O Burgo y Vilaboa, en Culleredo, permiten empezar la búsqueda tomando como referencia núcleos con vida urbana. Hacia otras parroquias, la relación entre vivienda, servicios y desplazamientos cambia."
-    },
-    {
-      type: "paragraph",
-      text: "En Cambre, el río Mero y el entorno de Cecebre añaden una dimensión natural que no se percibe si solo recorres sus áreas más urbanas. Para quien quiere caminar o salir en bicicleta, interesa comprobar cómo se llega desde la parcela a esos recorridos, no solo que aparezcan cerca en el mapa."
-    },
-    {
-      type: "paragraph",
-      text: "Culleredo introduce una cuestión específica: Alvedro. Si una finca está en el entorno aeroportuario, conviene estudiar por separado el ruido y las afecciones aeronáuticas. Aena publica mapas acústicos; una visita silenciosa entre dos vuelos no sustituye esa consulta."
-    },
-    {
-      type: "paragraph",
-      text: "Entre ambos concellos, la comparación útil no es cuál está más cerca de A Coruña, sino desde qué parcela puedes resolver más cosas sin organizar un desplazamiento para cada una."
-    },
-
-    {
       type: "image",
-      src: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Praia_de_Gandar%C3%ADo_Bergondo.jpg",
-      alt: "Playa de Gandarío en Bergondo",
-      caption: "Gandarío, Bergondo. Fotografía: Nemigo · Wikimedia Commons · CC0.",
-      sourceUrl: "https://commons.wikimedia.org/wiki/File:Praia_de_Gandar%C3%ADo_Bergondo.jpg"
+      src: "https://upload.wikimedia.org/wikipedia/commons/1/13/Praia_de_Santa_Cristina._Oleiros_e_A_Coru%C3%B1a.jpg",
+      alt: "Playa de Santa Cristina y entorno residencial de Oleiros, en las afueras de A Coruña",
+      caption: "Santa Cristina, Oleiros. Fotografía: Jose Luis Cernadas Iglesias · CC BY 2.0 · Sin modificar. Licencia: https://creativecommons.org/licenses/by/2.0/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Praia_de_Santa_Cristina._Oleiros_e_A_Coru%C3%B1a.jpg"
     },
-
+    {
+      type: "paragraph",
+      text: "Análisis urbanístico, precios, calidad de vida y mejores concellos para construir una vivienda unifamiliar en el área metropolitana de A Coruña"
+    },
     {
       type: "heading",
-      text: "Sada o Bergondo: tener un centro cerca o buscar entre varios núcleos"
+      text: "Introducción: elegir concello es elegir estilo de vida"
     },
     {
       type: "paragraph",
-      text: "Sada ofrece una referencia clara para organizar la búsqueda: su centro, el paseo y el puerto. Una vivienda próxima permite plantear una rutina distinta a la de una finca situada en las laderas o en parroquias como Carnoedo. Pertenecer al mismo concello no equivale a disfrutar de los mismos servicios a pie."
+      text: "El área metropolitana de A Coruña ofrece una diversidad enorme en pocos kilómetros. En menos de 30 minutos puedes pasar de un entorno costero premium a una zona rural con parcelas grandes y precios muy competitivos."
     },
     {
       type: "paragraph",
-      text: "Bergondo invita a una búsqueda más repartida. Gandarío, Guísamo y el entorno de Mariñán no ofrecen la misma relación con la playa, las vías de comunicación o los núcleos de actividad. Antes de recorrer anuncios, elige qué referencia quieres tener cerca."
+      text: "Pero no todos los concellos son iguales. Y no todos encajan con el mismo tipo de comprador."
     },
     {
       type: "paragraph",
-      text: "Aquí las vistas pueden inclinar la decisión demasiado pronto. Pide que te sitúen sobre un plano la casa, la entrada y la zona de jardín: en una parcela inclinada, esos tres elementos pueden necesitar plataformas y obras diferentes."
+      text: "Esta guía analiza los principales concellos del entorno para ayudarte a decidir dónde construir tu vivienda unifamiliar en 2026. Y lo hace desde una perspectiva diferente: la de quien ha visitado cientos de parcelas, ha tramitado licencias y ha cimentado viviendas de estructura de madera en la zona."
     },
     {
-      type: "quote",
-      text: "Una finca de 1.000 m² no ofrece necesariamente 1.000 m² de jardín cómodo. Dibuja primero la casa, el acceso y el espacio exterior que realmente utilizarías."
+      type: "paragraph",
+      text: "Si aún no has comprado la parcela, te recomendamos leer primero nuestra guía sobre qué debe tener un buen terreno para construir tu vivienda modular."
     },
-
     {
       type: "heading",
-      text: "Arteixo: empieza por el lugar donde trabajas"
+      text: "Cómo leer esta guía"
     },
     {
       type: "paragraph",
-      text: "Para quien se desplaza a Sabón, buscar al oeste de A Coruña merece una comparación propia. Medir todas las ubicaciones por su distancia al centro de la ciudad puede llevar a descartar una que simplificaría la mayor parte de la semana."
-    },
-    {
-      type: "paragraph",
-      text: "Tampoco conviene reducir Arteixo a su actividad industrial. El núcleo urbano, Pastoriza y el litoral de Barrañán o Valcovo representan entornos diferentes. Decide primero qué peso tienen el trabajo, los servicios y la playa en tu búsqueda."
-    },
-    {
-      type: "paragraph",
-      text: "En las ubicaciones costeras, visita con viento además de con sol. La exposición influye en cómo se disfruta una terraza o un jardín y merece entrar en el diseño desde el principio."
-    },
-
-    {
-      type: "heading",
-      text: "Carral y Abegondo: qué harás con el espacio adicional"
-    },
-    {
-      type: "paragraph",
-      text: "Al ampliar la búsqueda hacia Carral y Abegondo, puede aparecer la posibilidad de comprar más superficie con el mismo presupuesto. Antes de valorarlo como una ventaja, ponle un uso: huerto, juego, privacidad, taller o simplemente separación respecto a los vecinos."
-    },
-    {
-      type: "paragraph",
-      text: "Si solo necesitas una terraza y una pequeña zona verde, una finca muy grande también añade cierres, desbroce y mantenimiento. Y su superficie total no indica qué parte puede destinarse a la vivienda."
-    },
-    {
-      type: "paragraph",
-      text: "En Carral, utiliza el núcleo como referencia para comprobar cómo resolverías la compra y los recados. En Abegondo, prueba las conexiones desde la parroquia concreta hacia tus destinos habituales. El primer tramo hasta la vía principal puede pesar tanto como el resto del recorrido."
-    },
-
-    {
-      type: "image",
-      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Embalse_de_Cecebre.jpg/1280px-Embalse_de_Cecebre.jpg",
-      alt: "Paisaje del embalse de Abegondo-Cecebre",
-      caption: "Embalse de Cecebre. Fotografía: Maria Varela Martínez · CC BY-SA 4.0 · Tamaño reducido.",
-      sourceUrl: "https://commons.wikimedia.org/wiki/File:Embalse_de_Cecebre.jpg",
-      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
-    },
-
-    {
-      type: "heading",
-      text: "Betanzos y Miño: elegir una vida propia fuera de A Coruña"
-    },
-    {
-      type: "paragraph",
-      text: "Betanzos merece estudiarse como lugar donde hacer vida, además de como punto desde el que desplazarse a Coruña. La proximidad al centro permite valorar comercio, encuentros y recados dentro de la propia villa. Una parcela en sus parroquias exteriores puede requerir otra organización."
-    },
-    {
-      type: "paragraph",
-      text: "Miño plantea una decisión más vinculada al litoral. Para una vivienda habitual, vuelve fuera del verano y comprueba qué servicios utilizarías durante el resto del año. No valores el entorno únicamente con la experiencia de un día de playa."
-    },
-    {
-      type: "paragraph",
-      text: "En ambos casos, ampliar la distancia puede funcionar si parte de tu semana sucede allí. Si todos tus compromisos siguen en A Coruña, calcula antes cuánto tiempo y dinero dedicarías a mantenerlos."
-    },
-
-    {
-      type: "heading",
-      text: "El clima: mira dónde cae la sombra en enero"
-    },
-    {
-      type: "paragraph",
-      text: "Etiquetar un concello como soleado, húmedo o ventoso dice poco sobre una parcela. La orientación de la ladera, los edificios, el arbolado y la posición respecto al valle pueden cambiar mucho la experiencia dentro de una misma parroquia."
-    },
-    {
-      type: "paragraph",
-      text: "Pide un estudio de soleamiento para la posición prevista de la vivienda y de la terraza. Si compras por el jardín, necesitas saber cuándo podrá recibir sol. Después de llover, observa también por dónde entra y sale el agua; cualquier duda debe trasladarse al estudio técnico del terreno."
-    },
-
-    {
-      type: "heading",
-      text: "Qué zonas comparar primero"
-    },
-    {
-      type: "table",
-      headers: [
-        "Tu prioridad",
-        "Primera comparación",
-        "La diferencia que debes comprobar"
-      ],
-      rows: [
-        [
-          "Mantener contacto frecuente con A Coruña",
-          "Perillo, O Burgo, Vilaboa, O Temple y A Barcala",
-          "El recorrido hasta tus destinos y los servicios accesibles a pie."
-        ],
-        [
-          "Costa y paseos",
-          "Mera, Santa Cruz, Sada y Miño",
-          "Si la vivienda está realmente conectada con el entorno que te atrae."
-        ],
-        [
-          "Trabajo en Sabón",
-          "Arteixo y alternativas al oeste",
-          "El trayecto laboral frente al de las opciones situadas al este."
-        ],
-        [
-          "Más espacio exterior",
-          "Carral, Abegondo y parroquias interiores",
-          "Superficie utilizable, mantenimiento y coste de acondicionamiento."
-        ],
-        [
-          "Hacer vida fuera de Coruña",
-          "Betanzos y los núcleos de Sada o Miño",
-          "Cuántas necesidades puedes resolver en la propia localidad."
-        ]
-      ]
-    },
-
-    {
-      type: "heading",
-      text: "Precio de compra y presupuesto para entrar a vivir"
-    },
-    {
-      type: "paragraph",
-      text: "No compares una finca preparada para construir con otra que necesita resolver accesos, redes y grandes desniveles utilizando solo el precio por metro cuadrado. Estás comparando puntos de partida distintos."
-    },
-    {
-      type: "paragraph",
-      text: "Un ejemplo hipotético: una parcela de 70.000 € que requiere 35.000 € de preparación suma 105.000 €. Otra de 90.000 € con 10.000 € de trabajos suma 100.000 €. No son presupuestos de mercado: muestran por qué el anuncio más barato puede acabar costando más, incluso antes de añadir impuestos y otros gastos."
-    },
-    {
-      type: "paragraph",
-      text: "Para decidir entre dos candidatas, solicita una estimación comparable que incluya preparación, cimentación, acometidas y acceso. Mantén también un margen para las partidas que todavía no puedan definirse."
-    },
-
-    {
-      type: "heading",
-      text: "Cinco respuestas antes de dar una señal"
+      text: "Para cada concello encontrarás siempre el mismo bloque de análisis:"
     },
     {
       type: "list",
       items: [
-        "Qué vivienda admite la finca: consulta urbanística sobre su referencia y ubicación exactas.",
-        "Qué compras: titularidad, límites, cargas y acceso legal.",
-        "Qué falta: servicios, obras previas y posibles obligaciones pendientes.",
-        "Qué cuesta implantar la casa: topografía, terreno, cimentación y montaje.",
-        "Cómo vivirías allí: desplazamientos probados y servicios identificados."
+        "✅ Lo mejor del concello",
+        "⚠️ Lo que nadie te cuenta",
+        "🏗️ Lo que vemos habitualmente en Modular Norte",
+        "🏡 Perfil de comprador ideal"
       ]
     },
     {
       type: "paragraph",
-      text: "Con esas respuestas, la elección entre concellos se vuelve mucho más concreta. Podrás distinguir si pagas por una ubicación que vas a aprovechar o por un atractivo que apenas formará parte de tu rutina."
+      text: "Este formato te permite comparar de un vistazo y entender no solo los datos objetivos, sino también las particularidades que solo se descubren cuando se trabaja sobre el terreno."
     },
     {
       type: "heading",
-      text: "¿Ya tienes dos o tres parcelas candidatas?"
+      text: "Oleiros – La referencia residencial del área metropolitana"
     },
     {
       type: "paragraph",
-      text: "Ese es un buen momento para estudiar la vivienda. En Modular Norte podemos ayudarte a comparar cómo encajaría el proyecto en cada terreno y qué trabajos necesitaría. Traer las referencias, los planos y las ubicaciones permite avanzar más que seguir acumulando anuncios."
+      text: "Si el presupuesto no es la variable principal, Oleiros sigue siendo el concello más demandado para vivienda unifamiliar del entorno de A Coruña."
+    },
+    {
+      type: "paragraph",
+      text: "La combinación de costa, servicios, colegios, zonas verdes y proximidad a la ciudad hace que siga siendo una de las ubicaciones más exclusivas de Galicia."
+    },
+    {
+      type: "paragraph",
+      text: "Distancia al centro de A Coruña: 5-15 km · 10-25 minutos."
+    },
+    {
+      type: "paragraph",
+      text: "Precio del suelo: Desde 90 €/m², superando frecuentemente los 200 €/m². En zonas exclusivas, cifras muy superiores."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Oleiros"
+    },
+    {
+      type: "list",
+      items: [
+        "Cercanía a A Coruña.",
+        "Playas y paseos marítimos.",
+        "Algunos de los mejores colegios del área metropolitana.",
+        "Mercado inmobiliario sólido y muy estable.",
+        "Alta capacidad de revalorización."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Las parcelas realmente buenas salen poco al mercado.",
+        "Muchas fincas tienen condicionantes paisajísticos o urbanísticos.",
+        "Determinadas zonas presentan costes elevados de urbanización.",
+        "El tráfico de entrada y salida a Coruña puede ser importante en horas punta."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Muchas de las parcelas que estudiamos en Oleiros son excelentes para viviendas de estructura de madera por:"
+    },
+    {
+      type: "list",
+      items: [
+        "Orientaciones favorables.",
+        "Parcelas relativamente llanas.",
+        "Entornos residenciales consolidados."
+      ]
+    },
+    {
+      type: "paragraph",
+      text: "Sin embargo, también es frecuente encontrar limitaciones de ocupación o necesidades de integración paisajística que afectan al diseño."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Familias que buscan una vivienda definitiva, valoran los servicios y quieren mantener una elevada calidad de vida sin alejarse de A Coruña."
+    },
+    {
+      type: "heading",
+      text: "Cambre – El concello más equilibrado de todo el entorno coruñés"
+    },
+    {
+      type: "paragraph",
+      text: "Si tuviésemos que recomendar una única ubicación a la mayoría de nuestros clientes, probablemente Cambre aparecería entre las primeras posiciones."
+    },
+    {
+      type: "paragraph",
+      text: "Distancia: 10-15 km · 15-30 minutos."
+    },
+    {
+      type: "paragraph",
+      text: "Precio del suelo: Normalmente 60-140 €/m²."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Cambre"
+    },
+    {
+      type: "list",
+      items: [
+        "Muy buena conexión con A Coruña.",
+        "Mercado de suelo amplio.",
+        "Buenos colegios.",
+        "Servicios suficientes para el día a día.",
+        "Excelente relación calidad-precio."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Existen grandes diferencias entre parroquias.",
+        "El precio puede variar muchísimo entre parcelas situadas a pocos kilómetros.",
+        "Conviene revisar cuidadosamente las condiciones urbanísticas antes de comprar."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Muchas parcelas presentan condiciones muy favorables para viviendas industrializadas:"
+    },
+    {
+      type: "list",
+      items: [
+        "Pendientes suaves.",
+        "Buen acceso para grúa.",
+        "Solares regulares.",
+        "Costes razonables de cimentación."
+      ]
+    },
+    {
+      type: "paragraph",
+      text: "Por eso Cambre es uno de los concellos donde más proyectos analizamos."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Familias que quieren equilibrar presupuesto, calidad de vida y proximidad a la ciudad."
+    },
+    {
+      type: "image",
+      src: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Praia_de_Gandar%C3%ADo_Bergondo.jpg",
+      alt: "Playa de Gandarío y entorno costero de Bergondo",
+      caption: "Playa de Gandarío, Bergondo. Fotografía: Nemigo · Wikimedia Commons · CC0.",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Praia_de_Gandar%C3%ADo_Bergondo.jpg"
+    },
+    {
+      type: "heading",
+      text: "Bergondo – Donde más potencial vemos actualmente"
+    },
+    {
+      type: "paragraph",
+      text: "Bergondo es probablemente uno de los mercados más interesantes de toda el área metropolitana para los próximos años."
+    },
+    {
+      type: "paragraph",
+      text: "Distancia: 20-35 minutos."
+    },
+    {
+      type: "paragraph",
+      text: "Precio: 40-90 €/m²."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Bergondo"
+    },
+    {
+      type: "list",
+      items: [
+        "Buen acceso por AP-9.",
+        "Entorno natural muy atractivo.",
+        "Precios todavía razonables.",
+        "Parcelas amplias.",
+        "Notable potencial de revalorización."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Algunas parcelas pertenecen a núcleos rurales con condiciones específicas.",
+        "Conviene revisar alineaciones y normativa antes de comprar.",
+        "Los servicios son más limitados que en Oleiros o Cambre."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Las parcelas suelen permitir diseños muy atractivos de vivienda unifamiliar de estructura de madera debido a:"
+    },
+    {
+      type: "list",
+      items: [
+        "Mayor superficie disponible.",
+        "Menor densidad edificatoria.",
+        "Entornos muy tranquilos.",
+        "Menor impacto visual de la vivienda."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Quien busca una vivienda para muchos años con una buena combinación entre naturaleza y accesibilidad."
+    },
+    {
+      type: "heading",
+      text: "Sada – La mejor calidad de vida para quien disfruta del mar"
+    },
+    {
+      type: "paragraph",
+      text: "Sada sigue siendo uno de los lugares más agradables para vivir cerca de A Coruña."
+    },
+    {
+      type: "paragraph",
+      text: "Distancia: 25-40 minutos."
+    },
+    {
+      type: "paragraph",
+      text: "Clima: Muy suave, escasas heladas, elevada influencia marítima."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Sada"
+    },
+    {
+      type: "list",
+      items: [
+        "Ambiente marítimo.",
+        "Puerto deportivo.",
+        "Vida propia durante todo el año.",
+        "Comercio local.",
+        "Hostelería."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Muchas parcelas tienen pendientes relevantes.",
+        "Es habitual que los costes de cimentación sean superiores a la media.",
+        "La orientación y la topografía son especialmente importantes."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Cuando la parcela es buena, Sada permite crear viviendas espectaculares aprovechando vistas, orientación y relación con el paisaje."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Personas que buscan una vivienda para disfrutar diariamente del entorno costero."
+    },
+    {
+      type: "heading",
+      text: "Arteixo – La mejor ubicación para quienes trabajan en Sabón o Inditex"
+    },
+    {
+      type: "paragraph",
+      text: "Distancia: 15-35 minutos."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Arteixo"
+    },
+    {
+      type: "list",
+      items: [
+        "Actividad económica.",
+        "Servicios.",
+        "Buenas comunicaciones.",
+        "Mercado inmobiliario activo."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Algunas zonas tienen menos carácter residencial.",
+        "La proximidad a polígonos industriales puede afectar al precio y al entorno.",
+        "Conviene elegir bien la parroquia."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Parcelas con buenos accesos y servicios, ideales para viviendas eficientes y bien comunicadas."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Trabajadores de Inditex, Sabón o polígonos industriales que quieren minimizar desplazamientos."
+    },
+    {
+      type: "heading",
+      text: "Culleredo – La alternativa práctica"
+    },
+    {
+      type: "paragraph",
+      text: "Distancia: 10-25 minutos."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Culleredo"
+    },
+    {
+      type: "list",
+      items: [
+        "Cercanía inmediata a A Coruña.",
+        "Buenos accesos.",
+        "Servicios completos."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Algunas zonas próximas al aeropuerto presentan condicionantes urbanísticos específicos.",
+        "Conviene revisar las servidumbres aeronáuticas.",
+        "El precio del suelo ha subido en los últimos años."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Parcelas bien comunicadas y con servicios, ideales para viviendas modulares de alta eficiencia."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Quien prioriza cercanía a la ciudad y servicios completos."
+    },
+    {
+      type: "heading",
+      text: "Carral – Más terreno por menos dinero"
+    },
+    {
+      type: "paragraph",
+      text: "Carral es una de las grandes sorpresas del mercado residencial en los últimos años."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Carral"
+    },
+    {
+      type: "list",
+      items: [
+        "Precio del suelo entre los más competitivos.",
+        "Menor humedad.",
+        "Más horas de sol.",
+        "Menos viento.",
+        "Facilidad constructiva generalmente buena."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Menos servicios que en la costa.",
+        "Mayor dependencia del vehículo privado.",
+        "Algunas parcelas están en núcleos rurales con condiciones específicas."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Parcelas amplias, con buenas orientaciones y costes de cimentación razonables. Es uno de los concellos donde más proyectos de estructura de madera analizamos."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Quien prioriza metros y tranquilidad sobre proximidad inmediata."
+    },
+    {
+      type: "image",
+      src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Embalse_de_Cecebre.jpg/1280px-Embalse_de_Cecebre.jpg",
+      alt: "Paisaje del embalse de Cecebre en el entorno de Abegondo",
+      caption: "Embalse de Cecebre. Fotografía: Maria Varela Martínez · CC BY-SA 4.0 · Sin modificar, tamaño reducido. Licencia: https://creativecommons.org/licenses/by-sa/4.0/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Embalse_de_Cecebre.jpg"
+    },
+    {
+      type: "heading",
+      text: "Abegondo – La tierra de las parcelas grandes"
+    },
+    {
+      type: "paragraph",
+      text: "Si tu prioridad es disponer de terreno, difícilmente encontrarás mejores oportunidades."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Abegondo"
+    },
+    {
+      type: "list",
+      items: [
+        "Precios muy competitivos.",
+        "Clima excelente: más sol y menos humedad.",
+        "Parcelas grandes.",
+        "Menor densidad urbanística."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Servicios más limitados.",
+        "Mayor dependencia del coche.",
+        "Conviene verificar accesos y acometidas antes de comprar."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Parcelas que permiten diseños amplios y aprovechar al máximo las ventajas de la estructura de madera."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Quien busca un estilo de vida rural moderno, con espacio y tranquilidad."
+    },
+    {
+      type: "heading",
+      text: "Betanzos – La pequeña ciudad con todos los servicios"
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Betanzos"
+    },
+    {
+      type: "list",
+      items: [
+        "Hospitales cercanos.",
+        "Comercio.",
+        "Educación.",
+        "Hostelería.",
+        "Vida urbana propia."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "El suelo urbano es más caro que en los concellos rurales.",
+        "Las parcelas disponibles son más pequeñas.",
+        "Conviene revisar el planeamiento antes de comprar."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Parcelas urbanas con todos los servicios, ideales para viviendas modulares de alta eficiencia."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Quien busca la comodidad de una ciudad pequeña sin renunciar a la tranquilidad."
+    },
+    {
+      type: "heading",
+      text: "Miño – La mejor opción para quien prioriza playa y tranquilidad"
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Miño"
+    },
+    {
+      type: "list",
+      items: [
+        "Playas.",
+        "Entorno natural.",
+        "Buenas parcelas."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Menor actividad fuera de temporada.",
+        "Menos servicios que en otras zonas.",
+        "El precio del suelo ha subido en los últimos años."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Parcelas con buen entorno, ideales para viviendas de disfrute vacacional o primera residencia."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Quien prioriza playa y tranquilidad."
+    },
+    {
+      type: "heading",
+      text: "Tabla definitiva para elegir concello"
+    },
+    {
+      type: "table",
+      headers: [
+        "Concello",
+        "Precio suelo",
+        "Construir",
+        "Servicios",
+        "Distancia Coruña",
+        "Clima",
+        "Calidad vida"
+      ],
+      rows: [
+        ["Oleiros", "⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐⭐"],
+        ["Cambre", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐"],
+        ["Culleredo", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐"],
+        ["Arteixo", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐"],
+        ["Bergondo", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐⭐"],
+        ["Sada", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐⭐"],
+        ["Carral", "⭐⭐⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐⭐"],
+        ["Abegondo", "⭐⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐⭐"],
+        ["Betanzos", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐"],
+        ["Miño", "⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐"]
+      ]
+    },
+    {
+      type: "heading",
+      text: "Dónde construiríamos una vivienda de estructura de madera en 2026"
+    },
+    {
+      type: "paragraph",
+      text: "Después de analizar cientos de parcelas y ejecutar proyectos de viviendas industrializadas y de estructura de madera, estas son las zonas donde actualmente encontramos mejor equilibrio entre:"
+    },
+    {
+      type: "list",
+      items: [
+        "Precio del suelo.",
+        "Facilidad urbanística.",
+        "Calidad de vida.",
+        "Eficiencia constructiva.",
+        "Potencial de revalorización."
+      ]
+    },
+    {
+      type: "heading",
+      text: "Top 5 Modular Norte"
+    },
+    {
+      type: "list",
+      items: [
+        "🥇 Cambre",
+        "🥈 Bergondo",
+        "🥉 Carral",
+        "4️⃣ Sada",
+        "5️⃣ Abegondo"
+      ]
+    },
+    {
+      type: "paragraph",
+      text: "Porque suelen reunir características que permiten aprovechar especialmente bien las ventajas de la construcción industrializada:"
+    },
+    {
+      type: "list",
+      items: [
+        "✅ Parcelas más amplias.",
+        "✅ Buen acceso para transporte y montaje.",
+        "✅ Menores costes de movimiento de tierras.",
+        "✅ Mayor libertad de diseño.",
+        "✅ Mejor orientación.",
+        "✅ Excelente comportamiento energético."
+      ]
+    },
+    {
+      type: "heading",
+      text: "Conclusión"
+    },
+    {
+      type: "paragraph",
+      text: "La mejor parcela no es la más barata, ni la más grande, ni siquiera la que tiene mejores vistas."
+    },
+    {
+      type: "paragraph",
+      text: "La mejor parcela es aquella que permite construir la vivienda que realmente necesitas, con costes controlados, buena orientación, servicios suficientes y una calidad de vida acorde a tu proyecto familiar."
+    },
+    {
+      type: "paragraph",
+      text: "En una vivienda modular de estructura de madera, el terreno es el punto de partida de todo el ahorro: menos movimiento de tierras, cimentación más rápida y económica, y una base perfecta para una casa que consume un 70% menos de energía."
+    },
+    {
+      type: "paragraph",
+      text: "En Modular Norte analizamos la viabilidad de las parcelas de nuestros clientes antes de iniciar cualquier proyecto, para garantizar que la vivienda empieza sobre una base sólida: un buen terreno."
+    },
+    {
+      type: "paragraph",
+      text: "📌 ¿Tienes una parcela en mente y quieres saber si es viable para tu casa modular de madera? Completa nuestro cuestionario de contacto y te ayudamos a analizarla sin compromiso."
+    },
+    {
+      type: "paragraph",
+      text: "👉 https://www.modularnorte.com/contactar"
     }
   ]
 },
