@@ -1,0 +1,246 @@
+/* ==========================================
+   TOP BAR
+========================================== */
+
+.mn-topbar {
+  background: #1d3c32;
+  color: white;
+  height: 41px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.mn-header-container {
+  width: 100%;
+  max-width: 1160px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.mn-topbar .mn-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mn-topbar span,
+.mn-topbar a {
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.mn-white-header {
+  width: 100%;
+  height: 88px;
+  background: #ffffff;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.mn-header-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.mn-header-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.mn-header-logo img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.mn-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  white-space: nowrap;
+  margin-left: 6px;
+}
+
+.mn-header-nav a,
+.mn-header-nav button {
+  color: #050505 !important;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: inherit;
+  background: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.mn-header-nav a:hover,
+.mn-header-nav button:hover {
+  color: #666 !important;
+}
+
+/* ==========================================
+   ACTIONS
+========================================== */
+
+.mn-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.mn-header-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 16px;
+  color: #000 !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.mn-budget-button {
+  border: 0;
+  background: #000;
+  color: #fff;
+  border-radius: 40px;
+  padding: 16px 25px;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.mn-budget-button:hover {
+  background: #303030;
+  transform: translateY(-1px);
+}
+
+/* ==========================================
+   MOBILE TOGGLE
+========================================== */
+
+.mn-mobile-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid #e5e5e5;
+  border-radius: 9px;
+  background: white;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.mn-mobile-toggle span {
+  width: 21px;
+  height: 2px;
+  background: #111;
+  border-radius: 2px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1200px) {
+  .mn-header-content {
+    gap: 18px;
+  }
+
+  .mn-header-nav {
+    gap: 15px;
+  }
+
+  .mn-header-nav a,
+  .mn-header-nav button {
+    font-size: 13px;
+  }
+
+  .mn-header-actions {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .mn-header-nav,
+  .mn-header-phone {
+    display: none;
+  }
+
+  .mn-mobile-toggle {
+    display: flex;
+  }
+
+  .mn-header-actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .mn-topbar {
+    height: 37px;
+  }
+
+  .mn-topbar span {
+    font-size: 10px;
+  }
+
+  .mn-topbar a {
+    display: none;
+  }
+
+  .mn-topbar .mn-header-container {
+    justify-content: center;
+  }
+
+  .mn-white-header {
+    height: 74px;
+  }
+
+  .mn-header-logo img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .mn-header-content {
+    gap: 12px;
+  }
+
+  .mn-budget-button {
+    padding: 11px 15px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mn-budget-button {
+    padding: 10px 11px;
+    font-size: 11px;
+  }
+}

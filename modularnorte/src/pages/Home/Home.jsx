@@ -4,6 +4,7 @@ import ContactModal from "../ContactModal/ContactModal";
 
 import "./HomeHero.css";
 
+import HomeHeader from "./HomeHeader";
 
 
 const ICONS = {
@@ -155,12 +156,9 @@ function Icon({ name }) {
 /** includeChrome: true only if your global layout has no header/footer. */
 
 export default function Home({
-
-  includeChrome = false,
-
+  includeChrome = true,
   heroVideo = "/assets/modularnorte-hero.mp4",
-
-}) {
+})  {
 
   const [modal, setModal] = useState(null);
 
@@ -208,121 +206,15 @@ export default function Home({
 
       <div className="mn-home">
 
-        {includeChrome && (
+            
+      {includeChrome && (
+        <HomeHeader
+          onBudget={openBudget}
+          onContact={openContact}
+        />
+      )}
 
-          <>
-
-            <div className="aviso">
-
-              <div className="wrap">
-
-                <span>Más de 400 viviendas llave en mano desde 2009</span>
-
-                <a href="tel:+34722782240">
-
-                  <Icon name="icon1" />
-
-                  722 782 240
-
-                </a>
-
-              </div>
-
-            </div>
-
-            <header className="cab">
-
-              <div className="wrap">
-
-                <a href="#inicio" aria-label="Modular Norte, inicio">
-
-                  <img
-
-                    className="logo"
-
-                    src="https://www.modularnorte.com/assets/custom/img/logo_menu.png"
-
-                    alt="Logo Modular Norte"
-
-                    width="64"
-
-                    height="64"
-
-                  />
-
-                </a>
-
-                <nav
-
-                  aria-label="Principal"
-
-                  id="mn-home-navigation"
-
-                  className={menuOpen ? "is-open" : ""}
-
-                  onClick={() => setMenuOpen(false)}
-
-                >
-
-                  <a href="#casas">Qué construimos</a>
-
-                  <a href="#proyectos">Proyectos</a>
-
-                  <a href="#proceso">Cómo construimos</a>
-
-                  <a href="#preguntas">Preguntas</a>
-
-                  <a href="#blog">Blog</a>
-
-                  <button type="button" onClick={openContact}>
-
-                    Contacto
-
-                  </button>
-
-                </nav>
-
-                <a className="tel" href="tel:+34722782240">
-
-                  <Icon name="icon1" />
-
-                  722 782 240
-
-                </a>
-
-                <button className="boton" type="button" onClick={openBudget}>
-
-                  Pedir presupuesto
-
-                </button>
-
-                <button
-
-                  className="hamb"
-
-                  type="button"
-
-                  aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
-
-                  aria-expanded={menuOpen}
-
-                  aria-controls="mn-home-navigation"
-
-                  onClick={() => setMenuOpen(!menuOpen)}
-
-                >
-
-                  <Icon name="icon2" />
-
-                </button>
-
-              </div>
-
-            </header>
-
-          </>
-
-        )}
+  <main id="inicio"></main>
 
         <main id="inicio">
 
