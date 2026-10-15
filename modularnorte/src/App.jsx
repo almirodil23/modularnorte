@@ -39,7 +39,7 @@ function App() {
       <ScrollToTop />
       <Preloader />
       <ConsentBanner />
-      <Header />
+    
       <SideMenu />
 
       <Routes>

@@ -41,3 +41,72 @@
   color: #888;
 }
 
+
+/* ESTILO EDITORIAL PARA LOS BLOGS */
+
+.blog-article {
+  font-family: "Mulish", sans-serif;
+  color: #252525;
+}
+
+/* TÍTULOS PRINCIPALES DE SECCIÓN */
+.blog-article h2 {
+  font-family: "Mulish", sans-serif;
+  font-size: clamp(27px, 3vw, 36px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.9px;
+  text-transform: none !important;
+  color: #202020;
+
+  margin: 60px 0 22px;
+  max-width: 850px;
+}
+
+/* SUBTÍTULOS */
+.blog-article h3 {
+  font-size: clamp(21px, 2.2vw, 26px);
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+  text-transform: none !important;
+  color: #303030;
+
+  margin: 38px 0 16px;
+}
+
+/* PÁRRAFOS */
+.blog-article p {
+  font-size: 16.5px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0;
+  color: #414141;
+  text-align: left;
+  margin-bottom: 23px;
+}
+
+/* LISTAS */
+.blog-article li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #414141;
+  margin-bottom: 9px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .blog-article h2 {
+    font-size: 27px;
+    margin-top: 42px;
+  }
+
+  .blog-article h3 {
+    font-size: 21px;
+  }
+
+  .blog-article p {
+    font-size: 15.5px;
+    line-height: 1.8;
+  }
+}
