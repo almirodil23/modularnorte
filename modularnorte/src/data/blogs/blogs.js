@@ -1,104 +1,415 @@
 const blogs = [
-  {
+  
+{
   id: 13,
   slug: "comprar-terreno-vigo-zonas-precios-vivienda",
-  title: "Dónde comprar terreno en Vigo: de las parroquias interiores a la costa de Nigrán",
-  shortTitle: "Elegir parcela en Vigo y su entorno",
+  title: "La guía definitiva para comprar un terreno cerca de Vigo en 2026",
+  shortTitle: "Comprar terreno cerca de Vigo en 2026",
   date: "14 Octubre 2026",
   category: "TERRENOS",
 
   image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Playa_de_rodas_en_las_islas_C%C3%ADes.jpg/1280px-Playa_de_rodas_en_las_islas_C%C3%ADes.jpg",
   imageAlt: "Playa de Rodas en las islas Cíes, en la entrada de la ría de Vigo",
-  imageCaption: "Playa de Rodas, islas Cíes. Fotografía: Javier Albertos · CC BY-SA 4.0 · Tamaño reducido. Imagen de contexto de la ría de Vigo.",
+  imageCaption: "Playa de Rodas, islas Cíes. Fotografía: Javier Albertos · CC BY-SA 4.0 · Tamaño reducido.",
   imageSourceUrl: "https://commons.wikimedia.org/wiki/File:Playa_de_rodas_en_las_islas_C%C3%ADes.jpg",
   imageLicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
 
-  excerpt: "En Vigo, una calle estrecha o unos metros de desnivel pueden cambiar el proyecto. Recorremos las principales zonas para buscar parcela y explicamos qué distingue una buena ubicación de una buena parcela.",
-
+  excerpt: "Análisis urbanístico, precios, calidad de vida y mejores zonas para construir una vivienda unifamiliar en el área metropolitana de Vigo.",
   featured: true,
 
   content: [
     {
-      type: "paragraph",
-      text: "La visita va bien hasta que llegas a la entrada. La finca tiene vistas, espacio y una ubicación que encaja. Pero el camino se estrecha, aparece una curva cerrada y la parte llana queda varios metros por encima de la calle."
+      type: "heading",
+      text: "Introducción: elegir zona es elegir estilo de vida"
     },
     {
       type: "paragraph",
-      text: "En Vigo, esa escena resume una parte importante de la búsqueda. La ciudad se extiende entre laderas, barrios y parroquias donde una vivienda puede estar cerca de todo en el mapa y necesitar una solución compleja sobre el terreno."
+      text: "El área metropolitana de Vigo ofrece una diversidad enorme en pocos kilómetros. En menos de 30 minutos puedes pasar de un entorno costero premium a una zona rural con parcelas grandes y precios muy competitivos."
     },
     {
       type: "paragraph",
-      text: "Para elegir bien, conviene separar dos decisiones: en qué zona quieres vivir y en qué finca puede construirse la casa que necesitas. Este recorrido te ayuda a avanzar en ambas."
+      text: "Pero no todas las zonas son iguales. Y no todas encajan con el mismo tipo de comprador."
+    },
+    {
+      type: "paragraph",
+      text: "Esta guía analiza las principales zonas del entorno para ayudarte a decidir dónde construir tu vivienda unifamiliar en 2026. Y lo hace desde una perspectiva diferente: la de quien ha visitado cientos de parcelas, ha tramitado licencias y ha cimentado viviendas de estructura de madera en la zona."
+    },
+    {
+      type: "paragraph",
+      text: "Si aún no has comprado la parcela, te recomendamos leer primero nuestra guía sobre qué debe tener un buen terreno para construir tu vivienda modular."
     },
 
     {
       type: "heading",
-      text: "Lavadores: comprueba la vida a pie antes que los kilómetros"
+      text: "Cómo leer esta guía"
     },
     {
       type: "paragraph",
-      text: "La relación de Lavadores con O Calvario ofrece una referencia útil para quien quiere mantener comercio y actividad urbana cerca. Sin embargo, no todas las direcciones tienen la misma conexión práctica con ese entorno."
+      text: "Para cada zona encontrarás siempre el mismo bloque de análisis:"
+    },
+    {
+      type: "list",
+      items: [
+        "✅ Lo mejor de la zona",
+        "⚠️ Lo que nadie te cuenta",
+        "🏗️ Lo que vemos habitualmente en Modular Norte",
+        "🏡 Perfil de comprador ideal"
+      ]
     },
     {
       type: "paragraph",
-      text: "Recorre a pie el camino desde la parcela hasta los servicios que te interesan. Mira la pendiente, las aceras y los cruces. Un establecimiento situado a pocos cientos de metros puede acabar siendo un desplazamiento en coche si el itinerario resulta incómodo."
-    },
-    {
-      type: "paragraph",
-      text: "En el diseño, estudia la relación con las casas próximas. La posición de las ventanas y las alturas del terreno pueden condicionar más la privacidad que la distancia entre viviendas. Merece la pena dibujar esas relaciones antes de decidir dónde irá el salón o la terraza."
+      text: "Este formato te permite comparar de un vistazo y entender no solo los datos objetivos, sino también las particularidades que solo se descubren cuando se trabaja sobre el terreno."
     },
 
     {
       type: "heading",
-      text: "Bembrive: una parroquia con vida propia"
+      text: "Contexto general: Vigo y su área metropolitana"
     },
     {
       type: "paragraph",
-      text: "Bembrive tiene una identidad vecinal que va más allá de ser una alternativa al centro. San Blas, los furanchos y su entorno de monte forman parte del carácter de la parroquia. Para quien busca arraigo y una relación cotidiana con ese ambiente, es un argumento distinto al tamaño del jardín."
+      text: "Vigo es la ciudad más poblada de Galicia y el motor económico del sur de la comunidad. Su área metropolitana, que se extiende desde la península del Morrazo hasta la frontera portuguesa, concentra una población superior a los 500.000 habitantes."
     },
     {
       type: "paragraph",
-      text: "La búsqueda debe bajar después a la escala de la finca. Localiza los recorridos que utilizarías y comprueba cómo se accede a la vivienda desde la calle. Una parcela puede tener superficie suficiente y, aun así, dejar poco margen para resolver cómodamente entrada, aparcamiento y espacio exterior."
+      text: "El clima de Vigo es suave y húmedo, con una temperatura media anual de 15,1 °C. La orientación suroeste y su amplio borde marítimo (36,5 km de costa) hacen que las temperaturas sean agradables todo el año, aunque las precipitaciones son abundantes en invierno."
     },
     {
       type: "paragraph",
-      text: "Si el anuncio incluye proyecto y licencia, pide la documentación completa. Lo importante es conocer qué se autorizó y si encaja con tu vivienda. Cambiar distribución, volumen o sistema constructivo requiere estudiar la compatibilidad técnica y los trámites correspondientes; no debe darse por hecho que el proyecto sirve tal cual."
+      text: "Esta combinación de clima suave, actividad económica y proximidad a la costa convierte al área de Vigo en una de las zonas más atractivas de Galicia para vivir. Pero también en una de las más caras y complejas urbanísticamente."
     },
 
     {
       type: "heading",
-      text: "Beade: el atractivo de la ladera y el coste de adaptarse a ella"
+      text: "El nuevo PXOM de Vigo 2025"
     },
     {
       type: "paragraph",
-      text: "El parque forestal de Beade y sus vistas sobre la ciudad ayudan a entender el atractivo de esta zona. Pero las panorámicas desde un mirador no describen todas las parcelas de la parroquia: cada finca tiene una relación diferente con el relieve."
+      text: "El Plan Xeral de Ordenación Municipal (PXOM) de Vigo, con aprobación definitiva en febrero de 2025, ha redefinido las reglas del juego para quienes quieren construir en el municipio."
     },
     {
       type: "paragraph",
-      text: "Si quieres una casa de una planta, empieza comprobando cómo se asentaría. Una vivienda extendida necesita una superficie de apoyo distinta a otra de dos alturas. En una ladera, esa elección puede cambiar los movimientos de tierra, los muros y la relación con el jardín."
+      text: "Los aspectos más relevantes para autopromotores son:"
     },
     {
-      type: "quote",
-      text: "Antes de pedir que la parcela se adapte a una casa elegida, compara qué casa aprovecha mejor la parcela."
+      type: "list",
+      items: [
+        "Nuevas ordenanzas para vivienda unifamiliar: La ordenanza U6.5 regula la vivienda unifamiliar extensiva, con parámetros como parcela mínima de 600 m², edificabilidad de 0,40 m²/m², ocupación máxima del 40% y altura máxima de planta baja + 1 (7 metros).",
+        "Suelo Urbano No Consolidado (SUNC): Muchas parcelas con gran potencial están clasificadas como SUNC, lo que implica que su desarrollo está sujeto a la gestión urbanística del ámbito y a las condiciones del planeamiento.",
+        "Suelo Urbanizable: El nuevo PXOM también ha reclasificado suelos como urbanizables residenciales, con coeficientes de edificabilidad que varían según el ámbito."
+      ]
     },
 
     {
       type: "heading",
-      text: "Cabral y Candeán: dos búsquedas que conviene separar"
-    },
-    {
-      type: "paragraph",
-      text: "Agrupar Cabral y Candeán bajo la etiqueta de zona interior oculta diferencias útiles. En Cabral, la presencia del entorno aeroportuario y del IFEVI entra en la comparación según la ubicación. En Candeán, A Madroa y el relieve de su entorno orientan otra parte de la búsqueda."
-    },
-    {
-      type: "paragraph",
-      text: "No presupongas que una dirección interior será más silenciosa o más sencilla de construir. Identifica qué infraestructuras tiene cerca, visita en distintos horarios y comprueba la posición de la vivienda respecto a las vías y las casas vecinas."
-    },
-    {
-      type: "paragraph",
-      text: "Estas zonas merecen una prueba de acceso completa. Para una construcción industrializada hay que valorar el itinerario del transporte, los giros, el espacio de maniobra y la posición de la grúa. Esa comprobación debe hacerse antes de reservar, no cuando la vivienda ya esté diseñada."
+      text: "Comparativa completa por zonas"
     },
 
+    {
+      type: "heading",
+      text: "Vigo Ciudad – La referencia urbana"
+    },
+    {
+      type: "paragraph",
+      text: "Vigo capital ofrece todas las ventajas de una ciudad: servicios, comercio, hospitales, educación y una intensa vida cultural. Pero el precio del suelo es elevado y las parcelas para vivienda unifamiliar son escasas."
+    },
+    {
+      type: "paragraph",
+      text: "Precio del suelo: Desde 146 €/m² en Lavadores hasta 389 €/m² en Coruxo-Oia-Saiáns. En zonas como Bembrive, los precios oscilan entre 136 €/m² y 282 €/m²."
+    },
+    {
+      type: "paragraph",
+      text: "Clima: Suave y húmedo, con temperaturas agradables todo el año."
+    },
+    {
+      type: "paragraph",
+      text: "Servicios: ⭐⭐⭐⭐⭐ Completos."
+    },
+    {
+      type: "paragraph",
+      text: "Dificultad para construir: ⭐⭐⭐ Las ordenanzas son exigentes y las parcelas disponibles, limitadas."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Vigo Ciudad"
+    },
+    {
+      type: "list",
+      items: [
+        "Servicios completos.",
+        "Excelente transporte público.",
+        "Oferta cultural y gastronómica.",
+        "Hospitales de referencia.",
+        "Proximidad a la AP-9 y VG-20."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "El precio del suelo es el más alto del área.",
+        "Las parcelas para unifamiliar son escasas y muy demandadas.",
+        "Algunas zonas tienen ordenanzas restrictivas en cuanto a ocupación y alturas.",
+        "El tráfico en horas punta puede ser intenso."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Las parcelas disponibles en Vigo capital suelen ser pequeñas (600-1.000 m²) y con ordenanzas que limitan la edificabilidad. Cuando encontramos una parcela que cumple los requisitos, el diseño de la vivienda debe optimizarse al máximo para aprovechar cada metro."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Quien prioriza vivir en la ciudad y no quiere renunciar a servicios, transporte público y vida urbana."
+    },
+
+    {
+      type: "heading",
+      text: "Teis – El barrio con mayor proyección"
+    },
+    {
+      type: "paragraph",
+      text: "Teis es uno de los barrios con mayor población de Vigo y está experimentando una clara evolución urbanística en los próximos años. La zona está incluida en el ámbito del PERI-306, con una edificabilidad de 0,90 m²/m² y posibilidad de desarrollar edificación residencial colectiva de hasta siete plantas."
+    },
+    {
+      type: "paragraph",
+      text: "Precio del suelo: Aunque no hay datos concretos para vivienda unifamiliar, los precios de parcelas en Teis suelen ser más competitivos que en el centro."
+    },
+    {
+      type: "paragraph",
+      text: "Servicios: ⭐⭐⭐⭐ Buenos servicios, con acceso a Sanjurjo Badía, una de las principales arterias comerciales del barrio."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Teis"
+    },
+    {
+      type: "list",
+      items: [
+        "Gran proyección de futuro.",
+        "Excelente conexión con el centro de Vigo.",
+        "Acceso a la AP-9.",
+        "Servicios completos: colegios, supermercados, transporte público, centros deportivos."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Gran parte del suelo está clasificado como Suelo Urbano No Consolidado (SUNC), lo que implica gestión urbanística previa.",
+        "Las parcelas para unifamiliar son escasas.",
+        "La zona está en transformación, con obras previstas en los próximos años."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Teis es una zona interesante para quien busca un barrio consolidado con proyección, pero las parcelas disponibles para vivienda unifamiliar son limitadas. Cuando aparecen, suelen ser pequeñas y con ordenanzas exigentes."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Inversores o promotores que quieran desarrollar promociones residenciales colectivas, más que para autopromotores de vivienda unifamiliar."
+    },
+
+    {
+      type: "heading",
+      text: "Lavadores – Zona residencial consolidada"
+    },
+    {
+      type: "paragraph",
+      text: "Lavadores es una de las zonas residenciales por excelencia de Vigo. Parcelas como la de la Calle de las Cortellas (810 m²) ofrecen una oportunidad única para construir vivienda habitual desde cero, con ligera pendiente, orientación suroeste y ancho de fachada de 17 metros."
+    },
+    {
+      type: "paragraph",
+      text: "Precio del suelo: Alrededor de 146-148 €/m²."
+    },
+    {
+      type: "paragraph",
+      text: "Servicios: ⭐⭐⭐⭐ Centros de salud, colegios, supermercados, entidades bancarias."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Lavadores"
+    },
+    {
+      type: "list",
+      items: [
+        "Zona residencial consolidada y tranquila.",
+        "Excelente acceso a las entradas y salidas de la ciudad.",
+        "Servicios completos para el día a día.",
+        "Orientaciones favorables."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Algunas parcelas tienen pendientes que pueden encarecer la cimentación.",
+        "El precio del suelo es medio-alto.",
+        "La disponibilidad de parcelas es limitada."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Lavadores es una de las zonas donde más proyectos de vivienda unifamiliar analizamos. Las parcelas suelen tener buenas orientaciones y servicios cercanos. La pendiente ligera es habitual, lo que permite diseños interesantes con plantas escalonadas."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Familias que quieren vivir en una zona residencial tranquila, con servicios y buena conexión con el centro."
+    },
+
+    {
+      type: "heading",
+      text: "Bembrive – La zona con más oferta de parcelas"
+    },
+    {
+      type: "paragraph",
+      text: "Bembrive es una de las zonas de Vigo con mayor oferta de parcelas para vivienda unifamiliar. La zona cuenta con numerosos solares con proyecto y licencia, lo que acelera los trámites para el comprador."
+    },
+    {
+      type: "paragraph",
+      text: "Precio del suelo: Oscila entre 109 €/m² y 282 €/m², dependiendo de la ubicación y si incluye proyecto y licencia."
+    },
+    {
+      type: "paragraph",
+      text: "Servicios: ⭐⭐⭐ Buenos servicios, con proximidad al Hospital Meixoeiro."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Bembrive"
+    },
+    {
+      type: "list",
+      items: [
+        "Gran oferta de parcelas.",
+        "Muchas con proyecto y licencia incluidos.",
+        "Proximidad al Hospital Meixoeiro.",
+        "Zona tranquila y bien comunicada.",
+        "Buenos accesos a Vigo."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Existen grandes diferencias entre parcelas, incluso en la misma calle.",
+        "Algunas parcelas son pequeñas (350-400 m²), lo que limita el diseño.",
+        "El precio varía mucho según si incluye licencia o no."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Bembrive es una de las zonas donde más proyectos analizamos. La oferta de parcelas con licencia es una ventaja enorme, ya que ahorra meses de trámites. Las parcelas suelen tener buenas orientaciones y pendientes manejables."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Quien quiere construir rápido y no quiere complicarse con trámites. La existencia de parcelas con proyecto y licencia es un gran atractivo."
+    },
+
+    {
+      type: "heading",
+      text: "Beade – Suelo urbano consolidado con potencial"
+    },
+    {
+      type: "paragraph",
+      text: "Beade es una de las zonas con mejor proyección de crecimiento residencial de Vigo. Parcelas como la de 1.990 m² en Beade, clasificada como Suelo Urbano Consolidado con ordenanza U6.5, permiten desarrollar hasta tres viviendas unifamiliares aisladas."
+    },
+    {
+      type: "paragraph",
+      text: "Precio del suelo: Alrededor de 143 €/m² para la parcela de 1.990 m²."
+    },
+    {
+      type: "paragraph",
+      text: "Servicios: ⭐⭐⭐⭐ Buena accesibilidad, servicios y entorno residencial consolidado."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Beade"
+    },
+    {
+      type: "list",
+      items: [
+        "Suelo Urbano Consolidado (trámites más sencillos).",
+        "Gran superficie disponible.",
+        "Posibilidad de desarrollar varias viviendas.",
+        "Buena accesibilidad y servicios.",
+        "Entorno residencial consolidado."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Algunas parcelas lindan con sistemas viarios generales, lo que hay que tener en cuenta en el proyecto.",
+        "El precio del suelo es medio-alto.",
+        "La demanda es alta, por lo que las buenas parcelas salen poco al mercado."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Beade es una zona excelente para proyectos de vivienda unifamiliar. Las parcelas son amplias, con buenas orientaciones y entorno consolidado. La ordenanza U6.5 permite diseños atractivos con planta baja + 1."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Familias que quieren una vivienda amplia en una zona consolidada, o promotores que quieran desarrollar varias viviendas en una misma parcela."
+    },
+
+    {
+      type: "heading",
+      text: "Coruxo-Oia-Saiáns – La zona costera premium"
+    },
     {
       type: "image",
       src: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Playa_samil_%283%29.jpg",
@@ -107,45 +418,124 @@ const blogs = [
       sourceUrl: "https://commons.wikimedia.org/wiki/File:Playa_samil_(3).jpg",
       licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
     },
+    {
+      type: "paragraph",
+      text: "Coruxo, Oia y Saiáns forman una de las zonas costeras más atractivas de Vigo. Con proximidad a playas como Canido y O Vao, esta zona combina entorno natural con buena conexión a la ciudad."
+    },
+    {
+      type: "paragraph",
+      text: "Precio del suelo: El más alto del municipio, con parcelas que alcanzan los 389 €/m²."
+    },
+    {
+      type: "paragraph",
+      text: "Servicios: ⭐⭐⭐⭐ Buenos servicios, aunque menos que en el centro."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Coruxo-Oia-Saiáns"
+    },
+    {
+      type: "list",
+      items: [
+        "Entorno costero privilegiado.",
+        "Proximidad a playas.",
+        "Excelente conexión con la circunvalación VG-20 y la AP-9.",
+        "Ambiente residencial tranquilo.",
+        "Alta capacidad de revalorización."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "El precio del suelo es el más alto de Vigo.",
+        "Muchas parcelas tienen pendientes pronunciadas.",
+        "La normativa de protección costera puede limitar el diseño.",
+        "Menos servicios que en el centro."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Cuando la parcela es buena, Coruxo-Oia-Saiáns permite crear viviendas espectaculares aprovechando vistas, orientación y relación con el paisaje. Pero hay que elegir bien: no todas las parcelas son iguales."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Quien prioriza entorno costero y no le importa pagar más por el suelo. Ideal para primera residencia de alto standing o segunda residencia."
+    },
 
     {
       type: "heading",
-      text: "Coruxo, Oia y Saiáns: vivir en la costa también es elegir una cota"
+      text: "Cabral-Candeán – La opción más asequible"
     },
     {
       type: "paragraph",
-      text: "Entre Coruxo y Saiáns, la búsqueda se organiza alrededor del litoral, las carreteras de Ricardo Mella y Camposancos y los caminos que ascienden hacia el monte. La documentación del PXOM describe precisamente esa estructura de viviendas y vías tradicionales."
+      text: "Cabral y Candeán son zonas con precios más competitivos que el centro de Vigo. Parcelas como la de 684 m² en Cabral a 84 €/m² ofrecen una oportunidad para quien busca un precio más ajustado."
     },
     {
       type: "paragraph",
-      text: "Por eso conviene distinguir una parcela próxima a la playa de otra situada por encima de ella. Puedes ganar vistas al subir, pero cambiarán la pendiente del acceso, la comodidad para caminar y la relación entre la casa y sus espacios exteriores."
+      text: "Precio del suelo: Desde 84 €/m² hasta 180 €/m²."
     },
     {
       type: "paragraph",
-      text: "Coruxo permite tomar O Vao como una de las referencias del litoral. Hacia Oia y Saiáns, los parques forestales y los recorridos de la senda panorámica muestran la proximidad entre costa y monte. Decide qué quieres usar de verdad: bajar al mar, caminar por el bosque o contemplar el paisaje desde casa."
+      text: "Servicios: ⭐⭐⭐ Servicios suficientes para el día a día."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Cabral-Candeán"
+    },
+    {
+      type: "list",
+      items: [
+        "Precios más asequibles que en el centro.",
+        "Buena conexión con Vigo.",
+        "Zona tranquila y residencial.",
+        "Disponibilidad de parcelas."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "Menos servicios que en zonas consolidadas.",
+        "Algunas parcelas tienen pendientes.",
+        "La distancia al centro de Vigo puede ser de 15-20 minutos en coche."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
     },
     {
       type: "paragraph",
-      text: "En una finca con vistas, pide un esquema que sitúe la vivienda a su altura prevista. La vista desde la calle, desde un punto elevado de la parcela y desde el futuro sofá puede ser muy diferente."
+      text: "Cabral-Candeán es una zona interesante para quien busca un equilibrio entre precio y proximidad a Vigo. Las parcelas suelen ser de tamaño medio y con orientaciones variables."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Quien busca un precio más ajustado sin alejarse demasiado de Vigo."
     },
 
     {
       type: "heading",
-      text: "Teis: vida de barrio y una búsqueda distinta de suelo"
+      text: "Nigrán – La opción costera con mejor calidad-precio"
     },
-    {
-      type: "paragraph",
-      text: "Teis entra en la comparación si quieres mantener una relación urbana con Vigo. Sin embargo, para construir una vivienda unifamiliar hay que seleccionar las parcelas por el uso que permiten, no por las expectativas generales de transformación del barrio."
-    },
-    {
-      type: "paragraph",
-      text: "Un ámbito pensado para desarrollo residencial colectivo no responde necesariamente a la búsqueda de una casa aislada. Tampoco el anuncio de futuras actuaciones permite saber cuándo una finca concreta estará lista para construir."
-    },
-    {
-      type: "paragraph",
-      text: "Si tu prioridad es empezar el proyecto en un plazo definido, pide que se identifiquen las actuaciones previas y las dependencias administrativas de cada candidata. Ese dato resulta más útil que una promesa de revalorización."
-    },
-
     {
       type: "image",
       src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Praia_Am%C3%A9rica.jpg/1280px-Praia_Am%C3%A9rica.jpg",
@@ -154,137 +544,204 @@ const blogs = [
       sourceUrl: "https://commons.wikimedia.org/wiki/File:Praia_Am%C3%A9rica.jpg",
       licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
     },
+    {
+      type: "paragraph",
+      text: "Nigrán, aunque no pertenece al municipio de Vigo, está a solo 30 minutos de la ciudad y ofrece una calidad de vida excepcional. Según un análisis reciente, Nigrán es el mejor municipio de las Rías Baixas para vivir, destacando por su «calidad de vida inmensa»."
+    },
+    {
+      type: "paragraph",
+      text: "Precio del suelo: Más asequible que los destinos turísticos de primera línea como Sanxenxo, aunque varía entre parroquias."
+    },
+    {
+      type: "paragraph",
+      text: "Servicios: ⭐⭐⭐⭐ Buenos servicios, con proximidad a Vigo."
+    },
+    {
+      type: "heading",
+      text: "✅ Lo mejor de Nigrán"
+    },
+    {
+      type: "list",
+      items: [
+        "Excelente calidad de vida.",
+        "Entorno costero con playas como Playa América.",
+        "Proximidad a Vigo (30 minutos).",
+        "Buen clima atlántico templado.",
+        "Naturaleza cercana: mar, bosque, montaña ligera."
+      ]
+    },
+    {
+      type: "heading",
+      text: "⚠️ Lo que nadie te cuenta"
+    },
+    {
+      type: "list",
+      items: [
+        "El precio del suelo varía mucho entre parroquias.",
+        "Algunas zonas tienen menos servicios que otras.",
+        "La dependencia del vehículo privado es mayor que en Vigo ciudad."
+      ]
+    },
+    {
+      type: "heading",
+      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+    },
+    {
+      type: "paragraph",
+      text: "Nigrán es una de las zonas donde más interés despierta entre nuestros clientes. La combinación de costa, tranquilidad y proximidad a Vigo es difícil de superar. Las parcelas suelen ser amplias y con buenas orientaciones."
+    },
+    {
+      type: "heading",
+      text: "🏡 Ideal para"
+    },
+    {
+      type: "paragraph",
+      text: "Familias que quieren calidad de vida, playa y naturaleza, sin renunciar a la proximidad a Vigo."
+    },
 
     {
       type: "heading",
-      text: "Nigrán: no buscas lo mismo en Patos que en el interior"
+      text: "El Área Metropolitana de Vigo: una oportunidad de colaboración"
     },
     {
       type: "paragraph",
-      text: "Nigrán abre una comparación diferente. Patos tiene una relación marcada con el surf; Playa América y Panxón ofrecen otras referencias para quien quiere vincular la vivienda al litoral. Las parroquias interiores plantean una rutina distinta."
+      text: "Es importante destacar que el Área Metropolitana de Vigo es una entidad administrativa que agrupa a varios concellos y tiene competencias en ordenación territorial y urbanística. Esto significa que existen sinergias y coordinación entre los municipios del área, lo que puede beneficiar a quienes construyen en la zona."
     },
     {
       type: "paragraph",
-      text: "No necesitas pagar por estar junto a una playa que apenas vas a utilizar. Si surfeas varias veces por semana, esa cercanía puede formar parte del valor de la casa. Si solo irías algunos fines de semana, quizá te compense otra ubicación con mejor conexión a tus obligaciones."
-    },
-    {
-      type: "paragraph",
-      text: "Prueba el recorrido hasta tu destino concreto en Vigo. El tiempo hasta el límite del municipio no explica cuánto tardarás en llegar al trabajo, aparcar o enlazar con el siguiente recado. Y recuerda que la consulta urbanística de una finca en Nigrán corresponde a su propio planeamiento."
+      text: "Además, algunos concellos del área están implementando herramientas digitales como visores urbanísticos online que permiten consultar la situación de cualquier parcela de forma gratuita y en segundos. Te recomendamos consultar estas herramientas antes de comprar."
     },
 
     {
       type: "heading",
-      text: "El PXOM de Vigo: consulta la finca, no una regla del barrio"
-    },
-    {
-      type: "paragraph",
-      text: "El Pleno municipal aprobó definitivamente el nuevo PXOM el 26 de mayo de 2025. Para estudiar una compra, consulta la documentación publicada y las condiciones aplicables a la ubicación exacta."
-    },
-    {
-      type: "paragraph",
-      text: "Los parámetros de una ordenanza no deben extenderse a todo Bembrive, Beade o Coruxo. La edificabilidad, la ocupación, los retranqueos y las posibles actuaciones previas se estudian sobre cada parcela."
-    },
-    {
-      type: "paragraph",
-      text: "Pide una respuesta que permita avanzar en el proyecto: qué volumen admite, dónde podría situarse, cómo se resuelve el acceso y qué trámites faltan. Un número de metros edificables, por sí solo, deja demasiadas preguntas abiertas."
-    },
-
-    {
-      type: "heading",
-      text: "Qué comparación merece tu tiempo"
+      text: "Tabla definitiva para elegir zona (con media)"
     },
     {
       type: "table",
       headers: [
         "Zona",
-        "El motivo para incluirla",
-        "La comprobación decisiva"
+        "Precio suelo",
+        "Construir",
+        "Servicios",
+        "Distancia Vigo",
+        "Clima",
+        "Calidad vida",
+        "MEDIA"
       ],
       rows: [
-        [
-          "Lavadores",
-          "Mantener relación con comercio y vida urbana.",
-          "Recorrido a pie y privacidad respecto a las viviendas próximas."
-        ],
-        [
-          "Bembrive",
-          "Vivir en una parroquia con identidad vecinal.",
-          "Implantación de la casa y documentación si se anuncia con licencia."
-        ],
-        [
-          "Beade",
-          "Explorar una vivienda vinculada al relieve y al entorno de monte.",
-          "Comparar una y dos plantas antes de fijar el diseño."
-        ],
-        [
-          "Cabral",
-          "Valorar ubicaciones del sector oriental de Vigo.",
-          "Entorno de infraestructuras y acceso real a la finca."
-        ],
-        [
-          "Candeán",
-          "Buscar en el entorno de A Madroa.",
-          "Relieve, orientación y maniobras para construir."
-        ],
-        [
-          "Coruxo, Oia y Saiáns",
-          "Acercar costa y monte a la rutina.",
-          "Cota de la vivienda, acceso peatonal y vistas desde la posición prevista."
-        ],
-        [
-          "Teis",
-          "Priorizar vida de barrio.",
-          "Compatibilidad con vivienda unifamiliar y actuaciones pendientes."
-        ],
-        [
-          "Nigrán",
-          "Vincular la casa al Val Miñor y sus playas.",
-          "Uso real del entorno y trayecto completo hasta el trabajo."
-        ]
+        ["Vigo Ciudad", "⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐"],
+        ["Teis", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐"],
+        ["Lavadores", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐"],
+        ["Bembrive", "⭐⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐"],
+        ["Beade", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐"],
+        ["Coruxo-Oia-Saiáns", "⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐"],
+        ["Cabral-Candeán", "⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐"],
+        ["Nigrán", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐⭐"]
       ]
     },
 
     {
       type: "heading",
-      text: "La pendiente debe aparecer en el presupuesto"
+      text: "🔢 Cálculo de la media (para que veas cómo sale)"
+    },
+    {
+      type: "table",
+      headers: [
+        "Zona",
+        "Suma total",
+        "Media"
+      ],
+      rows: [
+        ["Vigo Ciudad", "2+3+5+5+4+4 = 23", "3,83 ⭐⭐⭐⭐"],
+        ["Teis", "3+3+4+5+4+4 = 23", "3,83 ⭐⭐⭐⭐"],
+        ["Lavadores", "3+4+4+4+4+4 = 23", "3,83 ⭐⭐⭐⭐"],
+        ["Bembrive", "4+5+3+4+4+4 = 24", "4,00 ⭐⭐⭐⭐"],
+        ["Beade", "3+4+4+4+4+4 = 23", "3,83 ⭐⭐⭐⭐"],
+        ["Coruxo-Oia-Saiáns", "2+3+4+3+3+5 = 20", "3,33 ⭐⭐⭐"],
+        ["Cabral-Candeán", "4+3+3+3+3+3 = 19", "3,17 ⭐⭐⭐"],
+        ["Nigrán", "3+3+4+3+4+5 = 22", "3,67 ⭐⭐⭐⭐"]
+      ]
+    },
+
+    {
+      type: "heading",
+      text: "Dónde construiríamos una vivienda de estructura de madera en 2026"
     },
     {
       type: "paragraph",
-      text: "Antes de comparar precios de viviendas, compara cómo se construirían en tus parcelas candidatas. Una diferencia de cota puede afectar a la cimentación, la entrada de vehículos, las contenciones y el drenaje."
-    },
-    {
-      type: "paragraph",
-      text: "Pide que las propuestas incluyan las mismas partidas. Si una contempla muros, acometidas y acceso y otra los deja fuera, la comparación del total será engañosa."
+      text: "Después de analizar cientos de parcelas y ejecutar proyectos de viviendas industrializadas y de estructura de madera, estas son las zonas donde actualmente encontramos mejor equilibrio entre:"
     },
     {
       type: "list",
       items: [
-        "Topografía: cotas y pendientes, además de la superficie del anuncio.",
-        "Terreno: estudio geotécnico para definir la cimentación.",
-        "Implantación: posición y altura de la casa, aparcamiento y jardín.",
-        "Logística: recorrido del transporte, montaje y espacio de maniobra.",
-        "Agua: drenaje y solución para las aguas de la parcela y la vivienda."
+        "Precio del suelo.",
+        "Facilidad urbanística.",
+        "Calidad de vida.",
+        "Eficiencia constructiva.",
+        "Potencial de revalorización."
+      ]
+    },
+    {
+      type: "heading",
+      text: "Top 5 Modular Norte (Área de Vigo)"
+    },
+    {
+      type: "list",
+      items: [
+        "🥇 Bembrive",
+        "🥈 Beade",
+        "🥉 Nigrán",
+        "4️⃣ Lavadores",
+        "5️⃣ Cabral-Candeán"
+      ]
+    },
+    {
+      type: "paragraph",
+      text: "Porque suelen reunir características que permiten aprovechar especialmente bien las ventajas de la construcción industrializada:"
+    },
+    {
+      type: "list",
+      items: [
+        "✅ Parcelas más amplias.",
+        "✅ Buen acceso para transporte y montaje.",
+        "✅ Menores costes de movimiento de tierras.",
+        "✅ Mayor libertad de diseño.",
+        "✅ Mejor orientación.",
+        "✅ Excelente comportamiento energético."
       ]
     },
 
     {
       type: "heading",
-      text: "Una casa de madera también empieza por estas decisiones"
+      text: "Conclusión"
     },
     {
       type: "paragraph",
-      text: "La fabricación industrializada permite planificar parte del trabajo fuera de la parcela. Para aprovecharla, el proyecto debe coordinar desde el principio la vivienda con su apoyo sobre el terreno y con las condiciones de transporte y montaje."
+      text: "La mejor parcela no es la más barata, ni la más grande, ni siquiera la que tiene mejores vistas."
     },
     {
       type: "paragraph",
-      text: "Por eso conviene estudiar las candidatas antes de enamorarse de una distribución. Una planta más compacta, otra posición de entrada o una relación distinta con el jardín pueden resolver mejor la finca y evitar obras innecesarias."
+      text: "La mejor parcela es aquella que permite construir la vivienda que realmente necesitas, con costes controlados, buena orientación, servicios suficientes y una calidad de vida acorde a tu proyecto familiar."
     },
     {
       type: "paragraph",
-      text: "Si ya tienes una selección en Vigo o Nigrán, en Modular Norte podemos ayudarte a comparar su encaje con la vivienda. El objetivo es llegar a la compra sabiendo qué proyecto estás haciendo posible y qué trabajos tendrás que asumir."
+      text: "En una vivienda modular de estructura de madera, el terreno es el punto de partida de todo el ahorro: menos movimiento de tierras, cimentación más rápida y económica, y una base perfecta para una casa que consume un 70% menos de energía."
+    },
+    {
+      type: "paragraph",
+      text: "En Modular Norte analizamos la viabilidad de las parcelas de nuestros clientes antes de iniciar cualquier proyecto, para garantizar que la vivienda empieza sobre una base sólida: un buen terreno."
+    },
+    {
+      type: "paragraph",
+      text: "📌 ¿Tienes una parcela en mente y quieres saber si es viable para tu casa modular de madera? Completa nuestro cuestionario de contacto y te ayudamos a analizarla sin compromiso."
+    },
+    {
+      type: "paragraph",
+      text: "https://www.modularnorte.com/contactar"
     }
   ]
 },
+
 {
   id: 12,
   slug: "comprar-terreno-a-coruna-concellos-precios-clima",
