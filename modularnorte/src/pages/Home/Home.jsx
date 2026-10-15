@@ -206,13 +206,7 @@ export default function Home({
 
       <div className="mn-home">
 
-            
-      {includeChrome && (
-        <HomeHeader
-          onBudget={openBudget}
-          onContact={openContact}
-        />
-      )}
+
 
   <main id="inicio"></main>
 

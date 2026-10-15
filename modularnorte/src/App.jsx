@@ -21,6 +21,7 @@ import BlogSection from "./components/BlogSection";
 import ScrollToTop from "./components/ScrollToTop";
 import SeoManager from "./seo/SeoManager";
 import NotFound from "./pages/NotFound";
+import HomeHeader from "./pages/Home/HomeHeader";
 
 function LegacyProjectRedirect() {
   const { slug } = useParams();
@@ -39,7 +40,7 @@ function App() {
       <ScrollToTop />
       <Preloader />
       <ConsentBanner />
-    
+      <HomeHeader/>
       <SideMenu />
 
       <Routes>
