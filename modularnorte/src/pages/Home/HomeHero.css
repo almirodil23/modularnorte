@@ -1172,3 +1172,51 @@
     top: auto;
   }
 }
+
+
+.mn-home #casas,
+.mn-home #proyectos,
+.mn-home #proceso,
+.mn-home #preguntas,
+.mn-home #blog {
+  scroll-margin-top: 105px;
+}
+
+.mn-home .mn-section-more {
+  display: flex;
+  justify-content: center;
+  margin: 42px auto 0;
+  padding: 0 20px;
+}
+
+.mn-home .mn-more-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 28px;
+  border: 1px solid #171717;
+  border-radius: 30px;
+  background: #fff;
+  color: #171717;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.mn-home .mn-more-button:hover {
+  background: #171717;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .mn-home .mn-section-more {
+    margin-top: 30px;
+  }
+
+  .mn-home .mn-more-button {
+    width: 100%;
+    max-width: 350px;
+  }
+}

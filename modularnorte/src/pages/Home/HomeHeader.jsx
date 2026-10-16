@@ -1,17 +1,37 @@
-import { Link } from "react-router-dom";
 
-import "./HomeHeader.css";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SideMenu from "../../components/SideMenu";
+import "./HomeHeader.css";
+
+const navigation = [
+  { label: "Qué construimos", id: "casas" },
+  { label: "Proyectos", id: "proyectos" },
+  { label: "Cómo construimos", id: "proceso" },
+  { label: "Preguntas", id: "preguntas" },
+  { label: "Blog", id: "blog" },
+];
 
 export default function HomeHeader({ onBudget, onContact }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const goToModal = (mode) => {
+    if (location.pathname === "/") {
+      if (mode === "contact") onContact?.();
+      else onBudget?.();
+      return;
+    }
+
+    navigate("/", {
+      state: { homeModal: mode },
+    });
+  };
+
   return (
     <>
-      
-
       <header className="mn-white-header">
         <div className="mn-header-container mn-header-content">
-
-          <Link to="/" className="mn-header-logo">
+          <Link to="/" className="mn-header-logo" aria-label="Ir al inicio">
             <img
               src="https://www.modularnorte.com/assets/custom/img/logo_menu.png"
               alt="Modular Norte"
@@ -19,13 +39,13 @@ export default function HomeHeader({ onBudget, onContact }) {
           </Link>
 
           <nav className="mn-header-nav" aria-label="Navegación principal">
-            <a href="/#casas">Qué construimos</a>
-            <Link to="/proyectos/">Proyectos</Link>
-            <Link to="/proceso-constructivo">Cómo construimos</Link>
-            <Link to="/preguntas-frecuentes">Preguntas</Link>
-            <Link to="/blog/">Blog</Link>
+            {navigation.map((item) => (
+              <Link key={item.id} to={`/#${item.id}`}>
+                {item.label}
+              </Link>
+            ))}
 
-            <button type="button" onClick={onContact}>
+            <button type="button" onClick={() => goToModal("contact")}>
               Contacto
             </button>
           </nav>
@@ -51,7 +71,7 @@ export default function HomeHeader({ onBudget, onContact }) {
             <button
               type="button"
               className="mn-budget-button"
-              onClick={onBudget}
+              onClick={() => goToModal("budget")}
             >
               Pedir presupuesto
             </button>
@@ -71,7 +91,7 @@ export default function HomeHeader({ onBudget, onContact }) {
         </div>
       </header>
 
-      <SideMenu />
+      <SideMenu onBudget={goToModal} onContact={goToModal} />
     </>
   );
 }

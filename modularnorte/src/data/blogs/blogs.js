@@ -742,6 +742,7 @@ const blogs = [
   ]
 },
 
+
 {
   id: 12,
   slug: "comprar-terreno-a-coruna-concellos-precios-clima",
@@ -752,6 +753,7 @@ const blogs = [
   image: "https://upload.wikimedia.org/wikipedia/commons/1/13/Praia_de_Santa_Cristina._Oleiros_e_A_Coru%C3%B1a.jpg",
   excerpt: "Análisis urbanístico, precios, calidad de vida y mejores concellos para construir una vivienda unifamiliar en el área metropolitana de A Coruña",
   featured: true,
+
   content: [
     {
       type: "image",
@@ -764,6 +766,7 @@ const blogs = [
       type: "paragraph",
       text: "Análisis urbanístico, precios, calidad de vida y mejores concellos para construir una vivienda unifamiliar en el área metropolitana de A Coruña"
     },
+
     {
       type: "heading",
       text: "Introducción: elegir concello es elegir estilo de vida"
@@ -784,6 +787,7 @@ const blogs = [
       type: "paragraph",
       text: "Si aún no has comprado la parcela, te recomendamos leer primero nuestra guía sobre qué debe tener un buen terreno para construir tu vivienda modular."
     },
+
     {
       type: "heading",
       text: "Cómo leer esta guía"
@@ -805,9 +809,18 @@ const blogs = [
       type: "paragraph",
       text: "Este formato te permite comparar de un vistazo y entender no solo los datos objetivos, sino también las particularidades que solo se descubren cuando se trabaja sobre el terreno."
     },
+
+    // ===========================================
+    // OLEIROS
+    // ===========================================
+
     {
       type: "heading",
-      text: "Oleiros – La referencia residencial del área metropolitana"
+      text: "Oleiros"
+    },
+    {
+      type: "paragraph",
+      text: "La referencia residencial del área metropolitana"
     },
     {
       type: "paragraph",
@@ -854,7 +867,7 @@ const blogs = [
     },
     {
       type: "heading",
-      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+      text: "🏗️ lo que vemos habitualmente en Modular Norte"
     },
     {
       type: "paragraph",
@@ -880,9 +893,18 @@ const blogs = [
       type: "paragraph",
       text: "Familias que buscan una vivienda definitiva, valoran los servicios y quieren mantener una elevada calidad de vida sin alejarse de A Coruña."
     },
+
+    // ===========================================
+    // CAMBRE
+    // ===========================================
+
     {
       type: "heading",
-      text: "Cambre – El concello más equilibrado de todo el entorno coruñés"
+      text: "Cambre"
+    },
+    {
+      type: "paragraph",
+      text: "El concello más equilibrado de todo el entorno coruñés"
     },
     {
       type: "paragraph",
@@ -924,7 +946,7 @@ const blogs = [
     },
     {
       type: "heading",
-      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+      text: "🏗️ lo que vemos habitualmente en Modular Norte"
     },
     {
       type: "paragraph",
@@ -951,6 +973,11 @@ const blogs = [
       type: "paragraph",
       text: "Familias que quieren equilibrar presupuesto, calidad de vida y proximidad a la ciudad."
     },
+
+    // ===========================================
+    // BERGONDO
+    // ===========================================
+
     {
       type: "image",
       src: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Praia_de_Gandar%C3%ADo_Bergondo.jpg",
@@ -960,7 +987,11 @@ const blogs = [
     },
     {
       type: "heading",
-      text: "Bergondo – Donde más potencial vemos actualmente"
+      text: "Bergondo"
+    },
+    {
+      type: "paragraph",
+      text: "Donde más potencial vemos actualmente"
     },
     {
       type: "paragraph",
@@ -1002,7 +1033,7 @@ const blogs = [
     },
     {
       type: "heading",
-      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+      text: "🏗️ lo que vemos habitualmente en Modular Norte"
     },
     {
       type: "paragraph",
@@ -1025,9 +1056,18 @@ const blogs = [
       type: "paragraph",
       text: "Quien busca una vivienda para muchos años con una buena combinación entre naturaleza y accesibilidad."
     },
+
+    // ===========================================
+    // SADA
+    // ===========================================
+
     {
       type: "heading",
-      text: "Sada – La mejor calidad de vida para quien disfruta del mar"
+      text: "Sada"
+    },
+    {
+      type: "paragraph",
+      text: "La mejor calidad de vida para quien disfruta del mar"
     },
     {
       type: "paragraph",
@@ -1069,7 +1109,7 @@ const blogs = [
     },
     {
       type: "heading",
-      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+      text: "🏗️ lo que vemos habitualmente en Modular Norte"
     },
     {
       type: "paragraph",
@@ -1083,9 +1123,18 @@ const blogs = [
       type: "paragraph",
       text: "Personas que buscan una vivienda para disfrutar diariamente del entorno costero."
     },
+
+    // ===========================================
+    // ARTEIXO
+    // ===========================================
+
     {
       type: "heading",
-      text: "Arteixo – La mejor ubicación para quienes trabajan en Sabón o Inditex"
+      text: "Arteixo"
+    },
+    {
+      type: "paragraph",
+      text: "La mejor ubicación para quienes trabajan en Sabón o Inditex"
     },
     {
       type: "paragraph",
@@ -1118,7 +1167,7 @@ const blogs = [
     },
     {
       type: "heading",
-      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+      text: "🏗️ lo que vemos habitualmente en Modular Norte"
     },
     {
       type: "paragraph",
@@ -1132,9 +1181,18 @@ const blogs = [
       type: "paragraph",
       text: "Trabajadores de Inditex, Sabón o polígonos industriales que quieren minimizar desplazamientos."
     },
+
+    // ===========================================
+    // CULLEREDO
+    // ===========================================
+
     {
       type: "heading",
-      text: "Culleredo – La alternativa práctica"
+      text: "Culleredo"
+    },
+    {
+      type: "paragraph",
+      text: "La alternativa práctica"
     },
     {
       type: "paragraph",
@@ -1166,7 +1224,7 @@ const blogs = [
     },
     {
       type: "heading",
-      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+      text: "🏗️ lo que vemos habitualmente en Modular Norte"
     },
     {
       type: "paragraph",
@@ -1180,9 +1238,18 @@ const blogs = [
       type: "paragraph",
       text: "Quien prioriza cercanía a la ciudad y servicios completos."
     },
+
+    // ===========================================
+    // CARRAL
+    // ===========================================
+
     {
       type: "heading",
-      text: "Carral – Más terreno por menos dinero"
+      text: "Carral"
+    },
+    {
+      type: "paragraph",
+      text: "Más terreno por menos dinero"
     },
     {
       type: "paragraph",
@@ -1216,7 +1283,7 @@ const blogs = [
     },
     {
       type: "heading",
-      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+      text: "🏗️ lo que vemos habitualmente en Modular Norte"
     },
     {
       type: "paragraph",
@@ -1230,6 +1297,11 @@ const blogs = [
       type: "paragraph",
       text: "Quien prioriza metros y tranquilidad sobre proximidad inmediata."
     },
+
+    // ===========================================
+    // ABEGONDO
+    // ===========================================
+
     {
       type: "image",
       src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Embalse_de_Cecebre.jpg/1280px-Embalse_de_Cecebre.jpg",
@@ -1239,7 +1311,11 @@ const blogs = [
     },
     {
       type: "heading",
-      text: "Abegondo – La tierra de las parcelas grandes"
+      text: "Abegondo"
+    },
+    {
+      type: "paragraph",
+      text: "La tierra de las parcelas grandes"
     },
     {
       type: "paragraph",
@@ -1272,7 +1348,7 @@ const blogs = [
     },
     {
       type: "heading",
-      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+      text: "🏗️ lo que vemos habitualmente en Modular Norte"
     },
     {
       type: "paragraph",
@@ -1286,9 +1362,18 @@ const blogs = [
       type: "paragraph",
       text: "Quien busca un estilo de vida rural moderno, con espacio y tranquilidad."
     },
+
+    // ===========================================
+    // BETANZOS
+    // ===========================================
+
     {
       type: "heading",
-      text: "Betanzos – La pequeña ciudad con todos los servicios"
+      text: "Betanzos"
+    },
+    {
+      type: "paragraph",
+      text: "La pequeña ciudad con todos los servicios"
     },
     {
       type: "heading",
@@ -1318,7 +1403,7 @@ const blogs = [
     },
     {
       type: "heading",
-      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+      text: "🏗️ lo que vemos habitualmente en Modular Norte"
     },
     {
       type: "paragraph",
@@ -1332,9 +1417,18 @@ const blogs = [
       type: "paragraph",
       text: "Quien busca la comodidad de una ciudad pequeña sin renunciar a la tranquilidad."
     },
+
+    // ===========================================
+    // MIÑO
+    // ===========================================
+
     {
       type: "heading",
-      text: "Miño – La mejor opción para quien prioriza playa y tranquilidad"
+      text: "Miño"
+    },
+    {
+      type: "paragraph",
+      text: "La mejor opción para quien prioriza playa y tranquilidad"
     },
     {
       type: "heading",
@@ -1362,7 +1456,7 @@ const blogs = [
     },
     {
       type: "heading",
-      text: "🏗️ Lo que vemos habitualmente en Modular Norte"
+      text: "🏗️ lo que vemos habitualmente en Modular Norte"
     },
     {
       type: "paragraph",
@@ -1376,6 +1470,11 @@ const blogs = [
       type: "paragraph",
       text: "Quien prioriza playa y tranquilidad."
     },
+
+    // ===========================================
+    // TABLA COMPARATIVA
+    // ===========================================
+
     {
       type: "heading",
       text: "Tabla definitiva para elegir concello"
@@ -1404,6 +1503,11 @@ const blogs = [
         ["Miño", "⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐⭐", "⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐"]
       ]
     },
+
+    // ===========================================
+    // RECOMENDACIONES MODULAR NORTE
+    // ===========================================
+
     {
       type: "heading",
       text: "Dónde construiríamos una vivienda de estructura de madera en 2026"
@@ -1451,6 +1555,11 @@ const blogs = [
         "✅ Excelente comportamiento energético."
       ]
     },
+
+    // ===========================================
+    // CONCLUSIÓN
+    // ===========================================
+
     {
       type: "heading",
       text: "Conclusión"
@@ -1481,6 +1590,7 @@ const blogs = [
     }
   ]
 },
+
 
 
 
