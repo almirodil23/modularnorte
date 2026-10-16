@@ -134,7 +134,7 @@ export default function Home({
               loop
               playsInline
               preload="metadata"
-              poster="https\://www.modularnorte.com/assets/custom/img/home.webp"
+              poster="https://www.modularnorte.com/assets/custom/img/home.webp"
               aria-hidden="true"
               onError={(event) => {
                 event.currentTarget.style.display = "none";
@@ -144,7 +144,7 @@ export default function Home({
             </video>
             <img
               className="hero-foto"
-              src="https\://www.modularnorte.com/assets/custom/img/home.webp"
+              src="https://www.modularnorte.com/assets/custom/img/home.webp"
               alt=""
               width="1600"
               height="900"
@@ -341,7 +341,7 @@ export default function Home({
                 <div className="paso">
                   <div className="foto">
                     <img
-                      src="https\://www.modularnorte.com/recurso/pagina/imagen/proceso_constructivo/proceso1.jpg"
+                      src="https://www.modularnorte.com/recurso/pagina/imagen/proceso_constructivo/proceso1.jpg"
                       alt="Replanteo de la losa de cimentación"
                       width="725"
                       height="544"
@@ -353,7 +353,7 @@ export default function Home({
                 <div className="paso">
                   <div className="foto">
                     <img
-                      src="https\://www.modularnorte.com/recurso/pagina/imagen/proceso_constructivo/proceso2.jpg"
+                      src="https://www.modularnorte.com/recurso/pagina/imagen/proceso_constructivo/proceso2.jpg"
                       alt="Encofrado y hormigonado de la losa"
                       width="900"
                       height="675"
@@ -365,7 +365,7 @@ export default function Home({
                 <div className="paso">
                   <div className="foto">
                     <img
-                      src="https\://www.modularnorte.com/recurso/pagina/imagen/proceso_constructivo/proceso3.jpg"
+                      src="https://www.modularnorte.com/recurso/pagina/imagen/proceso_constructivo/proceso3.jpg"
                       alt="Montaje de la estructura de madera laminada"
                       width="695"
                       height="522"
@@ -377,7 +377,7 @@ export default function Home({
                 <div className="paso">
                   <div className="foto">
                     <img
-                      src="https\://www.modularnorte.com/recurso/pagina/imagen/proceso_constructivo/proceso4.jpg"
+                      src="https://www.modularnorte.com/recurso/pagina/imagen/proceso_constructivo/proceso4.jpg"
                       alt="Recubrimiento perimetral con panel OSB/3"
                       width="718"
                       height="538"
@@ -484,7 +484,7 @@ export default function Home({
                 >
                   <div className="foto">
                     <img
-                      src="https\://www.modularnorte.com/proyectos/varias/pasiaje_galicia.jpg"
+                      src="https://www.modularnorte.com/proyectos/varias/pasiaje_galicia.jpg"
                       alt="Paisaje de Galicia"
                       width="1023"
                       height="686"
@@ -535,7 +535,7 @@ export default function Home({
                 >
                   <div className="foto">
                     <img
-                      src="https\://www.modularnorte.com/proyectos/ampliacion-modular-y-reforma-integral/cover.jpg"
+                      src="https://www.modularnorte.com/proyectos/ampliacion-modular-y-reforma-integral/cover.jpg"
                       alt="Ampliación modular y reforma integral en San Sebastián"
                       width="1620"
                       height="1080"
@@ -551,7 +551,7 @@ export default function Home({
                 <a className="obra ancha" href="/proyecto/project-130">
                   <div className="foto">
                     <img
-                      src="https\://www.modularnorte.com/proyectos/project-130/cover.jpg"
+                      src="https://www.modularnorte.com/proyectos/project-130/cover.jpg"
                       alt="Project 130 en Lizarraga, Navarra"
                       width="1613"
                       height="1080"
@@ -567,7 +567,7 @@ export default function Home({
                 <a className="obra" href="/proyecto/tenerife">
                   <div className="foto">
                     <img
-                      src="https\://www.modularnorte.com/proyectos/tenerife/imagen_8.jpg"
+                      src="https://www.modularnorte.com/proyectos/tenerife/imagen_8.jpg"
                       alt="Project 140 en Adeje, Tenerife"
                       width="1050"
                       height="700"
@@ -583,7 +583,7 @@ export default function Home({
                 <a className="obra" href="/proyecto/denia">
                   <div className="foto">
                     <img
-                      src="https\://www.modularnorte.com/proyectos/denia/cover.jpg"
+                      src="https://www.modularnorte.com/proyectos/denia/cover.jpg"
                       alt="Project 160 en Denia, Alicante"
                       width="1050"
                       height="700"
@@ -599,7 +599,7 @@ export default function Home({
                 <a className="obra" href="/proyecto/project-90-tarragona">
                   <div className="foto">
                     <img
-                      src="https\://www.modularnorte.com/proyectos/project-90-tarragona/img_1.jpg"
+                      src="https://www.modularnorte.com/proyectos/project-90-tarragona/img_1.jpg"
                       alt="Project 90 en Tarragona, Tarragona"
                       width="1050"
                       height="700"
@@ -680,7 +680,7 @@ export default function Home({
                 <div className="marca">
                   <img
                     className="logo"
-                    src="https\://www.modularnorte.com/assets/custom/img/logo_menu.png"
+                    src="https://www.modularnorte.com/assets/custom/img/logo_menu.png"
                     alt="Logo Modular Norte"
                     width="84"
                     height="84"
